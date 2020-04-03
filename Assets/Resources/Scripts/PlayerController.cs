@@ -207,6 +207,16 @@ public class PlayerController : MonoBehaviour
 		agent.isStopped = false;
 	}
 
+	public void ReceiveDamage(int damage)
+	{
+		hp -= damage;
+		if (hp <= 0)
+		{
+			canMove = false;
+			animator.SetTrigger("Die");
+		}
+	}
+
 	public void PutDownHeldObject(GameObject location)
 	{
 		interactionTarget = null;
@@ -419,7 +429,7 @@ public class PlayerController : MonoBehaviour
 				{
 					target.ReceiveDamage(s.damage);
 
-				}, animator.GetCurrentAnimatorStateInfo(1).length * 0.9f);
+				}, 1);
 
 				GameManager.instance.ExecuteAction(new Action(() => {
 					s.canAttack = true;
