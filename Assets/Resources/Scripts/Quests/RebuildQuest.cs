@@ -19,9 +19,9 @@ public class RebuildQuest : BaseQuest
 	private void ResourceArea_OnResourceAreaUpdateEvent()
 	{
 		//might potentialy delete more objects than needed
-		if (resourceArea.resourcesCount[Resource.ResourceType.Stone] > stoneAmount)
+		if (resourceArea.resourcesCount[Resource.ResourceType.Stone] >= stoneAmount)
 		{
-			if (resourceArea.resourcesCount[Resource.ResourceType.Wood] > woodAmount)
+			if (resourceArea.resourcesCount[Resource.ResourceType.Wood] >= woodAmount)
 			{
 				SetState(QuestState.Completed);
 				GameUI.instance.FadeInRebuildingScreen();

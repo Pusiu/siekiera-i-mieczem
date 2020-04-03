@@ -26,7 +26,7 @@ public class ResourceArea : MonoBehaviour
 		foreach (Resource.ResourceType t in resourcesCount.Keys.ToList())
 			resourcesCount[t] = 0;
 			
-		Collider[] cols = Physics.OverlapBox(col.center, col.size / 2, col.transform.rotation);
+		Collider[] cols = Physics.OverlapBox(transform.position, col.size / 2, col.transform.rotation);
 		foreach (Collider c in cols)
 		{
 			Resource r = c.GetComponentInChildren<Resource>();
@@ -46,16 +46,16 @@ public class ResourceArea : MonoBehaviour
 
 	public void RemoveResources()
 	{
-		Collider[] cols = Physics.OverlapBox(col.center, col.size / 2, col.transform.rotation);
+		Collider[] cols = Physics.OverlapBox(transform.position, col.size / 2, col.transform.rotation);
 
 		foreach (Resource.ResourceType t in resourcesCount.Keys)
 		{
 			//Remove from player
-			Resource lh = PlayerController.instance.hands[PlayerController.Hand.Left].GetComponent<Resource>();
-			if (lh?.resourceType == t)
+			Resource lh = PlayerController.instance.hands[PlayerController.Hand.Left]?.GetComponent<Resource>();
+			if (lh != null && lh.resourceType == t)
 			{
-				Resource rh = PlayerController.instance.hands[PlayerController.Hand.Right].GetComponent<Resource>();
-				if (rh?.resourceType == t)
+				Resource rh = PlayerController.instance.hands[PlayerController.Hand.Right]?.GetComponent<Resource>();
+				if (rh != null && rh.resourceType == t)
 					PlayerController.instance.hands[PlayerController.Hand.Right] = null;
 
 				Destroy(lh.gameObject);
@@ -64,7 +64,8 @@ public class ResourceArea : MonoBehaviour
 			for (int i=0; i < PlayerController.instance.items.Count;i++)
 			{
 				Item it = PlayerController.instance.items[i];
-				if (it.GetComponent<Resource>()?.resourceType == t)
+				Resource r = it?.GetComponent<Resource>();
+				if ( r!= null && r.resourceType == t)
 				{
 					PlayerController.instance.items[i] = null;
 					Destroy(it.gameObject);
@@ -87,10 +88,10 @@ public class ResourceArea : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Invoke("CalculateResourcesInside()", 2);
+		Invoke("CalculateResourcesInside", 2);
 	}
 	private void OnTriggerExit(Collider other)
 	{
-		Invoke("CalculateResourcesInside()", 2);
+		Invoke("CalculateResourcesInside", 2);
 	}
 }

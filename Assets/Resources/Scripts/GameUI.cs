@@ -15,6 +15,7 @@ public class GameUI : MonoBehaviour
 	public GameObject guideScreen;
 	public GameObject guideScreenEntriesTitles;
 	public GameObject guideScreenEntriesContents;
+	public GameObject timePassOverlay;
 
 	public GameObject currentSpeechFocus = null;
 	public float typewriteLetterTime = 0.1f;
@@ -34,11 +35,14 @@ public class GameUI : MonoBehaviour
 	public Image leftHandSlot;
 	public Image leftHolsterSlot;
 
+	private void Awake()
+	{
+		instance = this;
+	}
+
 	// Start is called before the first frame update
 	void Start()
     {
-		instance = this;
-
 		EventTrigger.Entry eventDrag = new EventTrigger.Entry();
 		eventDrag.eventID = EventTriggerType.Drag;
 		eventDrag.callback.AddListener((eventData) => { InventorySlotEventHandler_OnDrag(eventData); });
@@ -310,11 +314,12 @@ public class GameUI : MonoBehaviour
 
 	public void FadeInRebuildingScreen()
 	{
-
+		timePassOverlay.SetActive(true);
+		timePassOverlay.GetComponent<Animator>().SetBool("Fade",true);
 	}
 	public void FadeOutRebuildingScreen()
 	{
-
+		timePassOverlay.GetComponent<Animator>().SetBool("Fade", false);
 	}
 
 	public void Typewrite(string text)
