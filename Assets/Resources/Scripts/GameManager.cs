@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,14 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 		instance = this;
+		if (GameUI.instance == null)
+		{
+			SceneManager.LoadScene("UIScene", LoadSceneMode.Additive);
+			SceneManager.sceneLoaded += (s,e) =>
+			{
+				GetComponent<TimeAndWeather>().StartCycle();
+			};
+		}
     }
 
     // Update is called once per frame

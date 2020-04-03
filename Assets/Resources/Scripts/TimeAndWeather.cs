@@ -10,7 +10,7 @@ public class TimeAndWeather : MonoBehaviour
 	public Light sun;
 	public Light moon;
 
-	private void Start()
+	public void StartCycle()
 	{
 		UpdateGameTime();
 	}
