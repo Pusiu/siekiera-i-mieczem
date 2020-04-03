@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 	public static GameManager instance;
-
+	public List<BaseQuest> questList = new List<BaseQuest>();
 
     // Start is called before the first frame update
     void Start()

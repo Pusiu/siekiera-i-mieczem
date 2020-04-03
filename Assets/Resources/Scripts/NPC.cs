@@ -5,7 +5,8 @@ using UnityEngine;
 public class NPC : MonoBehaviour, IInteractable
 {
 	public DialogueScriptableObject currentDialogue;
-	Animator animator;
+	public Animator animator;
+	public int currentDialogueLineIndex = 0;
 
 	// Start is called before the first frame update
 	void Start()
@@ -25,30 +26,20 @@ public class NPC : MonoBehaviour, IInteractable
 			StartDialogue();
 	}
 
-	public void SayLine(int index)
+
+
+	public void ProcessLine()
 	{
-		if (index >= currentDialogue.lines.Count)
+		GameUI.instance.speechBubble.gameObject.SetActive(false);
+		if (currentDialogueLineIndex >= currentDialogue.lines.Count)
 		{
-			GameUI.instance.speechBubble.gameObject.SetActive(false);
 			return;
 		}
-
-		bool isNPCSpeaking = (currentDialogue.lines[index].speaker == DialogueLine.Speaker.NPC) ? true : false;
-
-		Animator a =  isNPCSpeaking ? animator : PlayerController.instance.animator;
-		a.SetTrigger("TalkTrigger");
-
-		GameUI.instance.currentSpeechFocus = isNPCSpeaking ? gameObject : PlayerController.instance.gameObject;
-
-		GameManager.instance.ExecuteAction(() =>
-		{
-			SayLine(index + 1);
-		}, currentDialogue.lines[index].text.Length * GameUI.instance.typewriteLetterTime + 1);
-		GameUI.instance.Typewrite(currentDialogue.lines[index].text);
+		currentDialogue.lines[currentDialogueLineIndex].Execute(this);
 	}
 
 	public void StartDialogue()
 	{
-		SayLine(0);
+		ProcessLine();
 	}
 }

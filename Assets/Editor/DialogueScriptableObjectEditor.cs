@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System.Linq;
+using System;
 
 [CustomEditor(typeof(DialogueScriptableObject))]
+[ExecuteInEditMode]
 public class DialogueScriptableObjectEditor : Editor
 {
 	DialogueScriptableObject o;
@@ -15,7 +18,10 @@ public class DialogueScriptableObjectEditor : Editor
 		GUILayout.BeginHorizontal();
 		if (GUILayout.Button("+", new GUILayoutOption[] { GUILayout.MaxWidth(50) }))
 		{
-			o.lines.Insert(index+1, new DialogueLine(DialogueLine.Speaker.NPC, ""));
+			o.lines.Insert(index+1, (DialogueAction)ScriptableObject.CreateInstance(typeof(DialogueLine)));
+			o.lines[index + 1].name = "DialogueLine";
+			AssetDatabase.AddObjectToAsset(o.lines[index+1], o);
+			EditorUtility.SetDirty(o.lines[index+1]);
 		}
 		if (GUILayout.Button("-",new GUILayoutOption[] { GUILayout.MaxWidth(50) }))
 		{
@@ -24,21 +30,62 @@ public class DialogueScriptableObjectEditor : Editor
 		GUILayout.EndHorizontal();
 	}
 
+	public List<Type> types = new List<Type>();
+	private void Awake()
+	{
+		UpdateTypes();
+	}
+
+	void UpdateTypes()
+	{
+		foreach (Type t in System.Reflection.Assembly.Load("Assembly-CSharp").GetTypes())
+		{
+			if (t.IsSubclassOf(typeof(DialogueAction)))
+			{
+				types.Add(t);
+			}
+		}
+	}
+
+
+
 	public override void OnInspectorGUI()
 	{
+		if (types.Count == 0)
+			UpdateTypes();
+
 		base.OnInspectorGUI();
 		o = (DialogueScriptableObject)target;
 		for (int i=0; i < o.lines.Count;i++)
 		{
-			DialogueLine d = o.lines[i];
+			DialogueAction d = o.lines[i];
+			if (o.lines[i] == null)
+			{
+				o.lines.Clear();
+				return;
+			}
 			EditorGUILayout.BeginHorizontal();
-			DrawPlusMinus(i);
-			d.speaker = (DialogueLine.Speaker)EditorGUILayout.EnumPopup(d.speaker, new GUILayoutOption[] { GUILayout.MaxWidth(100)});
-			EditorStyles.textArea.wordWrap = true;
-			d.text = GUILayout.TextArea(d.text, new GUILayoutOption[] { GUILayout.MinWidth(200), GUILayout.MinHeight(200), GUILayout.ExpandWidth(false)});
+			int currentTypeIndex = types.IndexOf(o.lines[i].GetType());
+			if (currentTypeIndex >= 0)
+			{
+				currentTypeIndex = EditorGUILayout.Popup(currentTypeIndex, types.Select(x => x.Name).ToArray());
+				if (types[currentTypeIndex] != o.lines[i].GetType())
+				{
+					o.lines[i] = (DialogueAction)ScriptableObject.CreateInstance(types[currentTypeIndex]); //(DialogueAction)Activator.CreateInstance(types[currentTypeIndex]);
+					o.lines[i].name = o.lines[i].GetType().ToString();
+					AssetDatabase.AddObjectToAsset(o.lines[i], o);
+					EditorUtility.SetDirty(o.lines[i]);
+					d = o.lines[i];
+				}
+
+				DrawPlusMinus(i);
+				d.DrawInspectorLine();
+			}
 			EditorGUILayout.EndHorizontal();
 		}
-		EditorUtility.SetDirty(o);
 		DrawPlusMinus(-1);
+
+		EditorUtility.SetDirty(o);
+		//AssetDatabase.SaveAssets();
 	}
 }

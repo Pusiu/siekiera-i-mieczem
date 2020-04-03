@@ -5,7 +5,6 @@ using UnityEngine;
 public class Rock : ResourceGenerator
 {
 	public GameObject resourcePrefab;
-	public int count = 5;
 	public int hitsToDestroy = 3;
 
 	public override void OnInteraction()

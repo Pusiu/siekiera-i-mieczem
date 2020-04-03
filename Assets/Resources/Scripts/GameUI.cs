@@ -308,6 +308,15 @@ public class GameUI : MonoBehaviour
 		inventoryScreen.SetActive(!inventoryScreen.activeInHierarchy);
 	}
 
+	public void FadeInRebuildingScreen()
+	{
+
+	}
+	public void FadeOutRebuildingScreen()
+	{
+
+	}
+
 	public void Typewrite(string text)
 	{
 		StopAllCoroutines();

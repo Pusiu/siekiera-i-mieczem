@@ -6,7 +6,8 @@ public class ResourceGenerator : MonoBehaviour, IInteractable
 {
 	public bool requireTool = true;
 	public Tool.ToolType requiredToolType;
-
+	public Resource.ResourceType resourceType;
+	public int count = 1;
 
 
 	public virtual void OnInteraction()

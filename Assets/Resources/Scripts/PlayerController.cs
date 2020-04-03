@@ -165,6 +165,13 @@ public class PlayerController : MonoBehaviour
 			GameUI.instance.ToggleInventory();
 			canMove = !GameUI.instance.inventoryScreen.activeInHierarchy;
 		}
+		if (Input.GetKeyDown(KeyCode.F1))
+		{
+			if (GameUI.instance.guideScreen.activeInHierarchy)
+				GameUI.instance.HideGuideScreen();
+			else
+				GameUI.instance.ShowGuideScreen();
+		}
 
 		if (interactionTarget != null)
 		{
