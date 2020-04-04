@@ -9,6 +9,7 @@ public class TreeResource : ResourceGenerator
 
 	public override void Gather()
 	{
+		base.Gather();
 		Chop();
 	}
 

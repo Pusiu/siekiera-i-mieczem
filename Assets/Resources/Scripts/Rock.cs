@@ -9,6 +9,7 @@ public class Rock : ResourceGenerator
 
 	public override void Gather()
 	{
+		base.Gather();
 		Mine();
 	}
 

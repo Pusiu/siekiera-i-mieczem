@@ -7,6 +7,7 @@ public class DialogueAction : ScriptableObject
 {
 	/// <summary>
 	/// Executes dialogue action
+	/// By default, returns true, meaning it will immediately proceed to next line
 	/// </summary>
 	/// <param name="npc"></param>
 	/// <returns>true if npc should immediately proceed to next line</returns>

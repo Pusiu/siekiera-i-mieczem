@@ -9,6 +9,7 @@ public class LogResource : ResourceGenerator
 
 	public override void Gather()
 	{
+		base.Gather();
 		Chop();
 	}
 

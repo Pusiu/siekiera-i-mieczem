@@ -35,8 +35,9 @@ public class Enemy : LivingBeing
 			}
 
 			agent.speed = speed;
-			if (!activityZone.bounds.Contains(PlayerController.instance.transform.position))
+			if (!activityZone.bounds.Contains(transform.position))
 			{
+				MoveTo(transform.position);
 				OnPlayerLeaveArea();
 			}
 			if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) <= attackDistance)
@@ -58,7 +59,7 @@ public class Enemy : LivingBeing
 				MoveTo(randomPoint);
 			}
 
-			if (activityZone.bounds.Contains(PlayerController.instance.transform.position))
+			if (activityZone.bounds.Contains(PlayerController.instance.transform.position) && PlayerController.instance.hp > 0)
 			{
 				if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) <= spottingDistance)
 				{
@@ -77,11 +78,25 @@ public class Enemy : LivingBeing
 	public void OnPlayerSpotted()
 	{
 		isInCombat = true;
+		string text = "Będziesz żałował że tutaj przyszedłeś";
+		GameUI.instance.currentSpeechFocus = gameObject;
+		GameUI.instance.Typewrite(text);
+		GameManager.instance.ExecuteAction(() =>
+		{
+			GameUI.instance.speechBubble.gameObject.SetActive(false);
+		}, text.Length * GameUI.instance.typewriteLetterTime + 2);
 	}
 
 	public void OnPlayerLeaveArea()
 	{
 		isInCombat = false;
+		string text = "Jeszcze cię dorwę!";
+		GameUI.instance.currentSpeechFocus = gameObject;
+		GameUI.instance.Typewrite(text);
+		GameManager.instance.ExecuteAction(() =>
+		{
+			GameUI.instance.speechBubble.gameObject.SetActive(false);
+		},text.Length*GameUI.instance.typewriteLetterTime + 2);
 	}
 
 	void MoveTo(Vector3 target)

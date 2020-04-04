@@ -15,14 +15,19 @@ public class TimeAndWeather : MonoBehaviour
 		UpdateGameTime();
 	}
 
+	public void SetTime(int time)
+	{
+		currentTime = time;
+	}
+
+
+
 	int sunrise = 400;
 	int sunset = 2000;
 	Color ambientColor = new Color(199 / 255.0f, 199 / 255.0f, 199 / 255.0f);
-	private void UpdateGameTime()
+	public void ProcessTime()
 	{
-		currentTime++;
-
-		if (currentTime - (int)(currentTime / 100)*100 >= 60)
+		if (currentTime - (int)(currentTime / 100) * 100 >= 60)
 		{
 			currentTime = ((int)(currentTime / 100) + 1) * 100;
 		}
@@ -33,7 +38,7 @@ public class TimeAndWeather : MonoBehaviour
 		float xrot;
 		if (currentTime >= sunrise && currentTime <= sunset)
 		{
-			if (currentTime >= sunrise && currentTime <= sunrise+100)
+			if (currentTime >= sunrise && currentTime <= sunrise + 100)
 			{
 				float progress = (float)(GetDifferenceInSeconds(currentTime, sunrise)) / GetDifferenceInSeconds(sunrise + 100, sunrise);
 				sun.shadowStrength = Mathf.Lerp(0, 1, progress);
@@ -45,7 +50,7 @@ public class TimeAndWeather : MonoBehaviour
 			}
 
 			float tdiff = GetDifferenceInSeconds(currentTime, sunrise);
-			float duration = TimeToSeconds(sunset)-TimeToSeconds(sunrise);
+			float duration = TimeToSeconds(sunset) - TimeToSeconds(sunrise);
 			xrot = Mathf.LerpAngle(0, 180, tdiff / duration);
 		}
 		else
@@ -61,8 +66,8 @@ public class TimeAndWeather : MonoBehaviour
 				RenderSettings.ambientLight = ambientColor * intensity;
 			}
 
-			int nightDuration = GetDifferenceInSeconds(sunrise,sunset);
-			float passedTime = (currentTime >= sunset) ? GetDifferenceInSeconds(currentTime,sunset) : TimeToSeconds(currentTime) + GetDifferenceInSeconds(2400,sunset);
+			int nightDuration = GetDifferenceInSeconds(sunrise, sunset);
+			float passedTime = (currentTime >= sunset) ? GetDifferenceInSeconds(currentTime, sunset) : TimeToSeconds(currentTime) + GetDifferenceInSeconds(2400, sunset);
 
 			xrot = Mathf.LerpAngle(180, 360, (passedTime / nightDuration));
 		}
@@ -72,6 +77,12 @@ public class TimeAndWeather : MonoBehaviour
 		//sun.transform.rotation = Quaternion.Euler(xrot, sun.transform.rotation.eulerAngles.y, sun.transform.rotation.eulerAngles.z);
 
 
+	}
+
+	private void UpdateGameTime()
+	{
+		currentTime++;
+		ProcessTime();
 		Invoke("UpdateGameTime", 1 / updateFrequency);
 	}
 

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
@@ -12,6 +13,9 @@ public class GameUI : MonoBehaviour
 	public Slider hpSlider;
 	public Slider energySlider;
 	public RectTransform speechBubble;
+	public GameObject gameOverScreen;
+	public GameObject gameWinScreen;
+	public GameObject menu;
 	public GameObject hintPanel;
 	public GameObject guideScreen;
 	public GameObject guideScreenEntriesTitles;
@@ -375,15 +379,36 @@ public class GameUI : MonoBehaviour
 		StartCoroutine(HintCoroutine());
 	}
 
+	public void ShowGameWinScreen()
+	{
+		PlayerController.instance.canMove = false;
+		gameWinScreen.gameObject.SetActive(true);
+	}
+
+	public void ShowDeathScreen()
+	{
+		PlayerController.instance.canMove = false;
+		gameOverScreen.gameObject.SetActive(true);
+	}
+
+	public void ShowMenu()
+	{
+		PlayerController.instance.canMove = false;
+	}
+	public void HideMenu()
+	{
+		PlayerController.instance.canMove = true;
+	}
+
 	public void ExitToMainMenu()
 	{
-		Application.Quit();
+		SceneManager.LoadScene(0);
 	}
 
 	float hideTime;
 	IEnumerator HintCoroutine()
 	{
-		if (Time.time < hideTime)
+		while(Time.time < hideTime)
 		{
 			yield return new WaitForEndOfFrame();
 		}

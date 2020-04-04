@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 				GameUI.instance.SetupQuestLogEntries();
 			};
 		}
+
+		npcs.AddRange(FindObjectsOfType<NPC>());
     }
 
     // Update is called once per frame

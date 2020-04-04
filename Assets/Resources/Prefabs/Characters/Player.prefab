@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1793494151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1793494152}
+  m_Layer: 8
+  m_Name: TwoHandPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1793494152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793494151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.0025, z: 0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8396518129746108161}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &342421326602095828
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +658,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5859895040827884903}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.821065, y: -0.13392973, z: 13.960845}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -695,11 +725,14 @@ MonoBehaviour:
   cameraZoomRange: 5
   cameraZoom: 0
   cameraZoomDamping: 2
+  bothHandsPosition: {fileID: 1793494152}
   rightHandBone: {fileID: 4226186178099341032}
   leftHandBone: {fileID: 2127110359588815951}
   hipsBone: {fileID: 4811939082625594880}
   inventoryCapacity: 5
   items: []
+  movePoint: {fileID: 4032049357520637817, guid: 7eb78631d7d363049832fd753de7f151,
+    type: 3}
   interactionTarget: {fileID: 0}
   rightholsteredOffsetPosition: {x: 0.008, y: -0.001, z: -0.002}
   rightholsteredOffsetRotation: {x: 0, y: -265, z: 60}
@@ -721,7 +754,7 @@ NavMeshAgent:
   m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 1
   m_AngularSpeed: 120
   m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
@@ -761,6 +794,7 @@ Transform:
   - {fileID: 3873715003489710025}
   - {fileID: 4888964064212174620}
   - {fileID: 7149629654985300648}
+  - {fileID: 1793494152}
   m_Father: {fileID: 4811939082625594880}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

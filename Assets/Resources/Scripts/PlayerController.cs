@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour
 			items.Add(null);
 		}
 		agent.speed = speed;
+
+		movePoint = Instantiate(movePoint);
+		movePoint.SetActive(false);
 	}
 
 	public Animator animator;
@@ -54,7 +57,9 @@ public class PlayerController : MonoBehaviour
 	public List<Item> items;
 
 
+	public GameObject movePoint;
 	public GameObject interactionTarget;
+
 	public delegate void TargetReached(GameObject target);
 
 	private event TargetReached TargetReachedEvent;
@@ -101,65 +106,69 @@ public class PlayerController : MonoBehaviour
 		Camera.main.transform.LookAt(transform.position);
 
 
-        if (Input.GetMouseButtonDown(0))
+		if (hp > 0 && canMove)
 		{
-			if (canMove)
+			if (Input.GetMouseButtonDown(0))
 			{
-				Ray r = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
-				RaycastHit hit;
-				if (Physics.Raycast(r, out hit))
-				{
-					if (hit.collider.tag == "Terrain")
+					Ray r = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
+					RaycastHit hit;
+					if (Physics.Raycast(r, out hit))
 					{
-						interactionTarget = null;
-						GameObject g = new GameObject("MovePoint");
-						g.transform.position = hit.point;
-						MoveTo(g);
-						OnTargetReached += (args) =>
+						if (hit.collider.tag == "Terrain")
 						{
-							if (args.Equals(g))
-								Destroy(g);
-						};
+							interactionTarget = null;
+						//GameObject g = new GameObject("MovePoint");
+						movePoint.SetActive(true);
+							movePoint.transform.position = hit.point;
+							MoveTo(movePoint);
+							OnTargetReached += (args) =>
+							{
+								if (args.Equals(movePoint))
+									movePoint.SetActive(false);
+							};
+
+						}
+						else if (hit.collider.GetComponent<IInteractable>() != null)
+						{
+							hit.collider.GetComponent<IInteractable>().OnInteraction();
+						}
 
 					}
-					else if (hit.collider.GetComponent<IInteractable>() != null)
+			}
+
+			if (Input.GetMouseButtonDown(1))
+			{
+				if (!HasFreeHand(Hand.Right) || !HasFreeHand(Hand.Left))
+				{
+					Ray r = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
+					RaycastHit hit;
+					if (Physics.Raycast(r, out hit))
 					{
-						hit.collider.GetComponent<IInteractable>().OnInteraction();
-					}
+						if (hit.collider.tag == "Terrain")
+						{
+							GameObject g = new GameObject("DropPoint");
+							g.transform.position = hit.point;
+							MoveTo(g);
+							OnTargetReached += (args) =>
+							{
+								PutDownHeldObject(args);
+								Destroy(args);
+							};
 
+						}
+					}
 				}
 			}
-		}
 
-		if (Input.GetMouseButtonDown(1))
-		{
-			if (!HasFreeHand(Hand.Right) || !HasFreeHand(Hand.Left))
-			{
-				Ray r = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
-				RaycastHit hit;
-				if (Physics.Raycast(r, out hit))
-				{
-					if (hit.collider.tag == "Terrain")
-					{
-						GameObject g = new GameObject("DropPoint");
-						g.transform.position = hit.point;
-						MoveTo(g);
-						OnTargetReached += (args) =>
-						{
-							PutDownHeldObject(args);
-							Destroy(args);
-						};
 
-					}
-				}
-			}
+			if (Input.GetKeyDown(KeyCode.Z))
+				DrawTool(Hand.Left);
+			if (Input.GetKeyDown(KeyCode.X))
+				DrawTool(Hand.Right);
+
 		}
 
 
-		if (Input.GetKeyDown(KeyCode.Z))
-			DrawTool(Hand.Left);
-		if (Input.GetKeyDown(KeyCode.X))
-			DrawTool(Hand.Right);
 
 		if (Input.GetKeyDown(KeyCode.Tab))
 		{
@@ -172,6 +181,14 @@ public class PlayerController : MonoBehaviour
 				GameUI.instance.HideGuideScreen();
 			else
 				GameUI.instance.ShowGuideScreen();
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			if (!GameUI.instance.menu.activeInHierarchy)
+				GameUI.instance.ShowMenu();
+			else
+				GameUI.instance.HideMenu();
 		}
 
 		if (interactionTarget != null)
@@ -215,6 +232,7 @@ public class PlayerController : MonoBehaviour
 		{
 			canMove = false;
 			animator.SetTrigger("Die");
+			GameUI.instance.ShowDeathScreen();
 		}
 	}
 
