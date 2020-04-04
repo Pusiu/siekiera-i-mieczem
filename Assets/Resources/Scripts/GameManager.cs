@@ -10,14 +10,15 @@ public class GameManager : MonoBehaviour
 	public List<BaseQuest> questList = new List<BaseQuest>();
 	public List<NPC> npcs;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+	bool gameOver = false;
+	// Start is called before the first frame update
+	void Start()
+	{
 		instance = this;
 		if (GameUI.instance == null)
 		{
 			SceneManager.LoadScene("UIScene", LoadSceneMode.Additive);
-			SceneManager.sceneLoaded += (s,e) =>
+			SceneManager.sceneLoaded += (s, e) =>
 			{
 				GetComponent<TimeAndWeather>().StartCycle();
 				GameUI.instance.SetupQuestLogEntries();
@@ -25,7 +26,26 @@ public class GameManager : MonoBehaviour
 		}
 
 		npcs.AddRange(FindObjectsOfType<NPC>());
-    }
+		questList.Clear();
+		questList.AddRange(FindObjectsOfType<BaseQuest>());
+		InvokeRepeating("CheckQuestStatuses", 1, 1);
+	}
+
+	public void CheckQuestStatuses()
+	{
+		if (gameOver)
+			return;
+
+		if (questList.FindAll(x => x.questState != BaseQuest.QuestState.Completed && x.isMainQuest).Count == 0)
+		{
+			gameOver = true;
+			ExecuteAction(() =>
+			{
+				GameUI.instance.ShowGameWinScreen();
+			}, 5);
+		}
+
+	}
 
     // Update is called once per frame
     void Update()

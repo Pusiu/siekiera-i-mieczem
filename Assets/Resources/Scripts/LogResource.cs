@@ -7,10 +7,14 @@ public class LogResource : ResourceGenerator
 	public int hitsToDestroy = 3;
 	public GameObject branchPrefab;
 
-	public override void Gather()
+	public override bool Gather()
 	{
-		base.Gather();
-		Chop();
+		if (base.Gather())
+		{
+			Chop();
+			return true;
+		}
+		return false;
 	}
 
 	public void Chop()
@@ -20,6 +24,9 @@ public class LogResource : ResourceGenerator
 		{
 			if (PlayerController.instance.interactionTarget == gameObject)
 			{
+				if (!PlayerController.instance.DrainEnergy(workEnergyDrainPerHit))
+					return;
+
 				PlayerController.instance.animator.SetBool("LeftHand", (PlayerController.instance.hands[PlayerController.Hand.Left] == t) ? true : false);
 				PlayerController.instance.animator.SetBool("RightHand", (PlayerController.instance.hands[PlayerController.Hand.Right] == t) ? true : false);
 				PlayerController.instance.animator.SetTrigger("AttackTrigger");

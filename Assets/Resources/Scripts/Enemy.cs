@@ -28,7 +28,7 @@ public class Enemy : LivingBeing
 
 		if (isInCombat)
 		{
-			if (PlayerController.instance.hp <=0)
+			if (PlayerController.instance.health <=0)
 			{
 				isInCombat = false;
 				return;
@@ -59,7 +59,7 @@ public class Enemy : LivingBeing
 				MoveTo(randomPoint);
 			}
 
-			if (activityZone.bounds.Contains(PlayerController.instance.transform.position) && PlayerController.instance.hp > 0)
+			if (activityZone.bounds.Contains(PlayerController.instance.transform.position) && PlayerController.instance.health > 0)
 			{
 				if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) <= spottingDistance)
 				{

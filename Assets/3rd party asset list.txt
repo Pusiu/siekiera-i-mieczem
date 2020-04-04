@@ -1,3 +1,13 @@
 poly.google.com:
 	Medieval cart by Kenney
 	Grass by Google
+	
+https://opengameart.org/	
+	https://opengameart.org/content/37-hitspunchesby Independent.nu
+	https://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud by TinyWorlds
+	https://opengameart.org/content/5-hit-sounds-dying by TinyWorlds
+	https://opengameart.org/content/items-door-fire-weapon-hits by Jute
+	
+freesound.org
+	https://freesound.org/people/Imjeax/sounds/427400/ - Forest Ambient LOOP by Imjeax
+	https://freesound.org/people/Nimlos/sounds/422048/ - forest_cicada_loop.flac by Nimlos

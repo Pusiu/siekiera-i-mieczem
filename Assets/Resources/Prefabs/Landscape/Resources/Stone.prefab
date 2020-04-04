@@ -95,9 +95,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "Kamie\u0144"
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 32a63987069c517479c9f5ff69dbce3e, type: 3}
   handlingMethod: 0
   resourceType: 0
+  isOnCart: 0
 --- !u!65 &7483187212673018138
 BoxCollider:
   m_ObjectHideFlags: 0

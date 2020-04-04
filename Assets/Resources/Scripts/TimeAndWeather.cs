@@ -38,7 +38,7 @@ public class TimeAndWeather : MonoBehaviour
 		float xrot;
 		if (currentTime >= sunrise && currentTime <= sunset)
 		{
-			if (currentTime >= sunrise && currentTime <= sunrise + 100)
+			if (currentTime >= sunrise)
 			{
 				float progress = (float)(GetDifferenceInSeconds(currentTime, sunrise)) / GetDifferenceInSeconds(sunrise + 100, sunrise);
 				sun.shadowStrength = Mathf.Lerp(0, 1, progress);
@@ -55,7 +55,7 @@ public class TimeAndWeather : MonoBehaviour
 		}
 		else
 		{
-			if (currentTime >= sunset && currentTime <= sunset + 100)
+			if (currentTime >= sunset || currentTime < sunrise)
 			{
 				float progress = (GetDifferenceInSeconds(currentTime, sunset)) / (float)GetDifferenceInSeconds(sunset + 100, sunset);
 				sun.shadowStrength = Mathf.Lerp(1, 0, progress);

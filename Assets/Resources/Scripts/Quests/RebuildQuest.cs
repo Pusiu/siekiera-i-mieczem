@@ -24,6 +24,10 @@ public class RebuildQuest : BaseQuest
 			resourceArea.gameObject.SetActive(true);
 			resourceArea.SetResourceText(woodAmount, stoneAmount);
 		}
+		else
+		{
+			resourceArea.gameObject.SetActive(false);
+		}
 	}
 
 	private void ResourceArea_OnResourceAreaUpdateEvent()

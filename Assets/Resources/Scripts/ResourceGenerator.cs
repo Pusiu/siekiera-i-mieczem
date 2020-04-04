@@ -8,13 +8,17 @@ public class ResourceGenerator : Resource //MonoBehaviour, IInteractable
 	public bool requireTool = true;
 	public Tool.ToolType requiredToolType;
 	//public Resource.ResourceType resourceType;
+	public float workEnergyDrainPerHit = 10;
 	public int count = 1;
 
-	public virtual void Gather()
+	public virtual bool Gather()
 	{
 		if (requireTool && PlayerController.instance.GetToolByType(requiredToolType) == null)
+		{
 			GameUI.instance.ShowHint("Nie masz wymaganego narzędzia!");
-
+			return false;
+		}
+		return true;
 		//Debug.LogWarning("Resource generator hasn't specified gather method");
 	}
 
@@ -36,11 +40,12 @@ public class ResourceGenerator : Resource //MonoBehaviour, IInteractable
 
 			if (canBePickedUp)
 			{
-				if (requireTool && PlayerController.instance.GetToolByType(requiredToolType) != null)
+				PlayerController.Hand h = (handlingMethod == HandlingMethod.InOneHand) ? PlayerController.Hand.Any : PlayerController.Hand.Both;
+				if (PlayerController.instance.HasFreeHand(h))
 				{
+					Pickup();
 					return;
 				}
-				Pickup();
 			}
 			Gather();
 		};

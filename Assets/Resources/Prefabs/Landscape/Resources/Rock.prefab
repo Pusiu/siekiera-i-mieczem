@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3600838704351733680}
   - component: {fileID: 3887794304785542715}
   - component: {fileID: 3887794304785542714}
+  - component: {fileID: 998591568}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -27,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3887794304785542712}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4961276, y: 1.6429161, z: 1.6429161}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &7784483346324672375
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -93,11 +94,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86b0154aa1e7a143ad34c63aeb3e423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: 
+  image: {fileID: 0}
+  handlingMethod: 1
+  resourceType: 0
+  isOnCart: 0
+  canBePickedUp: 1
   requireTool: 1
   requiredToolType: 1
+  workEnergyDrainPerHit: 5
+  count: 5
   resourcePrefab: {fileID: 7483187212673018139, guid: 01fde3fd7f301c949b24ce0c6d37d29d,
     type: 3}
-  count: 5
   hitsToDestroy: 3
 --- !u!65 &3887794304785542714
 BoxCollider:
@@ -112,3 +120,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.417861, y: 1.361109, z: 1.752468}
   m_Center: {x: -0.011410981, y: -0.00658813, z: -0.123765804}
+--- !u!208 &998591568
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887794304785542712}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.87600005}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.011000001, y: -0.007, z: -0.124000005}
+  m_TimeToStationary: 0.5

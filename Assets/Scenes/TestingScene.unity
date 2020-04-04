@@ -1663,18 +1663,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 885428453}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &887153184 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3438430774446213213, guid: 4896e6718d1e45b40a123cc9356d39fd,
-    type: 3}
-  m_PrefabInstance: {fileID: 3438430774641273469}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &961295256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2979,6 +2967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  stepPrefab: {fileID: 0}
   agent: {fileID: 0}
   animator: {fileID: 0}
 --- !u!95 &1416011247
@@ -3214,18 +3203,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489867371}
   m_Mesh: {fileID: -1845931679895651543, guid: a8230600e8ab56849a4388e7ebdf5bd2, type: 3}
---- !u!114 &1589086273 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3438430773746868796, guid: 4896e6718d1e45b40a123cc9356d39fd,
-    type: 3}
-  m_PrefabInstance: {fileID: 3438430774641273469}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1611781124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3437,6 +3414,7 @@ MonoBehaviour:
   canBePickedUp: 0
   requireTool: 1
   requiredToolType: 0
+  workEnergyDrainPerHit: 10
   count: 1
   logPrefab: {fileID: 6588339707627834101, guid: b374b6f1086ffad429a8ee9a47228d5f,
     type: 3}
@@ -3965,6 +3943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  stepPrefab: {fileID: 0}
   agent: {fileID: 0}
   animator: {fileID: 0}
 --- !u!195 &2051184913
@@ -44024,16 +44003,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3438430773959662669, guid: 4896e6718d1e45b40a123cc9356d39fd,
-        type: 3}
-      propertyPath: stoneText
-      value: 
-      objectReference: {fileID: 887153184}
-    - target: {fileID: 3438430773959662669, guid: 4896e6718d1e45b40a123cc9356d39fd,
-        type: 3}
-      propertyPath: woodText
-      value: 
-      objectReference: {fileID: 1589086273}
     - target: {fileID: 3438430773959662674, guid: 4896e6718d1e45b40a123cc9356d39fd,
         type: 3}
       propertyPath: m_Name

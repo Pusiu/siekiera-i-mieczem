@@ -106,7 +106,7 @@ public class GameUI : MonoBehaviour
 			log.SetActive(false);
 			Text[] texts = log.GetComponentsInChildren<Text>();
 			texts[0].text = q.questName;
-			texts[1].text = q.GetDescription();
+			texts[1].text = "";
 			questLogEntries.Add(q.name, log);
 		}
 	}
@@ -251,7 +251,7 @@ public class GameUI : MonoBehaviour
 	void Update()
 	{
 
-		hpSlider.value = PlayerController.instance.hp;
+		hpSlider.value = PlayerController.instance.health;
 		energySlider.value = PlayerController.instance.energy;
 
 		if (currentSpeechFocus != null)
@@ -308,8 +308,11 @@ public class GameUI : MonoBehaviour
 		{
 			if (q.questState == BaseQuest.QuestState.Active)
 			{
-				questLogEntries[q.name].GetComponentsInChildren<Text>()[1].text = q.GetDescription();
 				questLogEntries[q.name].SetActive(true);
+				GameManager.instance.ExecuteAction(() =>
+				{
+					questLogEntries[q.name].GetComponentsInChildren<Text>()[1].text = q.GetDescription();
+				}, 0.5f);
 			}
 			else
 			{

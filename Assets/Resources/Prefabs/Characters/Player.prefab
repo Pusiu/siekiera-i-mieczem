@@ -715,11 +715,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8ca8442fb5c144ea34b3c37b695279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  health: 100
+  stepPrefab: {fileID: 2771912835370890853, guid: 37e4567c74ecb054a965ca4f3b03a122,
+    type: 3}
+  agent: {fileID: 0}
+  animator: {fileID: 0}
   energy: 100
   canMove: 1
-  animator: {fileID: 0}
-  agent: {fileID: 0}
   speed: 4
   cameraOffset: {x: 10, y: 10, z: 10}
   cameraZoomRange: 5

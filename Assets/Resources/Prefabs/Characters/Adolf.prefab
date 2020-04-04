@@ -862,6 +862,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  stepPrefab: {fileID: 2771912835370890853, guid: 37e4567c74ecb054a965ca4f3b03a122,
+    type: 3}
   agent: {fileID: 0}
   animator: {fileID: 0}
   activityZone: {fileID: 0}

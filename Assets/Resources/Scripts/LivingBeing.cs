@@ -8,13 +8,22 @@ public class LivingBeing : MonoBehaviour, IInteractable, IAttackable
 {
 	public int health = 5;
 
+	public GameObject stepPrefab;
 	public NavMeshAgent agent;
 	public Animator animator;
 
-	private void Awake()
+	public void Awake()
 	{
 		agent = GetComponent<NavMeshAgent>();
 		animator = GetComponent<Animator>();
+		if (stepPrefab != null)
+			stepPrefab = Instantiate(stepPrefab, transform, false);
+	}
+
+	public void PlayStep()
+	{
+		if (stepPrefab != null)
+			stepPrefab.GetComponent<StepSound>().Play();
 	}
 
 	public virtual void OnInteraction()

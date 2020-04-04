@@ -4,19 +4,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : LivingBeing
 {
 	public static PlayerController instance;
 
 	public enum Hand { Left, Right, Any, Both};
 
-	public int hp = 100;
-	public int energy = 100;
+	//public int health = 100;
+	public float energy = 100;
 
 	public bool canMove = true;
 
+	public override void OnInteraction()
+	{
+		//base.OnInteraction();
+	}
+
 	private void Awake()
 	{
+		base.Awake();
 		instance = this;
 	}
 
@@ -42,8 +48,9 @@ public class PlayerController : MonoBehaviour
 		movePoint.SetActive(false);
 	}
 
-	public Animator animator;
-	public NavMeshAgent agent;
+
+	//public Animator animator;
+	//public NavMeshAgent agent;
 	public float speed = 5;
 	public Vector3 cameraOffset = new Vector3(10,10,10);
 	public float cameraZoomRange = 5;
@@ -106,7 +113,7 @@ public class PlayerController : MonoBehaviour
 		Camera.main.transform.LookAt(transform.position);
 
 
-		if (hp > 0 && canMove)
+		if (health > 0 && canMove)
 		{
 			if (Input.GetMouseButtonDown(0))
 			{
@@ -118,7 +125,7 @@ public class PlayerController : MonoBehaviour
 						{
 							interactionTarget = null;
 						//GameObject g = new GameObject("MovePoint");
-						movePoint.SetActive(true);
+							movePoint.SetActive(true);
 							movePoint.transform.position = hit.point;
 							MoveTo(movePoint);
 							OnTargetReached += (args) =>
@@ -149,9 +156,12 @@ public class PlayerController : MonoBehaviour
 							GameObject g = new GameObject("DropPoint");
 							g.transform.position = hit.point;
 							MoveTo(g);
+							movePoint.SetActive(true);
+							movePoint.transform.position = hit.point;
 							OnTargetReached += (args) =>
 							{
 								PutDownHeldObject(args);
+								movePoint.SetActive(false);
 								Destroy(args);
 							};
 
@@ -225,10 +235,10 @@ public class PlayerController : MonoBehaviour
 		agent.isStopped = false;
 	}
 
-	public void ReceiveDamage(int damage)
+	public override void ReceiveDamage(int damage)
 	{
-		hp -= damage;
-		if (hp <= 0)
+		health -= damage;
+		if (health <= 0)
 		{
 			canMove = false;
 			animator.SetTrigger("Die");
@@ -574,6 +584,20 @@ public class PlayerController : MonoBehaviour
 			}
 			return false;
 		}
+	}
+
+	public bool DrainEnergy(float en)
+	{
+		if (energy >= en)
+		{
+			energy -= en;
+			if (energy <= 0)
+				energy = 0;
+
+			return true;
+		}
+		GameUI.instance.ShowHint("Nie masz wystarczająco energii by to zrobić.\nWróć do wioski i prześpij się przy ognisku");
+		return false;
 	}
 
 

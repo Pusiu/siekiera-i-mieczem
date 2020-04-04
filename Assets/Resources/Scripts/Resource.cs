@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Resource : PickableObject
 {
-    public enum ResourceType { Stone, Wood};
+    public enum ResourceType { Stone, Wood, Flower};
 	public ResourceType resourceType;
 	public bool isOnCart = false;
 

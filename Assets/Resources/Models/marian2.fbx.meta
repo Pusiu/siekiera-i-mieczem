@@ -790,7 +790,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.0102933915
+        functionName: PlayStep
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 407c7a53f885cd44b9965e62cb6e2a27,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.6682005
+        functionName: PlayStep
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 407c7a53f885cd44b9965e62cb6e2a27,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -1080,7 +1096,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: PlayStep
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 407c7a53f885cd44b9965e62cb6e2a27,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5721948
+        functionName: PlayStep
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 407c7a53f885cd44b9965e62cb6e2a27,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

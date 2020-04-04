@@ -7,10 +7,14 @@ public class Rock : ResourceGenerator
 	public GameObject resourcePrefab;
 	public int hitsToDestroy = 3;
 
-	public override void Gather()
+	public override bool Gather()
 	{
-		base.Gather();
-		Mine();
+		if (base.Gather())
+		{
+			Mine();
+			return true;
+		}
+		return false;
 	}
 
 	public void Mine()
@@ -20,6 +24,9 @@ public class Rock : ResourceGenerator
 		{
 			if (PlayerController.instance.interactionTarget == gameObject)
 			{
+				if (!PlayerController.instance.DrainEnergy(workEnergyDrainPerHit))
+					return;
+
 				PlayerController.instance.animator.SetBool("LeftHand", (PlayerController.instance.hands[PlayerController.Hand.Left] == t) ? true : false);
 				PlayerController.instance.animator.SetBool("RightHand", (PlayerController.instance.hands[PlayerController.Hand.Right] == t) ? true : false);
 				PlayerController.instance.animator.SetTrigger("AttackTrigger");
@@ -45,7 +52,8 @@ public class Rock : ResourceGenerator
 		}
 		else
 		{
-			Pickup();
+			if (canBePickedUp)
+				Pickup();
 		}
 	}
 }

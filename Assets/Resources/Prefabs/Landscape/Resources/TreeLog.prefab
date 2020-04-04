@@ -124,13 +124,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 88323a33d4085154e9aa563c719593c9, type: 3}
   handlingMethod: 2
   resourceType: 1
   isOnCart: 0
   canBePickedUp: 1
   requireTool: 1
   requiredToolType: 0
-  count: 1
+  workEnergyDrainPerHit: 10
+  count: 3
   hitsToDestroy: 3
-  branchPrefab: {fileID: 0}
+  branchPrefab: {fileID: 3184519443540205676, guid: b66e5dd8fd1361341a1917182c7d128f,
+    type: 3}
