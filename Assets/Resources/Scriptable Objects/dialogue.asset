@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5635389662882477847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Powiniene\u015B zacz\u0105\u0107 od chaty, \u017Ceby\u015Bmy nie spali pod
+    go\u0142ym niebem."
+--- !u!114 &-4768858792541078457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Ja z \u017Con\u0105 zostali\u015Bmy z nadziej\u0105, \u017Ce kiedy\u015B
+    zjawi si\u0119 kto\u015B, kto pomo\u017Ce nam odbydowa\u0107 nasz\u0105 osad\u0119.
+    Niestety, przez te kilka miesci\u0119cy nikt si\u0119 nie pojawi\u0142, a sam
+    niestety nie dam rady jej odbydowa\u0107. "
+--- !u!114 &-1756556174219723927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: "Hmmm, od czego by tu zacz\u0105\u0107?"
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c577d62e81f2240b27e3f1a11b9d5e, type: 3}
+  m_Name: dialogue
+  m_EditorClassIdentifier: 
+  lines:
+  - {fileID: 4864249770867588010}
+  - {fileID: 3243595966788429660}
+  - {fileID: -4768858792541078457}
+  - {fileID: 2604062711917490435}
+  - {fileID: 790402288696903175}
+  - {fileID: 3758267330187262058}
+  - {fileID: -1756556174219723927}
+  - {fileID: -5635389662882477847}
+  - {fileID: 2498092020066354656}
+--- !u!114 &790402288696903175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: "To straszne. Ja mog\u0119 wam pom\xF3c. Troch\u0119 si\u0119 na tym znam
+    i jestem pe\u0142en si\u0142."
+--- !u!114 &2498092020066354656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: "Dobry pomy\u015Bl. Zabior\u0119 sie od razu do pracy."
+--- !u!114 &2604062711917490435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Lata ju\u017C nie te, nie mam tyle si\u0142y. Jeste\u015B pierwsz\u0105
+    osob\u0105, kt\xF3ra przyby\u0142a do naszej osady od splondrowania przez zbir\xF3w."
+--- !u!114 &3243595966788429660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Smutna historia. Jaki\u015B czas temu napadli na nasz\u0105 osad\u0119 zbiry
+    i ca\u0142\u0105 spl\u0105drowali. Inni mieszka\u0144cy uciekli i znale\u017Ali
+    inn\u0105 osad\u0119 do mieszkania. "
+--- !u!114 &3758267330187262058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Naprawd\u0119? Nie my\u015Bla\u0142em, \u017Ce do\u017Cyje takiej chwili.
+    Dzi\u0119kujemy Ci bardzo!"
+--- !u!114 &4864249770867588010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: "Witaj, co sta\u0142o si\u0119 z wasz\u0105 osad\u0105?"
+--- !u!114 &5444508676047276190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
