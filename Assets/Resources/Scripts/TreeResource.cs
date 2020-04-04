@@ -7,19 +7,9 @@ public class TreeResource : ResourceGenerator
 	public GameObject logPrefab;
 	public int hitsToDestroy = 3;
 
-	public override void OnInteraction()
+	public override void Gather()
 	{
-		if (PlayerController.instance.GetToolByType(Tool.ToolType.Axe) == null)
-			return;
-
-		base.OnInteraction();
-		PlayerController.instance.OnTargetReached += (args) =>
-		{
-			if (args != gameObject)
-				return;
-			PlayerController.instance.ClearOnTargetReachedListeners();
-			Chop();
-		};
+		Chop();
 	}
 
 	public void Chop()

@@ -7,8 +7,8 @@ public class RebuildQuest : BaseQuest
 	public int woodAmount;
 	public int stoneAmount;
 	public ResourceArea resourceArea;
-	public GameObject originalBuilding;
-	public GameObject rebuildedBuildingPrefab;
+	public GameObject destroyedBuilding;
+	public GameObject rebuildedBuilding;
 
 	// Start is called before the first frame update
 	void Start()
@@ -39,6 +39,8 @@ public class RebuildQuest : BaseQuest
 				PlayerController.instance.canMove = false;
 				GameManager.instance.ExecuteAction(() =>
 				{
+					rebuildedBuilding.SetActive(true);
+					destroyedBuilding.SetActive(false);
 					GameUI.instance.FadeOutRebuildingScreen();
 					PlayerController.instance.canMove = true;
 					resourceArea.RemoveResources();

@@ -43,8 +43,14 @@ public class PickableObject : Item, IInteractable
 
 		if (handlingMethod != HandlingMethod.InOneHand)
 		{
-			PlayerController.instance.animator.SetBool("LeftHand", true);
-			PlayerController.instance.animator.SetBool("RightHand", true);
+			if (handlingMethod == HandlingMethod.InTwoHands)
+			{
+				PlayerController.instance.animator.SetBool("LeftHand", true);
+				PlayerController.instance.animator.SetBool("RightHand", true);
+			}
+			else
+				PlayerController.instance.animator.SetBool("Shoulder", true);
+
 			PlayerController.instance.animator.SetTrigger("Pickup");
 
 			GameManager.instance.ExecuteAction(() =>
@@ -55,6 +61,7 @@ public class PickableObject : Item, IInteractable
 		}
 		else
 		{
+			PlayerController.instance.animator.SetBool("Shoulder", false);
 			PlayerController.instance.animator.SetBool("LeftHand", false);
 			PlayerController.instance.animator.SetBool("RightHand", false);
 			if (PlayerController.instance.HasFreeHand(PlayerController.Hand.Any))

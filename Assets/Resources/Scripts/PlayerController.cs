@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
 	public float cameraZoomRange = 5;
 	public float cameraZoom = 0;
 	public float cameraZoomDamping = 2;
+	public Transform bothHandsPosition;
 	public Transform rightHandBone;
 	public Transform leftHandBone;
 	public Transform hipsBone;
@@ -220,6 +221,7 @@ public class PlayerController : MonoBehaviour
 	public void PutDownHeldObject(GameObject location)
 	{
 		interactionTarget = null;
+		animator.SetBool("Shoulder", false);
 		animator.SetBool("RightHand", false);
 		animator.SetBool("LeftHand", false);
 
@@ -257,7 +259,19 @@ public class PlayerController : MonoBehaviour
 
 		if (hands[Hand.Left].Equals(hands[Hand.Right]))
 		{
-			animator.SetBool("LeftHand", true);
+			if (hands[Hand.Left].handlingMethod == Item.HandlingMethod.InTwoHands)
+			{
+				animator.SetBool("RightHand", true);
+				animator.SetBool("LeftHand", true);
+				animator.SetBool("Shoulder", false);
+			}
+			else
+			{
+				animator.SetBool("RightHand", false);
+				animator.SetBool("LeftHand", false);
+				animator.SetBool("Shoulder", true);
+			}
+
 			hands[Hand.Left] = null;
 		}
 		hands[h] = null;
@@ -534,7 +548,7 @@ public class PlayerController : MonoBehaviour
 			{
 				hands[Hand.Left] = hands[Hand.Right] = i;
 				i.gameObject.SetActive(true);
-				i.transform.SetParent(rightHandBone);
+				i.transform.SetParent((i.handlingMethod == Item.HandlingMethod.InTwoHands) ? bothHandsPosition : rightHandBone);
 				i.transform.localPosition = Vector3.zero;
 				i.transform.localRotation = Quaternion.identity;
 				

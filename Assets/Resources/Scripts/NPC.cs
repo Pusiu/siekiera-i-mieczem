@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour, IInteractable
 {
+	public int npcID = -1;
 	public DialogueScriptableObject currentDialogue;
 	public Animator animator;
 	public int currentDialogueLineIndex = 0;
@@ -12,6 +13,8 @@ public class NPC : MonoBehaviour, IInteractable
 	void Start()
     {
 		animator = GetComponent<Animator>();
+		if (npcID == -1)
+			Debug.LogError($"NPC {name} ID is not set!");
     }
 
     // Update is called once per frame

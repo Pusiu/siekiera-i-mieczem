@@ -12,6 +12,7 @@ public class GameUI : MonoBehaviour
 	public Slider hpSlider;
 	public Slider energySlider;
 	public RectTransform speechBubble;
+	public GameObject hintPanel;
 	public GameObject guideScreen;
 	public GameObject guideScreenEntriesTitles;
 	public GameObject guideScreenEntriesContents;
@@ -358,6 +359,35 @@ public class GameUI : MonoBehaviour
 		StopAllCoroutines();
 		speechBubble.gameObject.SetActive(true);
 		StartCoroutine(TypewriteCoroutine(text));
+	}
+
+	public void ShowHint(string text)
+	{
+		hintPanel.GetComponentInChildren<Text>().text = text;
+		if (hideTime > Time.time)
+		{
+			StopCoroutine(HintCoroutine());
+		}
+		else
+			hintPanel.GetComponent<Animator>().SetTrigger("HintTrigger");
+
+		hideTime = Time.time + 5;
+		StartCoroutine(HintCoroutine());
+	}
+
+	public void ExitToMainMenu()
+	{
+		Application.Quit();
+	}
+
+	float hideTime;
+	IEnumerator HintCoroutine()
+	{
+		if (Time.time < hideTime)
+		{
+			yield return new WaitForEndOfFrame();
+		}
+		hintPanel.GetComponent<Animator>().SetTrigger("HintTrigger");
 	}
 
 	IEnumerator TypewriteCoroutine(string text)

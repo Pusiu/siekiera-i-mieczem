@@ -7,14 +7,9 @@ public class Rock : ResourceGenerator
 	public GameObject resourcePrefab;
 	public int hitsToDestroy = 3;
 
-	public override void OnInteraction()
+	public override void Gather()
 	{
-		PlayerController.instance.MoveTo(gameObject);
-		PlayerController.instance.OnTargetReached += (args) =>
-		{
-			Mine();
-			PlayerController.instance.ClearOnTargetReachedListeners();
-		};
+		Mine();
 	}
 
 	public void Mine()
@@ -46,6 +41,10 @@ public class Rock : ResourceGenerator
 				}
 				Invoke("Mine", 2);
 			}
+		}
+		else
+		{
+			Pickup();
 		}
 	}
 }

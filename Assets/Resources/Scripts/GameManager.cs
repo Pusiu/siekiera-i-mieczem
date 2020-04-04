@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager instance;
 	public List<BaseQuest> questList = new List<BaseQuest>();
+	public List<NPC> npcs;
 
     // Start is called before the first frame update
     void Start()

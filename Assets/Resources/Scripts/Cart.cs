@@ -25,14 +25,24 @@ public class Cart : Item, IInteractable
 	public Transform GetFreePlaceForResource(Resource.ResourceType t)
 	{
 		List<Transform> l = null;
+		List<Transform> others = null;
 		switch (t)
 		{
 			case Resource.ResourceType.Stone:
 				l = stonesPos;
+				others = treesPos;
 				break;
 			case Resource.ResourceType.Wood:
 				l = treesPos;
+				others = stonesPos;
 				break;
+		}
+
+		//don't allow storing stone when there are logs or vice versa
+		foreach (Transform it in others)
+		{
+			if (it.childCount > 0)
+				return null;
 		}
 
 		foreach (Transform it in l)
