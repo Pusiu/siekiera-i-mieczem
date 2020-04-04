@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(BoxCollider))]
 public class ResourceArea : MonoBehaviour
 {
+	public Text stoneText;
+	public Text woodText;
+
 	BoxCollider col;
 
 	public Dictionary<Resource.ResourceType, int> resourcesCount = new Dictionary<Resource.ResourceType, int>();
@@ -18,6 +22,11 @@ public class ResourceArea : MonoBehaviour
 		resourcesCount.Add(Resource.ResourceType.Stone, 0);
 		resourcesCount.Add(Resource.ResourceType.Wood, 0);
 		col = GetComponent<BoxCollider>();
+	}
+
+	private void Start()
+	{
+		gameObject.SetActive(false);
 	}
 
 
@@ -42,6 +51,12 @@ public class ResourceArea : MonoBehaviour
 			}
 		}
 		OnResourceAreaUpdateEvent();
+	}
+
+	public void SetResourceText(int maxWood, int maxStone)
+	{
+		stoneText.text = $"{resourcesCount[Resource.ResourceType.Stone].ToString()}/{maxStone.ToString()}";
+		woodText.text = $"{resourcesCount[Resource.ResourceType.Wood].ToString()}/{maxWood.ToString()}";
 	}
 
 	public void RemoveResources()

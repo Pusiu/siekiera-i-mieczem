@@ -64,11 +64,11 @@ public class DialogueScriptableObjectEditor : Editor
 				o.lines.Clear();
 				return;
 			}
-			EditorGUILayout.BeginHorizontal();
 			int currentTypeIndex = types.IndexOf(o.lines[i].GetType());
 			if (currentTypeIndex >= 0)
 			{
-				currentTypeIndex = EditorGUILayout.Popup(currentTypeIndex, types.Select(x => x.Name).ToArray());
+				EditorGUILayout.BeginHorizontal();
+				currentTypeIndex = EditorGUILayout.Popup(currentTypeIndex, types.Select(x => x.Name).ToArray(), new GUILayoutOption[] { GUILayout.MinWidth(150)});
 				if (types[currentTypeIndex] != o.lines[i].GetType())
 				{
 					o.lines[i] = (DialogueAction)ScriptableObject.CreateInstance(types[currentTypeIndex]); //(DialogueAction)Activator.CreateInstance(types[currentTypeIndex]);
@@ -79,9 +79,15 @@ public class DialogueScriptableObjectEditor : Editor
 				}
 
 				DrawPlusMinus(i);
+				EditorGUILayout.EndHorizontal();
+
 				d.DrawInspectorLine();
 			}
-			EditorGUILayout.EndHorizontal();
+			Rect rect = EditorGUILayout.GetControlRect(false, 1);
+
+			rect.height = 1;
+
+			EditorGUI.DrawRect(rect, new Color(0.5f, 0.5f, 0.5f, 1));
 		}
 		DrawPlusMinus(-1);
 

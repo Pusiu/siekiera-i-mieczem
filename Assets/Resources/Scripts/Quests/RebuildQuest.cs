@@ -16,8 +16,19 @@ public class RebuildQuest : BaseQuest
 		resourceArea.OnResourceAreaUpdateEvent += ResourceArea_OnResourceAreaUpdateEvent;
 	}
 
+	public override void SetState(QuestState state)
+	{
+		base.SetState(state);
+		if (state == QuestState.Active)
+		{
+			resourceArea.gameObject.SetActive(true);
+			resourceArea.SetResourceText(woodAmount, stoneAmount);
+		}
+	}
+
 	private void ResourceArea_OnResourceAreaUpdateEvent()
 	{
+		resourceArea.SetResourceText(woodAmount, stoneAmount);
 		//might potentialy delete more objects than needed
 		if (resourceArea.resourcesCount[Resource.ResourceType.Stone] >= stoneAmount)
 		{
@@ -31,7 +42,8 @@ public class RebuildQuest : BaseQuest
 					GameUI.instance.FadeOutRebuildingScreen();
 					PlayerController.instance.canMove = true;
 					resourceArea.RemoveResources();
-				}, 2.0f);
+					resourceArea.gameObject.SetActive(false);
+				}, 5.0f);
 			}
 		}
 	}

@@ -17,6 +17,10 @@ public class GameUI : MonoBehaviour
 	public GameObject guideScreenEntriesContents;
 	public GameObject timePassOverlay;
 
+	public GameObject questLogContent;
+	public GameObject questLogEntryPrefab;
+	public Dictionary<string, GameObject> questLogEntries = new Dictionary<string, GameObject>();
+
 	public GameObject currentSpeechFocus = null;
 	public float typewriteLetterTime = 0.1f;
 
@@ -88,6 +92,19 @@ public class GameUI : MonoBehaviour
 		}
 		SetupGuideScreenCallbacks();
     }
+
+	public void SetupQuestLogEntries()
+	{
+		foreach (BaseQuest q in GameManager.instance.questList)
+		{
+			GameObject log = Instantiate(questLogEntryPrefab, questLogContent.transform);
+			log.SetActive(false);
+			Text[] texts = log.GetComponentsInChildren<Text>();
+			texts[0].text = q.questName;
+			texts[1].text = q.GetDescription();
+			questLogEntries.Add(q.name, log);
+		}
+	}
 
 	void SetupGuideScreenCallbacks()
 	{
@@ -281,6 +298,19 @@ public class GameUI : MonoBehaviour
 				}
 			}
 		}
+
+		foreach (BaseQuest q in GameManager.instance.questList)
+		{
+			if (q.questState == BaseQuest.QuestState.Active)
+			{
+				questLogEntries[q.name].GetComponentsInChildren<Text>()[1].text = q.GetDescription();
+				questLogEntries[q.name].SetActive(true);
+			}
+			else
+			{
+				questLogEntries[q.name].SetActive(false);
+			}
+		}
     }
 
 	public void ShowGuideScreen()
@@ -314,6 +344,7 @@ public class GameUI : MonoBehaviour
 
 	public void FadeInRebuildingScreen()
 	{
+		timePassOverlay.GetComponent<Image>().color = Color.white * 0;
 		timePassOverlay.SetActive(true);
 		timePassOverlay.GetComponent<Animator>().SetBool("Fade",true);
 	}

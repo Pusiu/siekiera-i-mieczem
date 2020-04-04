@@ -6,5 +6,5 @@ using UnityEngine;
 [System.Serializable]
 public class DialogueScriptableObject : ScriptableObject
 {
-	public List<DialogueAction> lines;
+	public List<DialogueAction> lines = new List<DialogueAction>();
 }

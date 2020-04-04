@@ -9,7 +9,7 @@ public class BaseQuest : MonoBehaviour
 	public enum QuestState { Hidden, Active, Completed};
 	public QuestState questState = QuestState.Hidden;
 
-	public void SetState(QuestState state)
+	public virtual void SetState(QuestState state)
 	{
 		questState = state;
 	}

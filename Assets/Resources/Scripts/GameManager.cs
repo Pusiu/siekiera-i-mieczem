@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 			SceneManager.sceneLoaded += (s,e) =>
 			{
 				GetComponent<TimeAndWeather>().StartCycle();
+				GameUI.instance.SetupQuestLogEntries();
 			};
 		}
     }

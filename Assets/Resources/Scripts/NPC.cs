@@ -26,20 +26,28 @@ public class NPC : MonoBehaviour, IInteractable
 			StartDialogue();
 	}
 
-
+	public void SetDialogue(DialogueScriptableObject d)
+	{
+		currentDialogueLineIndex = -1;
+		currentDialogue = d;
+	}
 
 	public void ProcessLine()
 	{
-		GameUI.instance.speechBubble.gameObject.SetActive(false);
-		if (currentDialogueLineIndex >= currentDialogue.lines.Count)
+		do
 		{
-			return;
-		}
-		currentDialogue.lines[currentDialogueLineIndex].Execute(this);
+			currentDialogueLineIndex++;
+			GameUI.instance.speechBubble.gameObject.SetActive(false);
+			if (currentDialogue == null || currentDialogueLineIndex >= currentDialogue.lines.Count)
+			{
+				return;
+			}
+		} while (currentDialogue.lines[currentDialogueLineIndex].Execute(this));
 	}
 
 	public void StartDialogue()
 	{
+		currentDialogueLineIndex = -1;
 		ProcessLine();
 	}
 }
