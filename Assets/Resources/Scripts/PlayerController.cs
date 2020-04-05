@@ -52,6 +52,8 @@ public class PlayerController : LivingBeing
 	//public Animator animator;
 	//public NavMeshAgent agent;
 	public float speed = 5;
+	public float cameraAngle = 30;
+	public float angleChangeSpeed = 1;
 	public Vector3 cameraOffset = new Vector3(10,10,10);
 	public float cameraZoomRange = 5;
 	public float cameraZoom = 0;
@@ -100,16 +102,31 @@ public class PlayerController : LivingBeing
 	public Vector3 leftinHandOffsetPosition;
 	public Vector3 leftinHandOffsetRotation;
 
+
+
 	// Update is called once per frame
 	void Update()
     {
+		if (Input.GetKey(KeyCode.A))
+			cameraAngle -= angleChangeSpeed;
+		if (Input.GetKey(KeyCode.D))
+			cameraAngle += angleChangeSpeed;
+
+		if (cameraAngle >= 360)
+			cameraAngle = 0;
+		else if (cameraAngle < 0)
+			cameraAngle = 359;
+
+		float z = Mathf.Sin(cameraAngle * Mathf.Deg2Rad);
+		float x = Mathf.Cos(cameraAngle * Mathf.Deg2Rad);
+
 		cameraZoom -= Input.mouseScrollDelta.y*cameraZoomDamping;
 		if (cameraZoom > cameraZoomRange)
 			cameraZoom = cameraZoomRange;
-		if (cameraZoom < -cameraZoomRange)
-			cameraZoom = -cameraZoomRange;
+		if (cameraZoom < 1)
+			cameraZoom = 1;
 
-		Camera.main.transform.position = transform.position + cameraOffset + Vector3.one*cameraZoom;
+		Camera.main.transform.position = transform.position + new Vector3(x*cameraOffset.x, cameraOffset.y, z*cameraOffset.z)*(cameraZoom);
 		Camera.main.transform.LookAt(transform.position);
 
 
