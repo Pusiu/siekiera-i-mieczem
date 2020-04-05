@@ -7,6 +7,9 @@ public class Rock : ResourceGenerator
 	public GameObject resourcePrefab;
 	public int hitsToDestroy = 3;
 
+	public AudioClip onDestroyedSound;
+	public AudioClip hitSound;
+
 	public override bool Gather()
 	{
 		if (base.Gather())
@@ -31,9 +34,15 @@ public class Rock : ResourceGenerator
 				PlayerController.instance.animator.SetBool("RightHand", (PlayerController.instance.hands[PlayerController.Hand.Right] == t) ? true : false);
 				PlayerController.instance.animator.SetTrigger("AttackTrigger");
 				hitsToDestroy--;
+				if (hitSound != null)
+					AudioSource.PlayClipAtPoint(hitSound, transform.position);
+
 				PlayerController.instance.transform.LookAtYOnly(transform.position);
 				if (hitsToDestroy <=0)
 				{
+					if (onDestroyedSound != null)
+						AudioSource.PlayClipAtPoint(onDestroyedSound, transform.position);
+
 					Vector3 c = GetComponent<Renderer>().bounds.center;
 					Vector3 s = GetComponent<Renderer>().bounds.extents;
 					for (int i = 0; i < count; i++)

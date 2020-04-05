@@ -49,22 +49,16 @@ public class ResourceGenerator : Resource //MonoBehaviour, IInteractable
 
 			if (canBePickedUp)
 			{
-				PlayerController.Hand h = (handlingMethod == HandlingMethod.InOneHand) ? PlayerController.Hand.Any : PlayerController.Hand.Both;
+				if (!Pickup())
+				{
+					Gather();
+					return;
+				}
+				/*PlayerController.Hand h = (handlingMethod == HandlingMethod.InOneHand) ? PlayerController.Hand.Any : PlayerController.Hand.Both;
 				if (PlayerController.instance.HasFreeHand(h))
 				{
-					Pickup();
 					return;
-				}
-
-				if ((PlayerController.instance.hands[PlayerController.Hand.Left] != null &&
-					PlayerController.instance.hands[PlayerController.Hand.Right] != null)
-					&&
-					(PlayerController.instance.hands[PlayerController.Hand.Left] == PlayerController.instance.hands[PlayerController.Hand.Right])
-					)
-				{
-					GameUI.instance.ShowHint("Najpierw odłóż obiekt, by podnieść inny");
-					return;
-				}
+				}*/
 			}
 			Gather();
 		};

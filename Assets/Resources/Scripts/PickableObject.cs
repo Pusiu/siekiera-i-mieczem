@@ -36,7 +36,10 @@ public class PickableObject : Item, IInteractable
 			return false;*/
 
 		if (!PlayerController.instance.HasFreeHand((handlingMethod == HandlingMethod.InOneHand) ? PlayerController.Hand.Any : PlayerController.Hand.Both))
+		{
+			GameUI.instance.ShowHint("Najpierw odłóż obiekt, by podnieść inny");
 			return false;
+		}
 
 
 		if (GetComponent<Rigidbody>() != null)
