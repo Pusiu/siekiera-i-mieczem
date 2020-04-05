@@ -28,6 +28,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-4774118703154637167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Dzi\u0119kuj\u0119 bardzo, \u015Bwietnie si\u0119 spisa\u0142e\u015B."
+--- !u!114 &-3467834798955055264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5973951cb18014b8d99a88a5fd075c, type: 3}
+  m_Name: DialogueCheckQuestStatus
+  m_EditorClassIdentifier: 
+  questID: 8
+  state: 2
+--- !u!114 &-1701509119905788148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
+  m_Name: DialogueSwitch
+  m_EditorClassIdentifier: 
+  currentNPC: 0
+  npcID: 1
+  endCurrent: 1
+  nextDialogue: {fileID: 11400000, guid: f6aa9a407a6ffe3468c029620e062d21, type: 2}
 --- !u!114 &-1008944363755036751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,10 +99,26 @@ MonoBehaviour:
   m_Name: kowal 3
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 2841991093566834251}
+  - {fileID: -3467834798955055264}
+  - {fileID: -4774118703154637167}
   - {fileID: -1008944363755036751}
   - {fileID: -6258110185200097511}
   - {fileID: 4697426759200948378}
+  - {fileID: -1701509119905788148}
+--- !u!114 &575435520609506661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &2841991093566834251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,7 +132,7 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: "Dzi\u0119kuj\u0119 bardzo, \u015Bwietnie si\u0119 spisa\u0142e\u015B."
+  text: 
 --- !u!114 &4697426759200948378
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -57,6 +57,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 1
   text: "To dla mnie? Dzi\u0119kuj\u0119. Jest pi\u0119kny!"
+--- !u!114 &-5013878977398590097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
+--- !u!114 &-4553209632680631274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-3572485065921957012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +99,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: 6
   state: 2
+--- !u!114 &-3549617821242386230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 6
+  state: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +126,9 @@ MonoBehaviour:
   m_Name: Halina2
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: -3572485065921957012}
+  - {fileID: 3879083734454253479}
+  - {fileID: 2950553991368482264}
+  - {fileID: -3549617821242386230}
   - {fileID: -6011679684934795081}
   - {fileID: -7073370913039349779}
 --- !u!114 &1506272091442167251
@@ -101,3 +145,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &2950553991368482264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260ba00121fc52c4da352b7c9257f40c, type: 3}
+  m_Name: DialogueRemoveResource
+  m_EditorClassIdentifier: 
+  t: 2
+  count: 1
+--- !u!114 &3879083734454253479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71dbf7e481f499498e335efcb6001b3, type: 3}
+  m_Name: DialogueHasResource
+  m_EditorClassIdentifier: 
+  t: 2
+  count: 1
+  exitIfFalse: 1

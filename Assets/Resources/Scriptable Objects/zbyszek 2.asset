@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6918523324612910557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5973951cb18014b8d99a88a5fd075c, type: 3}
+  m_Name: DialogueCheckQuestStatus
+  m_EditorClassIdentifier: 
+  questID: 1
+  state: 2
 --- !u!114 &-6699184565367537685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +83,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
   m_Name: DialogueSwitch
   m_EditorClassIdentifier: 
+  currentNPC: 1
+  npcID: 0
   endCurrent: 1
   nextDialogue: {fileID: 11400000, guid: f6aa9a407a6ffe3468c029620e062d21, type: 2}
 --- !u!114 &-1541651719088768205
@@ -99,7 +115,8 @@ MonoBehaviour:
   m_Name: zbyszek 2
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 7128771439123470403}
+  - {fileID: -6918523324612910557}
+  - {fileID: 9016442491915475002}
   - {fileID: 8949649392181197785}
   - {fileID: -4798087973301254708}
   - {fileID: -1541651719088768205}
@@ -164,8 +181,7 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: "\u015Awietna robota. Chod\u017Amy, rozpalimy ognisko. P\xF3jdziesz po ga\u0142\u0119zie
-    do ogniska?"
+  text: 
 --- !u!114 &8949649392181197785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,3 +196,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Ju\u017C id\u0119."
+--- !u!114 &9016442491915475002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "\u015Awietna robota. Chod\u017Amy, rozpalimy ognisko. P\xF3jdziesz po ga\u0142\u0119zie
+    do ogniska?"
