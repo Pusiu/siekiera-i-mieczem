@@ -77,12 +77,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f12d69369724e449a0796428bf0f121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: 
+  image: {fileID: 0}
+  handlingMethod: 0
+  resourceType: 2
+  isOnCart: 0
+  canBePickedUp: 0
   requireTool: 1
   requiredToolType: 0
-  resourceType: 0
+  workEnergyDrainPerHit: 10
   count: 1
   logPrefab: {fileID: 6588339707627834101, guid: b374b6f1086ffad429a8ee9a47228d5f,
     type: 3}
+  woodHitSound: {fileID: 8300000, guid: 1ff3c98b3bc970a41abc68e0b170bde1, type: 3}
+  woodFallSound: {fileID: 8300000, guid: 79ae7e71ef59edb498b5ebe9196aa7f4, type: 3}
   hitsToDestroy: 3
 --- !u!1 &2916506828583528136
 GameObject:

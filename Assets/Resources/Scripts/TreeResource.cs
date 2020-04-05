@@ -5,6 +5,8 @@ using UnityEngine;
 public class TreeResource : ResourceGenerator
 {
 	public GameObject logPrefab;
+	public AudioClip woodHitSound;
+	public AudioClip woodFallSound;
 	public int hitsToDestroy = 3;
 
 	public override bool Gather()
@@ -31,6 +33,13 @@ public class TreeResource : ResourceGenerator
 				PlayerController.instance.animator.SetBool("RightHand", (PlayerController.instance.hands[PlayerController.Hand.Right] == t) ? true : false);
 				PlayerController.instance.animator.SetTrigger("AttackTrigger");
 				hitsToDestroy--;
+
+				AudioSource.PlayClipAtPoint(GameManager.instance.wooshSound, transform.position);
+				GameManager.instance.ExecuteAction(() =>
+				{
+					AudioSource.PlayClipAtPoint(woodHitSound, transform.position);
+				}, 1);
+
 				PlayerController.instance.transform.LookAtYOnly(transform.position);
 				if (hitsToDestroy == 0)
 				{
@@ -40,7 +49,7 @@ public class TreeResource : ResourceGenerator
 					Vector3 c = GetComponentInChildren<Renderer>().bounds.center;
 					Vector3 s = GetComponentInChildren<Renderer>().bounds.extents;
 					gameObject.GetComponent<Rigidbody>().AddForceAtPosition(PlayerController.instance.transform.forward*5, c + new Vector3(0, s.y, 0), ForceMode.Force);
-
+					AudioSource.PlayClipAtPoint(woodFallSound, transform.position);
 					GameManager.instance.ExecuteAction(() =>
 					{
 						c = GetComponentInChildren<Renderer>().bounds.center;

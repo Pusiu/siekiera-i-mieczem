@@ -30,12 +30,12 @@ public class LivingBeing : MonoBehaviour, IInteractable, IAttackable
 
 	public virtual void OnInteraction()
 	{
-		PlayerController.instance.MoveTo(gameObject);
+		/*PlayerController.instance.MoveTo(gameObject);
 		PlayerController.instance.ToolToHand(Tool.ToolType.Sword);
 		PlayerController.instance.OnTargetReached += (tar) =>
 		{
 			PlayerController.instance.Attack(this);
-		};
+		};*/
 	}
 
 	public virtual void ReceiveDamage(int damage)

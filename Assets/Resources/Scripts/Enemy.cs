@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Enemy : LivingBeing
 {
+	public AudioClip attackClip;
 	public BoxCollider activityZone;
 	public int lastMoveTime;
 	public bool isInCombat = false;
@@ -24,6 +25,22 @@ public class Enemy : LivingBeing
 		{
 			Debug.LogError("Enemy has no id!");
 		}
+	}
+
+	public override void OnInteraction()
+	{
+		if (PlayerController.instance.GetToolByType(Tool.ToolType.Sword) == null)
+		{
+			GameUI.instance.ShowHint("Nie masz broni by go zaatakować");
+			return;
+		}
+
+		PlayerController.instance.MoveTo(gameObject);
+		PlayerController.instance.ToolToHand(Tool.ToolType.Sword);
+		PlayerController.instance.OnTargetReached += (tar) =>
+		{
+			PlayerController.instance.Attack(this);
+		};
 	}
 
 	private void Update()
@@ -131,6 +148,7 @@ public class Enemy : LivingBeing
 		animator.SetBool("RightHand", true);
 		animator.SetTrigger("AttackTrigger");
 		canAttack = false;
+		AudioSource.PlayClipAtPoint(attackClip, transform.position);
 		GameManager.instance.ExecuteAction(() =>
 		{
 			PlayerController.instance.ReceiveDamage(damage);

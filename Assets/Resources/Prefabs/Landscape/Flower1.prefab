@@ -92,7 +92,7 @@ MonoBehaviour:
   itemName: Kwiatek
   image: {fileID: 21300000, guid: ab384a8a6ead87940b6ad0d2b41c3776, type: 3}
   handlingMethod: 0
-  resourceType: 2
+  resourceType: 3
   isOnCart: 0
 --- !u!1 &8121425728625562307
 GameObject:

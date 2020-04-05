@@ -110,7 +110,7 @@ MonoBehaviour:
   itemName: Patyk
   image: {fileID: 21300000, guid: 55c0fd49f0f143a48bb2b6188a734ecb, type: 3}
   handlingMethod: 0
-  resourceType: 1
+  resourceType: 0
   isOnCart: 0
 --- !u!1 &3507210222487607337
 GameObject:

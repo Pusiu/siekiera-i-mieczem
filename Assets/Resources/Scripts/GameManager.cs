@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 	public static GameManager instance;
+	public AudioClip wooshSound;
+	public AudioClip wooshSwordSound;
+
 	public List<BaseQuest> questList = new List<BaseQuest>();
 	public List<NPC> npcs;
 

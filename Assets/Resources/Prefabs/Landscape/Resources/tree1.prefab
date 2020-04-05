@@ -128,14 +128,17 @@ MonoBehaviour:
   itemName: 
   image: {fileID: 0}
   handlingMethod: 0
-  resourceType: 0
+  resourceType: 2
   isOnCart: 0
   canBePickedUp: 0
   requireTool: 1
   requiredToolType: 0
+  workEnergyDrainPerHit: 10
   count: 1
   logPrefab: {fileID: 6588339707627834101, guid: b374b6f1086ffad429a8ee9a47228d5f,
     type: 3}
+  woodHitSound: {fileID: 8300000, guid: 1ff3c98b3bc970a41abc68e0b170bde1, type: 3}
+  woodFallSound: {fileID: 8300000, guid: 79ae7e71ef59edb498b5ebe9196aa7f4, type: 3}
   hitsToDestroy: 3
 --- !u!208 &7532450785926332417
 NavMeshObstacle:

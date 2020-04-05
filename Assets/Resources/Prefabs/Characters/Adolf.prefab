@@ -868,6 +868,7 @@ MonoBehaviour:
     type: 3}
   agent: {fileID: 0}
   animator: {fileID: 0}
+  attackClip: {fileID: 8300000, guid: 93b9062d28778054abe14bbc12b92022, type: 3}
   activityZone: {fileID: 0}
   lastMoveTime: 0
   isInCombat: 0

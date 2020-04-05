@@ -61,7 +61,7 @@ MonoBehaviour:
   itemName: "Kowad\u0142o"
   image: {fileID: 21300000, guid: ae074902d51f399409c8fbc5b0bcf61c, type: 3}
   handlingMethod: 1
-  resourceType: 3
+  resourceType: 4
   isOnCart: 0
 --- !u!1001 &4738296110969000003
 PrefabInstance:

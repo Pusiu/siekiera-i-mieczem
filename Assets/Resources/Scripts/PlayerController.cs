@@ -503,6 +503,7 @@ public class PlayerController : LivingBeing
 				s.canAttack = false;
 				animator.SetBool("RightHand", (h == Hand.Left) ? false : true);
 				animator.SetTrigger("AttackTrigger");
+				AudioSource.PlayClipAtPoint(GameManager.instance.wooshSwordSound, transform.position);
 				GameManager.instance.ExecuteAction(() =>
 				{
 					target.ReceiveDamage(s.damage);
