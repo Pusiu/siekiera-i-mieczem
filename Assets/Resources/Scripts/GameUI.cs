@@ -362,6 +362,8 @@ public class GameUI : MonoBehaviour
 		PlayerController.instance.canMove = false;
 		HideAllGuideScreenContents();
 		guideScreen.SetActive(true);
+		Canvas.ForceUpdateCanvases();
+
 	}
 	public void HideGuideScreen()
 	{
@@ -379,6 +381,7 @@ public class GameUI : MonoBehaviour
 	{
 		HideAllGuideScreenContents();
 		content.SetActive(true);
+		Canvas.ForceUpdateCanvases();
 	}
 
 	public void ToggleInventory()
@@ -432,11 +435,14 @@ public class GameUI : MonoBehaviour
 
 	public void ShowMenu()
 	{
+		PlayerController.instance.MoveTo(PlayerController.instance.gameObject);
 		PlayerController.instance.canMove = false;
+		menu.SetActive(true);
 	}
 	public void HideMenu()
 	{
 		PlayerController.instance.canMove = true;
+		menu.SetActive(false);
 	}
 
 	public void ExitToMainMenu()
