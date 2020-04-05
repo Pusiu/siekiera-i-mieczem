@@ -98,7 +98,13 @@ public class Cart : Item, IInteractable
 				 }
 				 else
 				 {
-					 Resource r = PlayerController.instance.hands[PlayerController.Hand.Left].GetComponent<Resource>();
+					 ResourceGenerator r = PlayerController.instance.hands[PlayerController.Hand.Left]?.GetComponent<ResourceGenerator>();
+					 if (r == null)
+					 {
+						 GameUI.instance.ShowHint("Na wóż możesz ładować tylko duże rzeczy");
+						 return;
+					 }
+
 					 Transform place = GetFreePlaceForResource(r.resourceType);
 					 if (place != null)
 					 {
