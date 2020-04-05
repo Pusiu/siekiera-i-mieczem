@@ -43,6 +43,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-6692704671294911016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260ba00121fc52c4da352b7c9257f40c, type: 3}
+  m_Name: DialogueRemoveResource
+  m_EditorClassIdentifier: 
+  t: 0
+  count: 5
 --- !u!114 &-6227730915515083388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +86,20 @@ MonoBehaviour:
   t: 0
   count: 5
   exitIfFalse: 1
+--- !u!114 &-5902334334623087491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-4996004619740906450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +206,8 @@ MonoBehaviour:
   - {fileID: 8949649392181197785}
   - {fileID: 8082930744075932709}
   - {fileID: -5987635938307592341}
+  - {fileID: -6692704671294911016}
+  - {fileID: 5249082067559560786}
   - {fileID: -4798087973301254708}
   - {fileID: -1541651719088768205}
   - {fileID: -6227730915515083388}
@@ -228,6 +258,34 @@ MonoBehaviour:
   speaker: 1
   text: "Nie mam poj\u0119cia. Mam dla Ciebie dobr\u0105 rad\u0119. Znajd\u017A kowala
     i zdob\u0105d\u017A od niego miecz."
+--- !u!114 &5249082067559560786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 9
+  state: 2
+--- !u!114 &5829394972688349644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &6333978758871273177
 MonoBehaviour:
   m_ObjectHideFlags: 0
