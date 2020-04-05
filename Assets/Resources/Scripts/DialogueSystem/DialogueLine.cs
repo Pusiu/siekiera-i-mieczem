@@ -18,25 +18,37 @@ public class DialogueLine : DialogueAction
 		this.text = text;
 	}
 
+	NPC executingNPC;
+	AudioSource src;
 	public override bool Execute(NPC npc)
 	{
 		//base.Execute(npc);
-
+		executingNPC = npc;
 
 		bool isNPCSpeaking = (speaker == Speaker.NPC) ? true : false;
 
 		Animator a = isNPCSpeaking ? npc.animator : PlayerController.instance.animator;
+		src = isNPCSpeaking ? npc.GetComponent<AudioSource>() : PlayerController.instance.playerMouth;
 		a.SetTrigger("TalkTrigger");
 
 		GameUI.instance.currentSpeechFocus = isNPCSpeaking ? npc.gameObject : PlayerController.instance.gameObject;
+		src.Play();
 
-		GameManager.instance.ExecuteAction(() =>
-		{
-			npc.ProcessLine();
-		}, text.Length * GameUI.instance.typewriteLetterTime + 3);
+		GameUI.instance.OnTypewriteEnded += OnTypewriteEnded;
+
 		GameUI.instance.Typewrite(text);
 
 		return false;
+	}
+
+	private void OnTypewriteEnded()
+	{
+		GameUI.instance.OnTypewriteEnded -= OnTypewriteEnded;
+		src.Stop();
+		GameManager.instance.ExecuteAction(() =>
+		{
+			executingNPC.ProcessLine();
+		}, 2);
 	}
 
 	public override void DrawInspectorLine()

@@ -58,6 +58,7 @@ public class NPC : LivingBeing
 
 	public void StartDialogue()
 	{
+		PlayerController.instance.cameraZoom = 3;
 		currentDialogueLineIndex = -1;
 		ProcessLine();
 	}

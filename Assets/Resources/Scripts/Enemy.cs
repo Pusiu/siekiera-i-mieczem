@@ -85,11 +85,15 @@ public class Enemy : LivingBeing
 		isInCombat = true;
 		string text = "Będziesz żałował że tutaj przyszedłeś";
 		GameUI.instance.currentSpeechFocus = gameObject;
+		GameUI.instance.OnTypewriteEnded += OnTypewriteEnded;
+		GetComponent<AudioSource>().Play();
 		GameUI.instance.Typewrite(text);
-		GameManager.instance.ExecuteAction(() =>
-		{
-			GameUI.instance.speechBubble.gameObject.SetActive(false);
-		}, text.Length * GameUI.instance.typewriteLetterTime + 2);
+	}
+
+	private void OnTypewriteEnded()
+	{
+		GetComponent<AudioSource>().Stop();
+		GameUI.instance.speechBubble.gameObject.SetActive(false);
 	}
 
 	public void OnPlayerLeaveArea()
@@ -97,11 +101,10 @@ public class Enemy : LivingBeing
 		isInCombat = false;
 		string text = "Jeszcze cię dorwę!";
 		GameUI.instance.currentSpeechFocus = gameObject;
+
+		GameUI.instance.OnTypewriteEnded += OnTypewriteEnded;
+		GetComponent<AudioSource>().Play();
 		GameUI.instance.Typewrite(text);
-		GameManager.instance.ExecuteAction(() =>
-		{
-			GameUI.instance.speechBubble.gameObject.SetActive(false);
-		},text.Length*GameUI.instance.typewriteLetterTime + 2);
 	}
 
 	void MoveTo(Vector3 target)

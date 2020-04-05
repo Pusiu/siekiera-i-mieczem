@@ -471,6 +471,9 @@ public class GameUI : MonoBehaviour
 		hintPanel.GetComponent<Animator>().SetTrigger("HintTrigger");
 	}
 
+	public delegate void TypewriteEnded();
+	public event TypewriteEnded OnTypewriteEnded;
+
 	IEnumerator TypewriteCoroutine(string text)
 	{
 		speechBubble.GetComponentInChildren<Text>().text = "";
@@ -480,5 +483,6 @@ public class GameUI : MonoBehaviour
 			speechBubble.GetComponentInChildren<Text>().text += text[i];
 			yield return new WaitForSeconds(typewriteLetterTime);
 		}
+		OnTypewriteEnded();
 	}
 }

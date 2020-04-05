@@ -51,6 +51,7 @@ public class PlayerController : LivingBeing
 
 	//public Animator animator;
 	//public NavMeshAgent agent;
+	public AudioSource playerMouth;
 	public float speed = 5;
 	public float cameraAngle = 30;
 	public float angleChangeSpeed = 1;
