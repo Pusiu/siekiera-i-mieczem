@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour, IInteractable
+public class NPC : LivingBeing
 {
-	public int npcID = -1;
+	//public int npcID = -1;
 	public DialogueScriptableObject currentDialogue;
-	public Animator animator;
+	//public Animator animator;
 	public int currentDialogueLineIndex = 0;
 
 	// Start is called before the first frame update
 	void Start()
     {
 		animator = GetComponent<Animator>();
-		if (npcID == -1)
+		if (id == -1)
 			Debug.LogError($"NPC {name} ID is not set!");
     }
 
@@ -23,7 +23,7 @@ public class NPC : MonoBehaviour, IInteractable
         
     }
 
-	public void OnInteraction()
+	public override void OnInteraction()
 	{
 		PlayerController.instance.movePoint.transform.position = transform.position + transform.forward * 3;
 		PlayerController.instance.MoveTo(PlayerController.instance.movePoint);

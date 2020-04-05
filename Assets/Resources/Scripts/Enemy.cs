@@ -19,6 +19,11 @@ public class Enemy : LivingBeing
 	{
 		attackDistance = agent.stoppingDistance + 1;
 		speed = agent.speed;
+
+		if (id == -1)
+		{
+			Debug.LogError("Enemy has no id!");
+		}
 	}
 
 	private void Update()

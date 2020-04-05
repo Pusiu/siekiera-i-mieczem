@@ -5,21 +5,28 @@ using UnityEngine;
 
 public class DialogueSwitch : DialogueAction
 {
+	public bool currentNPC = true;
+	public int npcID;
+
 	public bool endCurrent;
 	public DialogueScriptableObject nextDialogue;
 
 	public override bool Execute(NPC npc)
 	{
+		NPC target = npc;
+		if (!currentNPC)
+			npc = GameManager.instance.npcs.Find(x => x.id == npcID);
+
 		if (endCurrent)
 		{
-			npc.SetDialogue(null);
+			target.SetDialogue(null);
 			GameManager.instance.ExecuteAction(() =>
 			{
-				npc.SetDialogue(nextDialogue);
+				target.SetDialogue(nextDialogue);
 			}, .3f);
 		}
 		else
-			npc.SetDialogue(nextDialogue);
+			target.SetDialogue(nextDialogue);
 
 		return base.Execute(npc);
 	}
@@ -27,6 +34,19 @@ public class DialogueSwitch : DialogueAction
 	public override void DrawInspectorLine()
 	{
 		base.DrawInspectorLine();
+
+		GUILayout.BeginHorizontal();
+		GUILayout.Label("Current NPC?:");
+		currentNPC = EditorGUILayout.Toggle(currentNPC);
+		GUILayout.EndHorizontal();
+
+		if (!currentNPC)
+		{
+			GUILayout.BeginHorizontal();
+			GUILayout.Label("NPC ID:");
+			npcID = EditorGUILayout.IntField(npcID);
+			GUILayout.EndHorizontal();
+		}
 
 		GUILayout.BeginHorizontal();
 		GUILayout.Label("Next dialogue:");

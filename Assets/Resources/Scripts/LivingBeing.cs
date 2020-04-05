@@ -6,6 +6,8 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class LivingBeing : MonoBehaviour, IInteractable, IAttackable
 {
+
+	public int id = -1;
 	public int health = 5;
 
 	public GameObject stepPrefab;
