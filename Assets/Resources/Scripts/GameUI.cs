@@ -21,6 +21,7 @@ public class GameUI : MonoBehaviour
 	public GameObject guideScreenEntriesTitles;
 	public GameObject guideScreenEntriesContents;
 	public GameObject timePassOverlay;
+	public GameObject compass;
 
 	public GameObject questLogContent;
 	public GameObject questLogEntryPrefab;
@@ -293,6 +294,8 @@ public class GameUI : MonoBehaviour
 		hpSlider.GetComponentInChildren<Text>().text = $"Zdrowie: {hpSlider.value}/100";
 		energySlider.value = PlayerController.instance.energy;
 		energySlider.GetComponentInChildren<Text>().text = $"Energia: {energySlider.value}/100";
+
+		compass.transform.rotation = Quaternion.Euler(0, 0, PlayerController.instance.cameraAngle);
 
 		if (currentSpeechFocus != null)
 		{
