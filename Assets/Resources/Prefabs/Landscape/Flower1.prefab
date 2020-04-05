@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 119
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4164938213081191686
 Transform:
@@ -39,12 +39,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6517820135604017301}
+  - component: {fileID: 7338237425497154430}
+  - component: {fileID: 3345884385446118010}
   m_Layer: 0
   m_Name: Flower1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 119
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6517820135604017301
 Transform:
@@ -62,6 +64,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7338237425497154430
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7793667418798566022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.7, z: 0}
+--- !u!114 &3345884385446118010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7793667418798566022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7650c03e53278f418f6f7fe9620b357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Kwiatek
+  image: {fileID: 21300000, guid: ab384a8a6ead87940b6ad0d2b41c3776, type: 3}
+  handlingMethod: 0
+  resourceType: 2
+  isOnCart: 0
 --- !u!1 &8121425728625562307
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +110,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 119
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3572347549705135008
 Transform:

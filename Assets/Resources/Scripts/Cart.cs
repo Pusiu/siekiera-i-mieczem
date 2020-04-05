@@ -28,6 +28,7 @@ public class Cart : Item, IInteractable
 		List<Transform> others = null;
 		switch (t)
 		{
+			case Resource.ResourceType.Anvil:
 			case Resource.ResourceType.Stone:
 				l = stonesPos;
 				others = treesPos;

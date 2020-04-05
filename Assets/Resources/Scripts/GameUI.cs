@@ -227,7 +227,13 @@ public class GameUI : MonoBehaviour
 		if (destIndex == -5)
 		{
 			s.transform.SetParent(null);
-			s.transform.position = PlayerController.instance.transform.position + Vector3.up * 2 + PlayerController.instance.transform.forward;
+			Vector3 up = Vector3.up * 2;
+			if (s.transform.GetComponentInChildren<Collider>() != null)
+			{
+				up = new Vector3(0,s.transform.GetComponentInChildren<Collider>().bounds.extents.y,0);
+			}
+
+			s.transform.position = PlayerController.instance.transform.position + up + PlayerController.instance.transform.forward;
 			s.transform.rotation = Quaternion.identity;
 
 			/*if (PlayerController.instance.hands[PlayerController.Hand.Left] == s)

@@ -632,7 +632,7 @@ public class PlayerController : LivingBeing
 			hands[Hand.Right].GetComponent<Resource>().resourceType == t)
 			c++;
 
-		List<Item> i = items.FindAll(x => x.GetComponent<Resource>() != null && x.GetComponent<Resource>().resourceType == t);
+		List<Item> i = items.FindAll(x => x?.GetComponent<Resource>() != null && x.GetComponent<Resource>().resourceType == t);
 		c += i.Count;
 
 		if (c >= count)

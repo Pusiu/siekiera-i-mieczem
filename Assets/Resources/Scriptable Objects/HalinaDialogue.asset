@@ -66,6 +66,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
   m_Name: DialogueSwitch
   m_EditorClassIdentifier: 
+  currentNPC: 1
+  npcID: 0
   endCurrent: 1
   nextDialogue: {fileID: 11400000, guid: 3c918e7b82688cb4590bb244d525f1aa, type: 2}
 --- !u!114 &-6615331157569919080
@@ -80,6 +82,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
   m_Name: DialogueSwitch
   m_EditorClassIdentifier: 
+  currentNPC: 1
+  npcID: 0
   endCurrent: 1
   nextDialogue: {fileID: 11400000, guid: 3c918e7b82688cb4590bb244d525f1aa, type: 2}
 --- !u!114 &-6445231393772184155
@@ -164,6 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
   m_Name: DialogueSwitch
   m_EditorClassIdentifier: 
+  currentNPC: 1
+  npcID: 0
   endCurrent: 1
   nextDialogue: {fileID: 11400000, guid: 3c918e7b82688cb4590bb244d525f1aa, type: 2}
 --- !u!114 &-3393017451355398942
