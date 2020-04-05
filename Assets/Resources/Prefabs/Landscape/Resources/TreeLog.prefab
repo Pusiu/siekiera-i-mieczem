@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e773174be2c914c9c39238aa7b00bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: "K\u0142oda"
   image: {fileID: 21300000, guid: 88323a33d4085154e9aa563c719593c9, type: 3}
   handlingMethod: 2
   resourceType: 1

@@ -9,4 +9,10 @@ public class Item : MonoBehaviour
 
 	public enum HandlingMethod { InOneHand, InTwoHands, OnShoulder }
 	public HandlingMethod handlingMethod;
+
+
+	public virtual string GetItemDescription()
+	{
+		return "";
+	}
 }

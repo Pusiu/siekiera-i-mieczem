@@ -14,6 +14,9 @@ public class PickableObject : Item, IInteractable
 
 	public virtual void PutDown()
 	{
+		if (GetComponent<Collider>())
+			GetComponent<Collider>().enabled = true;
+
 		if (GetComponent<Rigidbody>())
 			GetComponent<Rigidbody>().isKinematic = false;
 
@@ -35,11 +38,15 @@ public class PickableObject : Item, IInteractable
 		if (!PlayerController.instance.HasFreeHand((handlingMethod == HandlingMethod.InOneHand) ? PlayerController.Hand.Any : PlayerController.Hand.Both))
 			return false;
 
+
 		if (GetComponent<Rigidbody>() != null)
 			GetComponent<Rigidbody>().isKinematic = true;
 
 		if (GetComponent<NavMeshObstacle>() != null)
 			GetComponent<NavMeshObstacle>().enabled = false;
+
+		if (GetComponent<Collider>())
+			GetComponent<Collider>().enabled = false;
 
 		if (handlingMethod != HandlingMethod.InOneHand)
 		{

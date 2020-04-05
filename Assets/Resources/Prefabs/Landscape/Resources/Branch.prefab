@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7650c03e53278f418f6f7fe9620b357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
-  image: {fileID: 0}
+  itemName: Patyk
+  image: {fileID: 21300000, guid: 55c0fd49f0f143a48bb2b6188a734ecb, type: 3}
   handlingMethod: 0
   resourceType: 1
   isOnCart: 0

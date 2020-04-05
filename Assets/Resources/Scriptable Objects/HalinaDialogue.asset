@@ -96,6 +96,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-5731663966851872177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5973951cb18014b8d99a88a5fd075c, type: 3}
+  m_Name: DialogueCheckQuestStatus
+  m_EditorClassIdentifier: 
+  questID: 0
+  state: 0
+--- !u!114 &-4924507916131067743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-4149302324330918910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,6 +138,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcID: 1
   active: 0
+--- !u!114 &-3513104291442300994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
+  m_Name: DialogueSwitch
+  m_EditorClassIdentifier: 
+  endCurrent: 1
+  nextDialogue: {fileID: 11400000, guid: 3c918e7b82688cb4590bb244d525f1aa, type: 2}
 --- !u!114 &-3393017451355398942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +210,7 @@ MonoBehaviour:
   - {fileID: 7903688318480782318}
   - {fileID: 215414384294682785}
   - {fileID: -6445231393772184155}
+  - {fileID: -3513104291442300994}
 --- !u!114 &215414384294682785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +294,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeIn: 1
 --- !u!114 &5725900209918009438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
+--- !u!114 &5929343291014975267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

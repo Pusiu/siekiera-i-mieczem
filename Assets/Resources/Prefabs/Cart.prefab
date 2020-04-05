@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: "W\xF3z"
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 6ae1bb218f6262c4182a5518e8465e71, type: 3}
   handlingMethod: 1
   wheels:
   - {fileID: 3977155108733852720}

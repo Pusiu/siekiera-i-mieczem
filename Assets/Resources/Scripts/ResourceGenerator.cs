@@ -13,10 +13,19 @@ public class ResourceGenerator : Resource //MonoBehaviour, IInteractable
 
 	public virtual bool Gather()
 	{
-		if (requireTool && PlayerController.instance.GetToolByType(requiredToolType) == null)
+		if (requireTool)
 		{
-			GameUI.instance.ShowHint("Nie masz wymaganego narzędzia!");
-			return false;
+			if (PlayerController.instance.GetToolByType(requiredToolType) == null)
+			{
+				GameUI.instance.ShowHint("Nie masz przy sobie wymaganego narzędzia!");
+				return false;
+			}
+
+			if (!PlayerController.instance.HasToolInHand(requiredToolType))
+			{
+				GameUI.instance.ShowHint("Musisz mieć narzędzie w ręce!");
+				return false;
+			}
 		}
 		return true;
 		//Debug.LogWarning("Resource generator hasn't specified gather method");
@@ -44,6 +53,16 @@ public class ResourceGenerator : Resource //MonoBehaviour, IInteractable
 				if (PlayerController.instance.HasFreeHand(h))
 				{
 					Pickup();
+					return;
+				}
+
+				if ((PlayerController.instance.hands[PlayerController.Hand.Left] != null &&
+					PlayerController.instance.hands[PlayerController.Hand.Right] != null)
+					&&
+					(PlayerController.instance.hands[PlayerController.Hand.Left] == PlayerController.instance.hands[PlayerController.Hand.Right])
+					)
+				{
+					GameUI.instance.ShowHint("Najpierw odłóż obiekt, by podnieść inny");
 					return;
 				}
 			}

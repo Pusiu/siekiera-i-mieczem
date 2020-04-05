@@ -30,6 +30,7 @@ public class GameUI : MonoBehaviour
 	public float typewriteLetterTime = 0.1f;
 
 	public GameObject inventoryScreen;
+	public GameObject itemInfo;
 	public Image preview;
 	public GameObject inventorySlotPrefab;
 	public GameObject inventoryGrid;
@@ -64,7 +65,15 @@ public class GameUI : MonoBehaviour
 		eventDrop.eventID = EventTriggerType.Drop;
 		eventDrop.callback.AddListener((eventData) => { InventorySlotEventHandler_OnDrop(eventData); });
 
-		List<EventTrigger.Entry> allEvents = new List<EventTrigger.Entry>() { eventDrag, eventEndDrag, eventDrop };
+		EventTrigger.Entry eventEnter = new EventTrigger.Entry();
+		eventEnter.eventID = EventTriggerType.PointerEnter;
+		eventEnter.callback.AddListener((eventData) => { InventorySlotEventHandler_OnEnter(eventData); });
+
+		EventTrigger.Entry eventExit = new EventTrigger.Entry();
+		eventExit.eventID = EventTriggerType.PointerExit;
+		eventExit.callback.AddListener((eventData) => { InventorySlotEventHandler_OnExit(eventData); });
+
+		List<EventTrigger.Entry> allEvents = new List<EventTrigger.Entry>() { eventDrag, eventEndDrag, eventDrop,eventEnter,eventExit };
 
 		rightHandSlot.color = emptySlotColor;
 		rightHandSlot.transform.parent.GetComponent<EventTrigger>().triggers.AddRange(allEvents);
@@ -167,6 +176,29 @@ public class GameUI : MonoBehaviour
 		}
 	}
 
+	void InventorySlotEventHandler_OnEnter(BaseEventData data)
+	{
+		GameObject target = ((PointerEventData)data).pointerCurrentRaycast.gameObject;
+		if (target == null || target.transform.childCount ==0)
+			return;
+
+		target = target.transform.GetChild(0)?.gameObject;
+
+		int index = Convert.ToInt32(target.name);
+		Item i = GetItemByIndex(index);
+		if (i != null)
+		{
+			itemInfo.gameObject.SetActive(true);
+			Text[] t = itemInfo.GetComponentsInChildren<Text>();
+			t[0].text = i.itemName;
+			t[1].text = i.GetItemDescription();
+		}
+	}
+	void InventorySlotEventHandler_OnExit(BaseEventData data)
+	{
+		itemInfo.gameObject.SetActive(false);
+	}
+
 	void InventorySlotEventHandler_OnEndDrag(BaseEventData data)
 	{
 		preview.gameObject.SetActive(false);
@@ -252,7 +284,9 @@ public class GameUI : MonoBehaviour
 	{
 
 		hpSlider.value = PlayerController.instance.health;
+		hpSlider.GetComponentInChildren<Text>().text = $"Zdrowie: {hpSlider.value}/100";
 		energySlider.value = PlayerController.instance.energy;
+		energySlider.GetComponentInChildren<Text>().text = $"Energia: {energySlider.value}/100";
 
 		if (currentSpeechFocus != null)
 		{
@@ -266,6 +300,8 @@ public class GameUI : MonoBehaviour
 
 		if (inventoryScreen.activeInHierarchy)
 		{
+			itemInfo.transform.position = Input.mousePosition;
+
 			ResetItemsSprites();
 			foreach (PlayerController.Hand h in PlayerController.instance.hands.Keys)
 			{

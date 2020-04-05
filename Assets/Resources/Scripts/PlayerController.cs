@@ -209,6 +209,8 @@ public class PlayerController : LivingBeing
 		if (Vector3.Distance(transform.position, agent.destination) < agent.stoppingDistance)
 		{
 			agent.isStopped = true;
+			movePoint.SetActive(false);
+
 			if (interactionTarget != null)
 			{
 				for (int i = 0; i < OnTargetReachedHandlers.Count; i++)
@@ -233,6 +235,8 @@ public class PlayerController : LivingBeing
 		interactionTarget = target;
 		agent.destination = target.transform.position;
 		agent.isStopped = false;
+		movePoint.SetActive(true);
+		movePoint.transform.position = target.transform.position;
 	}
 
 	public override void ReceiveDamage(int damage)
@@ -425,6 +429,17 @@ public class PlayerController : LivingBeing
 			return (Tool)hands[Hand.Right];
 
 		return null;
+	}
+
+	public bool HasToolInHand(Tool.ToolType type)
+	{
+		if (hands[Hand.Left]?.GetComponent<Tool>() != null && ((Tool)hands[Hand.Left])?.toolType == type)
+			return true;
+
+		if (hands[Hand.Right]?.GetComponent<Tool>() != null && ((Tool)hands[Hand.Right])?.toolType == type)
+			return true;
+
+		return false;
 	}
 
 	public Hand? GetFreeHand()

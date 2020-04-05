@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd676eb1e4f598247be8004204fe7b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
-  image: {fileID: 0}
+  itemName: Miecz
+  image: {fileID: 21300000, guid: af82739eb51aa904cbfdee9cd0c8d431, type: 3}
   handlingMethod: 0
   toolType: 2
   toolstatus: 0
