@@ -42,6 +42,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Witaj, co Ci\u0119 sprowadza do osady?"
+--- !u!114 &-2026290100794611814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 6
+  state: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +75,8 @@ MonoBehaviour:
   - {fileID: 3167258285643859506}
   - {fileID: -9071899398141535356}
   - {fileID: 5061371010697953102}
+  - {fileID: -2026290100794611814}
+  - {fileID: 6039128690582955664}
 --- !u!114 &3167258285643859506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +92,20 @@ MonoBehaviour:
   speaker: 1
   text: "Czy mog\u0142abym si\u0119 zatrzyma\u0107 tutaj? Chcia\u017C na jedn\u0105
     noc, \u017Ceby ogrza\u0107 si\u0119 przy ognisku."
+--- !u!114 &3475612609160384955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &5061371010697953102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +120,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 1
   text: "Naprawd\u0119? Dzi\u0119kuj\u0119 bardzo!"
+--- !u!114 &6039128690582955664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
+  m_Name: DialogueSwitch
+  m_EditorClassIdentifier: 
+  currentNPC: 1
+  npcID: 0
+  endCurrent: 1
+  nextDialogue: {fileID: 11400000, guid: e2a4c9a8d13f54c49a2ba033329678b7, type: 2}
+--- !u!114 &7267325086755495452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &7557719388123688786
 MonoBehaviour:
   m_ObjectHideFlags: 0
