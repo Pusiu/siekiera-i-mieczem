@@ -38,17 +38,17 @@ public class ResourceArea : MonoBehaviour
 		Collider[] cols = Physics.OverlapBox(transform.position, col.size / 2, col.transform.rotation);
 		foreach (Collider c in cols)
 		{
-			ResourceGenerator rg = c.GetComponentInChildren<ResourceGenerator>();
+			/*ResourceGenerator rg = c.GetComponentInChildren<ResourceGenerator>();
 			if (rg != null)
 			{
 				resourcesCount[rg.resourceType] += rg.count;
 			}
 			else
-			{
+			{*/
 				Resource r = c.GetComponentInChildren<Resource>();
 				if (r!=null)
 					resourcesCount[r.resourceType]++;
-			}
+			//}
 		}
 		OnResourceAreaUpdateEvent();
 	}

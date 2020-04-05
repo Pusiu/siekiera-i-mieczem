@@ -28,6 +28,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-2382909719853678436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 1
+  state: 1
 --- !u!114 &-1785974066649822478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,9 +69,7 @@ MonoBehaviour:
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 1007141968958748946}
-  - {fileID: -1785974066649822478}
-  - {fileID: 6092679026484239359}
+  - {fileID: -2382909719853678436}
 --- !u!114 &1007141968958748946
 MonoBehaviour:
   m_ObjectHideFlags: 0

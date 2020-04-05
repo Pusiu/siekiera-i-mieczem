@@ -54,6 +54,7 @@ public class ResourceGenerator : Resource //MonoBehaviour, IInteractable
 					Gather();
 					return;
 				}
+				return;
 				/*PlayerController.Hand h = (handlingMethod == HandlingMethod.InOneHand) ? PlayerController.Hand.Any : PlayerController.Hand.Both;
 				if (PlayerController.instance.HasFreeHand(h))
 				{
