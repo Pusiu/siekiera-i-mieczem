@@ -120,11 +120,14 @@ public class PlayerController : LivingBeing
 		float z = Mathf.Sin(cameraAngle * Mathf.Deg2Rad);
 		float x = Mathf.Cos(cameraAngle * Mathf.Deg2Rad);
 
-		cameraZoom -= Input.mouseScrollDelta.y*cameraZoomDamping;
-		if (cameraZoom > cameraZoomRange)
-			cameraZoom = cameraZoomRange;
-		if (cameraZoom < 1)
-			cameraZoom = 1;
+		if (GameUI.instance != null && !GameUI.instance.guideScreen.activeInHierarchy)
+		{
+			cameraZoom -= Input.mouseScrollDelta.y * cameraZoomDamping;
+			if (cameraZoom > cameraZoomRange)
+				cameraZoom = cameraZoomRange;
+			if (cameraZoom < 1)
+				cameraZoom = 1;
+		}
 
 		Camera.main.transform.position = transform.position + new Vector3(x*cameraOffset.x, cameraOffset.y, z*cameraOffset.z)*(cameraZoom);
 		Camera.main.transform.LookAt(transform.position);
@@ -620,6 +623,9 @@ public class PlayerController : LivingBeing
 
 	public bool DrainEnergy(float en)
 	{
+		if (energy > 20 && energy-en <= 20)
+			GameUI.instance.ShowHint("Zaczynasz być zmęczony, rozważ powrót do wioski by przespać się przy ognisku");
+
 		if (energy >= en)
 		{
 			energy -= en;

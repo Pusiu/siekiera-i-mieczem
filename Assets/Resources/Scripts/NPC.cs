@@ -25,8 +25,16 @@ public class NPC : MonoBehaviour, IInteractable
 
 	public void OnInteraction()
 	{
-		if (currentDialogue != null)
-			StartDialogue();
+		PlayerController.instance.movePoint.transform.position = transform.position + transform.forward * 3;
+		PlayerController.instance.MoveTo(PlayerController.instance.movePoint);
+		PlayerController.instance.OnTargetReached += (args) =>
+		{
+			PlayerController.instance.ClearOnTargetReachedListeners();
+			PlayerController.instance.MoveTo(PlayerController.instance.gameObject);
+			PlayerController.instance.transform.LookAtYOnly(transform.position);
+			if (currentDialogue != null)
+				StartDialogue();
+		};
 	}
 
 	public void SetDialogue(DialogueScriptableObject d)

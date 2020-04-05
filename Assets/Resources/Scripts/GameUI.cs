@@ -360,9 +360,10 @@ public class GameUI : MonoBehaviour
 	public void ShowGuideScreen()
 	{
 		PlayerController.instance.canMove = false;
+		PlayerController.instance.MoveTo(PlayerController.instance.gameObject);
 		HideAllGuideScreenContents();
 		guideScreen.SetActive(true);
-		Canvas.ForceUpdateCanvases();
+		//Canvas.ForceUpdateCanvases();
 
 	}
 	public void HideGuideScreen()
@@ -381,7 +382,8 @@ public class GameUI : MonoBehaviour
 	{
 		HideAllGuideScreenContents();
 		content.SetActive(true);
-		Canvas.ForceUpdateCanvases();
+		LayoutRebuilder.ForceRebuildLayoutImmediate(content.GetComponent<RectTransform>());
+		//Canvas.ForceUpdateCanvases();
 	}
 
 	public void ToggleInventory()

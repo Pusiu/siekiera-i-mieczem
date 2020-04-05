@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
 	bool gameOver = false;
 	// Start is called before the first frame update
+
 	void Start()
 	{
 		instance = this;
