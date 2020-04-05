@@ -28,6 +28,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-8127979491795462750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-3743295212966926594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,8 +111,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - {fileID: 349029062230942638}
-  - {fileID: -3663535097365885811}
+  - {fileID: 7162609888745198925}
   - {fileID: 9180866090543626337}
+  - {fileID: 4990598416864352112}
+  - {fileID: 756625848771097076}
+  - {fileID: 6040136340731854100}
+  - {fileID: 2234261566726422209}
 --- !u!114 &349029062230942638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,8 +130,49 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: "Bardzo dzi\u0119kuj\u0119! Ku\u017Ania wygl\u0105da wspaniale. A oto miecz
-    dla Ciebie"
+  text: "Bardzo dzi\u0119kuj\u0119! Ku\u017Ania wygl\u0105da wspaniale."
+--- !u!114 &756625848771097076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Powodzenia! Uwa\u017Caj na siebie!"
+--- !u!114 &2234261566726422209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
+  m_Name: DialogueSwitch
+  m_EditorClassIdentifier: 
+  endCurrent: 1
+  nextDialogue: {fileID: 11400000, guid: 36cdf14170f46a24ab47a1f77ec9850e, type: 2}
+--- !u!114 &2912972849992535597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &3006718786172805950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +187,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &4990598416864352112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: "Ju\u017C si\u0119 robi, rusz\u0119 w drog\u0119 od razu."
 --- !u!114 &5871705226874876707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +214,35 @@ MonoBehaviour:
   m_Name: DialogueWait
   m_EditorClassIdentifier: 
   time: 0
+--- !u!114 &6040136340731854100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: "Dzi\u0119kuj\u0119!"
+--- !u!114 &7162609888745198925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Jednak, \u017Ceby zrobi\u0107 miecz, potrzebuje kowad\u0142a, kt\xF3re zosta\u0142o
+    skradzione."
 --- !u!114 &7250576186183488470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +256,20 @@ MonoBehaviour:
   m_Name: DialogueFadeScreen
   m_EditorClassIdentifier: 
   fadeIn: 0
+--- !u!114 &7976701605014775944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5973951cb18014b8d99a88a5fd075c, type: 3}
+  m_Name: DialogueCheckQuestStatus
+  m_EditorClassIdentifier: 
+  questID: 0
+  state: 0
 --- !u!114 &8843496646682088427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,5 +296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
-  speaker: 0
-  text: "Wspania\u0142y miecz. Dzi\u0119kuj\u0119."
+  speaker: 1
+  text: "Z tego co wiem znajduj\u0119 si\u0119 w g\xF3rach. Prznie\u015B je, to dostaniesz
+    miecz"

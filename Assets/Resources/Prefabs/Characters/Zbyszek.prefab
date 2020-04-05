@@ -265,9 +265,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d0b1c1b6b0c8642a215f8a8e2b77ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcID: 1
-  currentDialogue: {fileID: 11400000, guid: c722265d69867274ea62864fd0f7a891, type: 2}
+  id: 1
+  health: 5
+  stepPrefab: {fileID: 0}
+  agent: {fileID: 0}
   animator: {fileID: 0}
+  currentDialogue: {fileID: 11400000, guid: c722265d69867274ea62864fd0f7a891, type: 2}
   currentDialogueLineIndex: 0
 --- !u!1 &3730805682048393145
 GameObject:

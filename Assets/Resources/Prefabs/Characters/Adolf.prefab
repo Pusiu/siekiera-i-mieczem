@@ -861,6 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c6c015080d18e4b9dbb60e2e56c2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 5
   health: 5
   stepPrefab: {fileID: 2771912835370890853, guid: 37e4567c74ecb054a965ca4f3b03a122,
     type: 3}

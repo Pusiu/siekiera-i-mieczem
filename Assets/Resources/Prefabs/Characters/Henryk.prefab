@@ -409,9 +409,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d0b1c1b6b0c8642a215f8a8e2b77ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcID: 2
-  currentDialogue: {fileID: 0}
+  id: 2
+  health: 5
+  stepPrefab: {fileID: 0}
+  agent: {fileID: 0}
   animator: {fileID: 0}
+  currentDialogue: {fileID: 0}
   currentDialogueLineIndex: 0
 --- !u!65 &5711154573809728675
 BoxCollider:
