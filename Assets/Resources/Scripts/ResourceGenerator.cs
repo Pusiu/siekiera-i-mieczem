@@ -70,4 +70,9 @@ public class ResourceGenerator : Resource //MonoBehaviour, IInteractable
 		};
 	}
 
+	public override string GetItemDescription()
+	{
+		return $"Zawiera {count} jednostek {(resourceType == ResourceType.Stone ? "kamienia" : "drewna")}";
+	}
+
 }

@@ -10,11 +10,14 @@ public class Resource : PickableObject
 
 	public override void OnInteraction()
 	{
-		base.OnInteraction();
 		if (isOnCart)
 		{
-			PlayerController.instance.agent.SetDestination(Cart.instance.loadingPos.position);
+			//PlayerController.instance.agent.SetDestination(.position);
+			PlayerController.instance.MoveTo(Cart.instance.loadingPos.gameObject);
+			PlayerController.instance.OnTargetReached += (args) => { Pickup(); };
 		}
+		else
+			base.OnInteraction();
 	}
 
 	public override bool Pickup()

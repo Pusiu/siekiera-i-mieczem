@@ -99,8 +99,8 @@ public class Cart : Item, IInteractable
 				 }
 				 else
 				 {
-					 ResourceGenerator r = PlayerController.instance.hands[PlayerController.Hand.Left]?.GetComponent<ResourceGenerator>();
-					 if (r == null)
+					 Resource r = PlayerController.instance.hands[PlayerController.Hand.Left]?.GetComponent<Resource>();
+					 if (r.handlingMethod == HandlingMethod.InOneHand)
 					 {
 						 GameUI.instance.ShowHint("Na wóż możesz ładować tylko duże rzeczy");
 						 return;

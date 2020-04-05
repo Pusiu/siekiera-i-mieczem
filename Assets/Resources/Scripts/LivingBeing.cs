@@ -14,7 +14,7 @@ public class LivingBeing : MonoBehaviour, IInteractable, IAttackable
 	public NavMeshAgent agent;
 	public Animator animator;
 
-	public void Awake()
+	public virtual void Awake()
 	{
 		agent = GetComponent<NavMeshAgent>();
 		animator = GetComponent<Animator>();

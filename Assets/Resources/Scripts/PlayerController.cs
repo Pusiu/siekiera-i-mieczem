@@ -20,7 +20,7 @@ public class PlayerController : LivingBeing
 		//base.OnInteraction();
 	}
 
-	private void Awake()
+	public override void Awake()
 	{
 		base.Awake();
 		instance = this;

@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: Zbyszek 3
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 1266902864319318264}
+  - {fileID: 5824145214008958298}
   - {fileID: -1882728671154660503}
   - {fileID: 6211040836953406527}
   - {fileID: 7013645774425878771}
@@ -193,6 +193,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &5824145214008958298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c9e6ab02eae484caf5f66193a10d70, type: 3}
+  m_Name: DialogueHasTool
+  m_EditorClassIdentifier: 
+  t: 2
+  exitIfFalse: 1
 --- !u!114 &6211040836953406527
 MonoBehaviour:
   m_ObjectHideFlags: 0
