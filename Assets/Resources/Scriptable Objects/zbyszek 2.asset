@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7455851724292297596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71dbf7e481f499498e335efcb6001b3, type: 3}
+  m_Name: DialogueHasResource
+  m_EditorClassIdentifier: 
+  t: 0
+  count: 5
+  exitIfFalse: 1
 --- !u!114 &-6918523324612910557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,6 +57,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Czego oni jeszcze tu chc\u0105? Przecie\u017C ca\u0142a osada jest zniszczona."
+--- !u!114 &-5987635938307592341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71dbf7e481f499498e335efcb6001b3, type: 3}
+  m_Name: DialogueHasResource
+  m_EditorClassIdentifier: 
+  t: 0
+  count: 5
+  exitIfFalse: 1
 --- !u!114 &-4996004619740906450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +117,20 @@ MonoBehaviour:
   npcID: 0
   endCurrent: 1
   nextDialogue: {fileID: 11400000, guid: f6aa9a407a6ffe3468c029620e062d21, type: 2}
+--- !u!114 &-4561860812669999047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-1541651719088768205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +146,20 @@ MonoBehaviour:
   speaker: 1
   text: "Z tego, co wiem to maj\u0105 swoj\u0105 chat\u0119 gdzie\u015B w pobli\u017Cu.
     Musisz by\u0107 czujny."
+--- !u!114 &-274086944101423188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c9e6ab02eae484caf5f66193a10d70, type: 3}
+  m_Name: DialogueHasTool
+  m_EditorClassIdentifier: 
+  t: 0
+  exitIfFalse: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +176,8 @@ MonoBehaviour:
   - {fileID: -6918523324612910557}
   - {fileID: 9016442491915475002}
   - {fileID: 8949649392181197785}
+  - {fileID: 8082930744075932709}
+  - {fileID: -5987635938307592341}
   - {fileID: -4798087973301254708}
   - {fileID: -1541651719088768205}
   - {fileID: -6227730915515083388}
@@ -125,6 +185,20 @@ MonoBehaviour:
   - {fileID: -4996004619740906450}
   - {fileID: 3546221487738883724}
   - {fileID: -4598294601327169034}
+--- !u!114 &1471048563812329992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &3546221487738883724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +256,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 1
   text: 
+--- !u!114 &8082930744075932709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 9
+  state: 1
 --- !u!114 &8949649392181197785
 MonoBehaviour:
   m_ObjectHideFlags: 0

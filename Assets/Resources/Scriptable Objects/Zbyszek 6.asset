@@ -73,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentNPC: 0
   npcID: 0
-  endCurrent: 0
+  endCurrent: 1
   nextDialogue: {fileID: 11400000, guid: ca164e2928d3d204293f36067cd4a056, type: 2}
 --- !u!114 &5002378746447647651
 MonoBehaviour:

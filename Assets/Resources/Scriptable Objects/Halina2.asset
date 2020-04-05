@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260ba00121fc52c4da352b7c9257f40c, type: 3}
   m_Name: DialogueRemoveResource
   m_EditorClassIdentifier: 
-  t: 2
+  t: 3
   count: 1
 --- !u!114 &3879083734454253479
 MonoBehaviour:
@@ -171,6 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71dbf7e481f499498e335efcb6001b3, type: 3}
   m_Name: DialogueHasResource
   m_EditorClassIdentifier: 
-  t: 2
+  t: 3
   count: 1
   exitIfFalse: 1
