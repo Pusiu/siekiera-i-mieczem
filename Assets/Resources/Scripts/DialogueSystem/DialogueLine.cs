@@ -33,7 +33,7 @@ public class DialogueLine : DialogueAction
 		GameManager.instance.ExecuteAction(() =>
 		{
 			npc.ProcessLine();
-		}, text.Length * GameUI.instance.typewriteLetterTime + 1);
+		}, text.Length * GameUI.instance.typewriteLetterTime + 3);
 		GameUI.instance.Typewrite(text);
 
 		return false;

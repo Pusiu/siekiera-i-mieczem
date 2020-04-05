@@ -106,7 +106,8 @@ public class Enemy : LivingBeing
 
 	void MoveTo(Vector3 target)
 	{
-		agent.SetDestination(target);
+		if (agent.enabled)
+			agent.SetDestination(target);
 	}
 
 	public override void ReceiveDamage(int damage)

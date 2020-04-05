@@ -621,6 +621,26 @@ public class PlayerController : LivingBeing
 		}
 	}
 
+	public bool HasResource(Resource.ResourceType t, int count=1)
+	{
+		int c = 0;
+		if (hands[Hand.Left]?.GetComponent<Resource>() != null &&
+			hands[Hand.Left].GetComponent<Resource>().resourceType == t)
+			c++;
+
+		if (hands[Hand.Right]?.GetComponent<Resource>() != null &&
+			hands[Hand.Right].GetComponent<Resource>().resourceType == t)
+			c++;
+
+		List<Item> i = items.FindAll(x => x.GetComponent<Resource>() != null && x.GetComponent<Resource>().resourceType == t);
+		c += i.Count;
+
+		if (c >= count)
+			return true;
+
+		return false;
+	}
+
 	public bool DrainEnergy(float en)
 	{
 		if (energy > 20 && energy-en <= 20)

@@ -13,6 +13,7 @@ public class Bed : MonoBehaviour, IInteractable
 		{
 			GameManager.instance.GetComponent<TimeAndWeather>().SetTime(700);
 			PlayerController.instance.energy = 100;
+			PlayerController.instance.health = 100;
 			PlayerController.instance.canMove = true;
 			GameUI.instance.FadeOutRebuildingScreen();
 		},3);
