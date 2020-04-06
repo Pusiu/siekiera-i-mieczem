@@ -132,7 +132,7 @@ MonoBehaviour:
   requireTool: 0
   requiredToolType: 0
   workEnergyDrainPerHit: 0
-  count: 0
+  count: 1
   hitsToDestroy: 3
   branchPrefab: {fileID: 3184519443540205676, guid: b66e5dd8fd1361341a1917182c7d128f,
     type: 3}

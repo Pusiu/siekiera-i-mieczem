@@ -234,7 +234,17 @@ public class GameUI : MonoBehaviour
 			Vector3 up = Vector3.up * 2;
 			if (s.transform.GetComponentInChildren<Collider>() != null)
 			{
-				up = new Vector3(0,s.transform.GetComponentInChildren<Collider>().bounds.extents.y,0);
+				up = new Vector3(0,s.transform.GetComponentInChildren<Collider>().bounds.size.y,0);
+			}
+
+			if (lastDraggedIndex == -1 || lastDraggedIndex == -3) //right hand
+			{
+				if (PlayerController.instance.hands[PlayerController.Hand.Left] != null &&
+					PlayerController.instance.hands[PlayerController.Hand.Right] != null &&
+					PlayerController.instance.hands[PlayerController.Hand.Left] == PlayerController.instance.hands[PlayerController.Hand.Right])
+				{
+					PlayerController.instance.hands[(lastDraggedIndex == -1) ? PlayerController.Hand.Left : PlayerController.Hand.Right] = null;
+				}
 			}
 
 			s.transform.position = PlayerController.instance.transform.position + up + PlayerController.instance.transform.forward;
@@ -247,6 +257,7 @@ public class GameUI : MonoBehaviour
 
 			s.gameObject.SetActive(true);
 			PlayerController.instance.MoveItem(null,lastDraggedIndex);
+			PlayerController.instance.animator.SetTrigger("Pickup");
 			return;
 		}
 

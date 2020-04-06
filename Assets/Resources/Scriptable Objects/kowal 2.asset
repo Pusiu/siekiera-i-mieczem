@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: "G\xF3ry znajduj\u0105 si\u0119 na po\u0142udniowym zachodzie. Pod\u0105\u017Caj
+  text: "G\xF3ry znajduj\u0105 si\u0119 na po\u0142udniowym wschodzie. Pod\u0105\u017Caj
     \u015Bcie\u017Ckami to na pewno tam trafisz"
 --- !u!114 &11400000
 MonoBehaviour:

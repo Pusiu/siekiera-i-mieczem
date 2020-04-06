@@ -103,7 +103,7 @@ MonoBehaviour:
   requireTool: 1
   requiredToolType: 1
   workEnergyDrainPerHit: 5
-  count: 5
+  count: 1
   resourcePrefab: {fileID: 7483187212673018139, guid: 01fde3fd7f301c949b24ce0c6d37d29d,
     type: 3}
   hitsToDestroy: 3

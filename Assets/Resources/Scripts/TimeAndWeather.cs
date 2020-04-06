@@ -36,7 +36,7 @@ public class TimeAndWeather : MonoBehaviour
 			currentTime = 0;
 
 		float xrot;
-		if (currentTime >= sunrise && currentTime <= sunset)
+		if (currentTime > sunrise && currentTime < sunset)
 		{
 			if (currentTime >= sunrise)
 			{

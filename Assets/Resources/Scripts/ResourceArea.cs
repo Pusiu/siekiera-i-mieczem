@@ -47,7 +47,7 @@ public class ResourceArea : MonoBehaviour
 			}
 			else
 			{*/
-				Resource r = c.GetComponentInChildren<Resource>();
+				Resource r = c.GetComponent<Resource>();
 				if (r!=null)
 					if (resourcesCount.ContainsKey(r.resourceType))
 						resourcesCount[r.resourceType]++;
@@ -111,6 +111,10 @@ public class ResourceArea : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		Invoke("CalculateResourcesInside", 2);
+	}
+	private void OnTriggerStay(Collider other)
+	{
+		CalculateResourcesInside();	
 	}
 	private void OnTriggerExit(Collider other)
 	{

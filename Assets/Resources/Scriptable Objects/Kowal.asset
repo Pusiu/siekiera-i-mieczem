@@ -14,6 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Witaj, Czy Ty jeste\u015B Kowalem?"
+--- !u!114 &-7668280671096703673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Je\u017Celi j\u0105 dla mnie odbudujesz, to dostaniesz miecz."
 --- !u!114 &-6569054012482292069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +103,7 @@ MonoBehaviour:
   - {fileID: 3722062876617753818}
   - {fileID: -6569054012482292069}
   - {fileID: 4924454247511486112}
+  - {fileID: -7668280671096703673}
   - {fileID: -3715650545160913639}
   - {fileID: -1882603183126858049}
   - {fileID: 1414922282887390493}
@@ -178,8 +193,8 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 0
-  text: "Wys\u0142a\u0142 mnie do Ciebie tutejszy ch\u0142op po miecz. Podobno to
-    niebezpieczna oklica. Wyku\u0142by\u015B dla mnie miecz?"
+  text: "Wys\u0142a\u0142 mnie do Ciebie tutejszy ch\u0142op. Podobno to niebezpieczna
+    oklica. Wyku\u0142by\u015B dla mnie miecz?"
 --- !u!114 &4924454247511486112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,8 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 1
   text: "Oczywi\u015Bcie zrobi\u0119 dla Ciebie miecz, ale jak widzisz moja ku\u017Ania
-    jest ca\u0142kiem zniszczona. Je\u017Celi j\u0105 dla mnie odbudujesz, to dostaniesz
-    miecz."
+    jest ca\u0142kiem zniszczona."
 --- !u!114 &7558601724905820535
 MonoBehaviour:
   m_ObjectHideFlags: 0
