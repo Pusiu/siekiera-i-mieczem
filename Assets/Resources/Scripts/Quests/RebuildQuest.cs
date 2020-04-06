@@ -71,8 +71,12 @@ public class RebuildQuest : BaseQuest
 
 	public override string GetDescription()
 	{
-		return $"Przynieś następującą ilość zasobów:\n" +
-				$"Skała:{resourceArea.resourcesCount[Resource.ResourceType.Rock]}/{rockAmount}\n" +
-				$"Drewno:{resourceArea.resourcesCount[Resource.ResourceType.Wood]}/{woodAmount}";
+		string s = $"Przynieś następującą ilość zasobów:\n";
+		if (rockAmount > 0)
+			s += $"Skała:{resourceArea.resourcesCount[Resource.ResourceType.Rock]}/{rockAmount}\n";
+		if (woodAmount > 0)
+			s += $"Drewno:{resourceArea.resourcesCount[Resource.ResourceType.Wood]}/{woodAmount}";
+
+		return s;
 	}
 }
