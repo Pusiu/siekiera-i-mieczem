@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: ZbyszekGalezie
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: -1128968826336055337}
+  - {fileID: 3197598283096222275}
   - {fileID: 646105053081258747}
   - {fileID: 2946354808693942258}
   - {fileID: -1114246652299101050}
@@ -162,6 +162,20 @@ MonoBehaviour:
   speaker: 1
   text: "\u015Awietna robota. Trzeba dorzuci\u0107 ga\u0142\u0119zie do ogniska.
     P\xF3jdziesz po nie?"
+--- !u!114 &3197598283096222275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5973951cb18014b8d99a88a5fd075c, type: 3}
+  m_Name: DialogueCheckQuestStatus
+  m_EditorClassIdentifier: 
+  questID: 1
+  state: 2
 --- !u!114 &6938881498178366235
 MonoBehaviour:
   m_ObjectHideFlags: 0

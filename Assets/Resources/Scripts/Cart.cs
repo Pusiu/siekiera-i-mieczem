@@ -126,7 +126,7 @@ public class Cart : Item, IInteractable
 
 					 if (r.handlingMethod == HandlingMethod.InOneHand)
 					 {
-						 GameUI.instance.ShowHint("Na wóż możesz ładować tylko duże rzeczy");
+						 GameUI.instance.ShowHint("Na wóz możesz ładować tylko duże rzeczy");
 						 return;
 					 }
 

@@ -2963,10 +2963,10 @@ PrefabInstance:
     - target: {fileID: 7998819857422134633, guid: 4bdcdd1e5b1487a4bb25b02bae233de8,
         type: 3}
       propertyPath: m_Text
-      value: "To jest okno samouczka\nZawiera on wszelkie informacje kt\xF3re pomog\u0105
-        Ci w grze\nMo\u017Cesz otworzy\u0107 go w dowolnym momencie klikaj\u0105c
-        <color=red>F1</color> albo klikaj\u0105c na znak zapytania w prawym g\xF3rnym
-        rogu ekranu"
+      value: "To jest okno samouczka\nSamouczek zawiera wszelkie informacje, kt\xF3re
+        pomog\u0105 Ci w grze\nMo\u017Cesz otworzy\u0107 to okno w dowolnym momencie
+        klikaj\u0105c <color=red>F1</color> albo klikaj\u0105c na znak zapytania
+        w prawym g\xF3rnym rogu ekranu"
       objectReference: {fileID: 0}
     - target: {fileID: 7998819857422134639, guid: 4bdcdd1e5b1487a4bb25b02bae233de8,
         type: 3}

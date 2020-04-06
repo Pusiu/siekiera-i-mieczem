@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: "Niestety, przez te kilka miesi\u0119cy nikt si\u0119 nie pojawi\u0142, a
-    sam niestety nie dam rady jej odbudowa\u0107. "
+  text: "Niestety, przez te kilka dni nikt si\u0119 nie pojawi\u0142, a sam niestety
+    nie dam rady jej odbudowa\u0107. "
 --- !u!114 &-4372617846117413071
 MonoBehaviour:
   m_ObjectHideFlags: 0
