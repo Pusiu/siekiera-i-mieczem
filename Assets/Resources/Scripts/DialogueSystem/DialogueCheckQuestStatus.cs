@@ -13,7 +13,11 @@ public class DialogueCheckQuestStatus : DialogueAction
 		BaseQuest q = GameManager.instance.questList.Find(x => x.questId == questID);
 		if (q.questState == state)
 			return true;
-
+		else
+		{
+			npc.currentDialogueLineIndex = npc.currentDialogue.lines.Count + 1;
+			return true;
+		}
 		return false;
 	}
 
