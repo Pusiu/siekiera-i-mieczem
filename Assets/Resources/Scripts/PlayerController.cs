@@ -655,11 +655,11 @@ public class PlayerController : LivingBeing
 	public bool HasResource(Resource.ResourceType t, int count=1)
 	{
 		int c = 0;
-		if (hands[Hand.Left]?.GetComponent<Resource>() != null &&
+		if (hands[Hand.Left] != null && hands[Hand.Left]?.GetComponent<Resource>() != null &&
 			hands[Hand.Left].GetComponent<Resource>().resourceType == t)
 			c++;
 
-		if (hands[Hand.Right]?.GetComponent<Resource>() != null &&
+		if (hands[Hand.Right] != null && hands[Hand.Right]?.GetComponent<Resource>() != null &&
 			hands[Hand.Right].GetComponent<Resource>().resourceType == t)
 			c++;
 

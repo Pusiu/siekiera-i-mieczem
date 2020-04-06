@@ -35,9 +35,10 @@ public class TreeResource : ResourceGenerator
 				hitsToDestroy--;
 
 				AudioSource.PlayClipAtPoint(GameManager.instance.wooshSound, transform.position);
+				Vector3 pos = transform.position;
 				GameManager.instance.ExecuteAction(() =>
 				{
-					AudioSource.PlayClipAtPoint(woodHitSound, transform.position);
+					AudioSource.PlayClipAtPoint(woodHitSound, pos);
 				}, 1);
 
 				PlayerController.instance.transform.LookAtYOnly(transform.position);

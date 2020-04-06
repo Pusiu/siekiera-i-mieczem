@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
-  speaker: 0
+  speaker: 1
   text: Odzyskaj je dla mnie, to dostaniesz miecz
 --- !u!114 &5871705226874876707
 MonoBehaviour:
