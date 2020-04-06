@@ -2,7 +2,7 @@ poly.google.com:
 	Medieval cart by Kenney
 	Grass by Google
 	
-https://opengameart.org/	
+opengameart.org
 	https://opengameart.org/content/37-hitspunchesby Independent.nu
 	https://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud by TinyWorlds
 	https://opengameart.org/content/5-hit-sounds-dying by TinyWorlds
@@ -13,3 +13,7 @@ freesound.org
 	https://freesound.org/people/Nimlos/sounds/422048/ - forest_cicada_loop.flac by Nimlos
 	Cartoon Mumble Speak by dersuperanton freesound.org
 	"Hammering Nails, Close, A.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org
+	https://freesound.org/people/ryanconway/sounds/240801/ - Pickaxe mining stone by ryanconway
+
+game-icons.net
+	Axe sword iconby Delapouite under CC BY 3.0

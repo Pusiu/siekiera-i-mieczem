@@ -107,8 +107,8 @@ MonoBehaviour:
   resourcePrefab: {fileID: 7483187212673018139, guid: 01fde3fd7f301c949b24ce0c6d37d29d,
     type: 3}
   hitsToDestroy: 3
-  onDestroyedSound: {fileID: 0}
-  hitSound: {fileID: 0}
+  onDestroyedSound: {fileID: 8300000, guid: 99fb5482cf4f2b345a535a4f307cb0d9, type: 3}
+  hitSound: {fileID: 8300000, guid: 99fb5482cf4f2b345a535a4f307cb0d9, type: 3}
 --- !u!65 &3887794304785542714
 BoxCollider:
   m_ObjectHideFlags: 0
