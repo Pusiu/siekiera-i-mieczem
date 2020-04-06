@@ -25,7 +25,11 @@ public class Resource : PickableObject
 		if (base.Pickup())
 		{
 			if (isOnCart)
+			{
 				isOnCart = false;
+				if (GetComponentInChildren<Collider>())
+					GetComponentInChildren<Collider>().isTrigger = false;
+			}
 
 			return true;
 		}

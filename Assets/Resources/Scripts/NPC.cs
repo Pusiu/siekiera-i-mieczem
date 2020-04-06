@@ -52,8 +52,10 @@ public class NPC : LivingBeing
 			PlayerController.instance.currentTalkingNPC = this;
 			currentDialogueLineIndex++;
 			GameUI.instance.speechBubble.gameObject.SetActive(false);
+			PlayerController.instance.canMove = false;
 			if (currentDialogue == null || currentDialogueLineIndex >= currentDialogue.lines.Count)
 			{
+				PlayerController.instance.canMove = true;
 				PlayerController.instance.currentTalkingNPC = null;
 				return;
 			}

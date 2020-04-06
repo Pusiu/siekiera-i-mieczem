@@ -124,7 +124,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.3805199, y: 1.0126, z: 0.7800007}
+  m_ConnectedAnchor: {x: 1.3805194, y: 1.0126, z: 0.7800002}
   m_UseSpring: 1
   m_Spring:
     spring: 5
@@ -555,6 +555,7 @@ MonoBehaviour:
   stonesPos:
   - {fileID: 2084728210750515166}
   - {fileID: 1290784170022020969}
+  firstUse: 1
 --- !u!208 &4904521602642298157
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -695,7 +696,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.6245193, y: 1.0126, z: 0.7800007}
+  m_ConnectedAnchor: {x: -1.6245196, y: 1.0126, z: 0.77999985}
   m_UseSpring: 1
   m_Spring:
     spring: 5

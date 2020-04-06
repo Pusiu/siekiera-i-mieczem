@@ -136,6 +136,10 @@ public class Cart : Item, IInteractable
 						 PlayerController.instance.PutDownHeldObject(place.gameObject);
 						 if (r.GetComponentInChildren<Rigidbody>())
 							 r.GetComponentInChildren<Rigidbody>().isKinematic = true;
+
+						 if (r.GetComponentInChildren<Collider>())
+							 r.GetComponentInChildren<Collider>().isTrigger = true;
+
 						 r.transform.SetParent(place);
 						 r.transform.localPosition = Vector3.zero;
 						 r.transform.localRotation = Quaternion.identity;
