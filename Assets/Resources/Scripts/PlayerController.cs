@@ -258,6 +258,7 @@ public class PlayerController : LivingBeing
 		agent.isStopped = false;
 		movePoint.SetActive(true);
 		movePoint.transform.position = target.transform.position;
+		GameManager.instance.CheckIfInBounds();
 	}
 
 	public override void ReceiveDamage(int damage)

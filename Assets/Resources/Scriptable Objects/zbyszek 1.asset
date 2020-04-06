@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 0
-  text: "Dobry pomy\u015Bl. Zabior\u0119 sie od razu do pracy."
+  text: "Dobry pomys\u0142. Zabior\u0119 sie od razu do pracy."
 --- !u!114 &2579234152992928310
 MonoBehaviour:
   m_ObjectHideFlags: 0

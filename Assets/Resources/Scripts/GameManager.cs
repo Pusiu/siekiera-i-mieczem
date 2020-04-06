@@ -10,9 +10,11 @@ public class GameManager : MonoBehaviour
 	public static GameManager instance;
 	public AudioClip wooshSound;
 	public AudioClip wooshSwordSound;
+	public AudioClip buildingSound;
 
 	public List<BaseQuest> questList = new List<BaseQuest>();
 	public List<NPC> npcs;
+	public List<MapBoundCollider> mapBounds;
 
 	bool gameOver = false;
 	// Start is called before the first frame update
@@ -30,10 +32,24 @@ public class GameManager : MonoBehaviour
 			};
 		}
 
+		mapBounds.AddRange(FindObjectsOfType<MapBoundCollider>());
+
 		npcs.AddRange(FindObjectsOfType<NPC>());
 		questList.Clear();
 		questList.AddRange(FindObjectsOfType<BaseQuest>());
 		InvokeRepeating("CheckQuestStatuses", 1, 1);
+	}
+
+	public void CheckIfInBounds()
+	{
+		foreach (MapBoundCollider m in mapBounds)
+		{
+			if (m.GetComponent<Collider>().bounds.Contains(PlayerController.instance.movePoint.transform.position))
+			{
+				MapBoundCollider.StopPlayer();
+				return;
+			}
+		}
 	}
 
 	public void CheckQuestStatuses()

@@ -41,6 +41,8 @@ public class RebuildQuest : BaseQuest
 				SetState(QuestState.Completed);
 				GameUI.instance.FadeInRebuildingScreen();
 				PlayerController.instance.canMove = false;
+				GameManager.instance.GetComponent<AudioSource>().clip = GameManager.instance.buildingSound;
+				GameManager.instance.GetComponent<AudioSource>().Play();
 				GameManager.instance.ExecuteAction(() =>
 				{
 					rebuildedBuilding.SetActive(true);

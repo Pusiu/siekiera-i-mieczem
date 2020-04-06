@@ -17,6 +17,6 @@ public class BaseQuest : MonoBehaviour
 
 	public virtual string GetDescription()
 	{
-		return "No description";
+		return "";
 	}
 }

@@ -1,5 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8664493836823046870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
+--- !u!114 &-8161402351736112959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
+--- !u!114 &-8037242350032527538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-7455851724292297596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,8 +69,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5973951cb18014b8d99a88a5fd075c, type: 3}
   m_Name: DialogueCheckQuestStatus
   m_EditorClassIdentifier: 
-  questID: 1
-  state: 2
+  questID: 9
+  state: 1
 --- !u!114 &-6699184565367537685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +142,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-5172151202206865940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dadf81dd082fd4649806ddea95780513, type: 3}
+  m_Name: DialogueSetTime
+  m_EditorClassIdentifier: 
+  time: 700
 --- !u!114 &-4996004619740906450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +214,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-4070539674901745963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c2ee143843540ab88898f373161c, type: 3}
+  m_Name: DialogueFadeScreen
+  m_EditorClassIdentifier: 
+  fadeIn: 0
+--- !u!114 &-2495154585494699596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0767878512a4743b9dd7d5b4856ed0, type: 3}
+  m_Name: DialogueWait
+  m_EditorClassIdentifier: 
+  time: 3
+--- !u!114 &-2463581664419189945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0767878512a4743b9dd7d5b4856ed0, type: 3}
+  m_Name: DialogueWait
+  m_EditorClassIdentifier: 
+  time: 3
+--- !u!114 &-1741934777821292704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dadf81dd082fd4649806ddea95780513, type: 3}
+  m_Name: DialogueSetTime
+  m_EditorClassIdentifier: 
+  time: 2200
+--- !u!114 &-1573564323889989649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c2ee143843540ab88898f373161c, type: 3}
+  m_Name: DialogueFadeScreen
+  m_EditorClassIdentifier: 
+  fadeIn: 0
 --- !u!114 &-1541651719088768205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,20 +322,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - {fileID: -6918523324612910557}
-  - {fileID: 9016442491915475002}
-  - {fileID: 8949649392181197785}
-  - {fileID: 8082930744075932709}
   - {fileID: -5987635938307592341}
   - {fileID: -6692704671294911016}
   - {fileID: 5249082067559560786}
+  - {fileID: 3057814862207839115}
+  - {fileID: -2495154585494699596}
+  - {fileID: -1741934777821292704}
+  - {fileID: -1573564323889989649}
   - {fileID: -4798087973301254708}
   - {fileID: -1541651719088768205}
   - {fileID: -6227730915515083388}
   - {fileID: 5169108052511564652}
   - {fileID: -4996004619740906450}
   - {fileID: 3546221487738883724}
+  - {fileID: 4287085767652470546}
+  - {fileID: -2463581664419189945}
+  - {fileID: -5172151202206865940}
+  - {fileID: -4070539674901745963}
   - {fileID: -4598294601327169034}
 --- !u!114 &1471048563812329992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
+--- !u!114 &3057814862207839115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c2ee143843540ab88898f373161c, type: 3}
+  m_Name: DialogueFadeScreen
+  m_EditorClassIdentifier: 
+  fadeIn: 1
+--- !u!114 &3241915620781551347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,6 +395,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questId: 5
   state: 1
+--- !u!114 &3742113834999054960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
+--- !u!114 &4287085767652470546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c2ee143843540ab88898f373161c, type: 3}
+  m_Name: DialogueFadeScreen
+  m_EditorClassIdentifier: 
+  fadeIn: 1
 --- !u!114 &5169108052511564652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,6 +479,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &6849747283778135783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &7128771439123470403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +521,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questId: 9
   state: 1
+--- !u!114 &8109349202472173832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
+--- !u!114 &8532519488272481874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &8949649392181197785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,5 +576,5 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: "\u015Awietna robota. Chod\u017Amy, rozpalimy ognisko. P\xF3jdziesz po ga\u0142\u0119zie
-    do ogniska?"
+  text: "\u015Awietna robota. Trzeba dorzuci\u0107 ga\u0142\u0119zie do ogniska.
+    P\xF3jdziesz po nie?"

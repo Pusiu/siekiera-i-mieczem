@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class MapBoundCollider : MonoBehaviour
 {
-	private void OnCollisionEnter(Collision collision)
+
+	public static void StopPlayer()
 	{
-		if (collision.collider.GetComponent<PlayerController>() != null)
-		{
-			GameUI.instance.currentSpeechFocus = PlayerController.instance.gameObject;
-			GameUI.instance.Typewrite("Nie powinienem się oddalać od wioski");
-		}
+		PlayerController.instance.MoveTo(PlayerController.instance.gameObject);
+		GameUI.instance.currentSpeechFocus = PlayerController.instance.gameObject;
+		GameUI.instance.Typewrite("Nie powinienem się oddalać od wioski");
+	}
+
+	private void OnMouseDown()
+	{
+		StopPlayer();
 	}
 }

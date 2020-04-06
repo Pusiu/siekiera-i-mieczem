@@ -398,6 +398,7 @@ public class GameUI : MonoBehaviour
 	public void ToggleInventory()
 	{
 		inventoryScreen.SetActive(!inventoryScreen.activeInHierarchy);
+		itemInfo.SetActive(false);
 	}
 
 	public void FadeInRebuildingScreen()
@@ -483,6 +484,7 @@ public class GameUI : MonoBehaviour
 			speechBubble.GetComponentInChildren<Text>().text += text[i];
 			yield return new WaitForSeconds(typewriteLetterTime);
 		}
-		OnTypewriteEnded();
+		if (OnTypewriteEnded != null)
+			OnTypewriteEnded();
 	}
 }
