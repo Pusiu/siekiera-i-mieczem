@@ -10,6 +10,9 @@ public class RebuildQuest : BaseQuest
 	public GameObject destroyedBuilding;
 	public GameObject rebuildedBuilding;
 
+	public bool activateNextQuestOnCompletion = true;
+	public BaseQuest nextQuest;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -51,6 +54,9 @@ public class RebuildQuest : BaseQuest
 					PlayerController.instance.canMove = true;
 					resourceArea.RemoveResources();
 					resourceArea.gameObject.SetActive(false);
+					if (activateNextQuestOnCompletion && nextQuest != null)
+						nextQuest.SetState(QuestState.Active);
+
 				}, 5.0f);
 			}
 		}

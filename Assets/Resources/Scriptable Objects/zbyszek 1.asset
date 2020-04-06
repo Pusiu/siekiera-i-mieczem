@@ -44,6 +44,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   t: 0
   exitIfFalse: 1
+--- !u!114 &-7251033067413690171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-5635389662882477847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +174,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Hmmm, od czego by tu zacz\u0105\u0107?"
+--- !u!114 &-1749042918698881406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 12
+  state: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +212,7 @@ MonoBehaviour:
   - {fileID: 3758267330187262058}
   - {fileID: -1756556174219723927}
   - {fileID: -5635389662882477847}
+  - {fileID: -1749042918698881406}
   - {fileID: 2498092020066354656}
   - {fileID: -1916727513224721928}
   - {fileID: 141681559985944374}
@@ -321,6 +350,20 @@ MonoBehaviour:
   speaker: 1
   text: "Naprawd\u0119? Nie my\u015Bla\u0142em, \u017Ce do\u017Cyje takiej chwili.
     Dzi\u0119kujemy Ci bardzo!"
+--- !u!114 &4184918413572000583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 12
+  state: 0
 --- !u!114 &4864249770867588010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +420,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Witaj, jestem Marian.\nCo sta\u0142o si\u0119 z wasz\u0105 osad\u0105?"
+--- !u!114 &6343488850868286137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &6765384335989519369
 MonoBehaviour:
   m_ObjectHideFlags: 0

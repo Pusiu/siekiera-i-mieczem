@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
 	public bool autoEndgame = true;
 
 	public List<BaseQuest> questList = new List<BaseQuest>();
-	public List<NPC> npcs;
+	public List<LivingBeing> npcs;
 	public List<MapBoundCollider> mapBounds;
 
 	bool gameOver = false;
@@ -35,7 +36,8 @@ public class GameManager : MonoBehaviour
 
 		mapBounds.AddRange(FindObjectsOfType<MapBoundCollider>());
 
-		npcs.AddRange(FindObjectsOfType<NPC>());
+		/*Scene sc = SceneManager.GetActiveScene();
+		npcs.AddRange(SceneManager.GetActiveScene().GetRootGameObjects().SelectMany(x => x.GetComponentsInChildren<NPC>()));*/
 		questList.Clear();
 		questList.AddRange(FindObjectsOfType<BaseQuest>());
 		InvokeRepeating("CheckQuestStatuses", 1, 1);
@@ -55,7 +57,7 @@ public class GameManager : MonoBehaviour
 
 	public void CheckQuestStatuses()
 	{
-		if (gameOver || autoEndgame)
+		if (gameOver || !autoEndgame)
 			return;
 
 		if (questList.FindAll(x => x.questState != BaseQuest.QuestState.Completed && x.isMainQuest).Count == 0)

@@ -152,6 +152,21 @@ MonoBehaviour:
   - {fileID: -3199528033162052696}
   - {fileID: -2871185438653534022}
   - {fileID: 3286453716976170082}
+  - {fileID: 7433763925851303420}
+--- !u!114 &449759828994612308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &1266902864319318264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +279,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Jakie nast\u0119pne zadanie masz dla mnie?"
+--- !u!114 &7433763925851303420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
+  m_Name: DialogueSwitch
+  m_EditorClassIdentifier: 
+  currentNPC: 1
+  npcID: 0
+  endCurrent: 1
+  nextDialogue: {fileID: 11400000, guid: 5c00f2089e2a4114fae558e576582f91, type: 2}
 --- !u!114 &7694182368229218108
 MonoBehaviour:
   m_ObjectHideFlags: 0

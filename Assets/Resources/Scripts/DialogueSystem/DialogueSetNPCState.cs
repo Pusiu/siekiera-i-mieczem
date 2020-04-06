@@ -10,7 +10,7 @@ public class DialogueSetNPCState : DialogueAction
 
 	public override bool Execute(NPC npc)
 	{
-		NPC target = GameManager.instance.npcs.Find(x => x.id == npcID);
+		LivingBeing target = GameManager.instance.npcs.Find(x => x.id == npcID);
 		if (target != null)
 			target.gameObject.SetActive(active);
 

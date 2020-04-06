@@ -13,6 +13,7 @@ public class BaseQuest : MonoBehaviour
 	public virtual void SetState(QuestState state)
 	{
 		questState = state;
+		GameManager.instance.CheckQuestStatuses();
 	}
 
 	public virtual string GetDescription()

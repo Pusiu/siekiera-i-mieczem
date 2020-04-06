@@ -81,10 +81,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
   m_Name: DialogueSwitch
   m_EditorClassIdentifier: 
-  currentNPC: 0
+  currentNPC: 1
   npcID: 0
   endCurrent: 1
-  nextDialogue: {fileID: 11400000, guid: 4309c93d80152cc41b1b93e81eb99494, type: 2}
+  nextDialogue: {fileID: 11400000, guid: 056c52e15dfd3154daeead84b27ecaa2, type: 2}
 --- !u!114 &-8205856432826848094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
-  speaker: 0
+  speaker: 1
   text: "Wspania\u0142a stajnia. Dzi\u0119kujemy."
 --- !u!114 &-1665571594532067311
 MonoBehaviour:
@@ -222,6 +222,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: 0
   state: 0
+--- !u!114 &-234241880037930411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - {fileID: -2436199605109047347}
+  - {fileID: 4018510948133135048}
   - {fileID: -1769184254982248082}
   - {fileID: 337202288595694040}
   - {fileID: -6003384321655709750}
@@ -369,6 +384,20 @@ MonoBehaviour:
   m_Name: DialogueSetTime
   m_EditorClassIdentifier: 
   time: 0
+--- !u!114 &4018510948133135048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 11
+  state: 2
 --- !u!114 &4076418637663493456
 MonoBehaviour:
   m_ObjectHideFlags: 0

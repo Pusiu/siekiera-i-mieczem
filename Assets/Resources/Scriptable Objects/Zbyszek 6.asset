@@ -71,10 +71,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
   m_Name: DialogueSwitch
   m_EditorClassIdentifier: 
-  currentNPC: 0
+  currentNPC: 1
   npcID: 0
   endCurrent: 1
-  nextDialogue: {fileID: 11400000, guid: ca164e2928d3d204293f36067cd4a056, type: 2}
+  nextDialogue: {fileID: 11400000, guid: 94363f156eff3ba4aa9de771337975e4, type: 2}
 --- !u!114 &5002378746447647651
 MonoBehaviour:
   m_ObjectHideFlags: 0

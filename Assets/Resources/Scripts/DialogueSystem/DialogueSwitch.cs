@@ -15,7 +15,7 @@ public class DialogueSwitch : DialogueAction
 	{
 		NPC target = npc;
 		if (!currentNPC)
-			npc = GameManager.instance.npcs.Find(x => x.id == npcID);
+			npc = GameManager.instance.npcs.Find(x => x.id == npcID).GetComponent<NPC>();
 
 		if (endCurrent)
 		{

@@ -26,10 +26,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89479048678cf1547938c6367739f9f4, type: 3}
   m_Name: DialogueSwitch
   m_EditorClassIdentifier: 
-  currentNPC: 0
+  currentNPC: 1
   npcID: 1
   endCurrent: 0
-  nextDialogue: {fileID: 11400000, guid: 94363f156eff3ba4aa9de771337975e4, type: 2}
+  nextDialogue: {fileID: 0}
+--- !u!114 &-7701550584168951463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Co\u015B si\u0119 sta\u0142o?"
 --- !u!114 &-5767059049429747694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,6 +58,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Spokojnie, nic si\u0119 nie dzieje. Chcia\u0142em Ci tylko co\u015B pokaza\u0107."
+--- !u!114 &-4246936368024055605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5973951cb18014b8d99a88a5fd075c, type: 3}
+  m_Name: DialogueCheckQuestStatus
+  m_EditorClassIdentifier: 
+  questID: 4
+  state: 2
 --- !u!114 &-3609623493508003011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +114,8 @@ MonoBehaviour:
   m_Name: Halina3
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 1726735557886560443}
+  - {fileID: -4246936368024055605}
+  - {fileID: -7701550584168951463}
   - {fileID: -5767059049429747694}
   - {fileID: 194987629594506086}
   - {fileID: 4072071802552397746}
