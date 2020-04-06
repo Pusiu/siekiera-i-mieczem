@@ -18,7 +18,10 @@ public class DialogueRemoveResource : DialogueAction
 			c++;
 		}
 		if (c >= count)
+		{
+			PlayerController.instance.RefreshHandAnimation();
 			return true;
+		}
 
 		if (PlayerController.instance.hands[PlayerController.Hand.Right]?.GetComponent<Resource>()?.resourceType == t)
 		{
@@ -27,7 +30,10 @@ public class DialogueRemoveResource : DialogueAction
 			c++;
 		}
 		if (c >= count)
+		{
+			PlayerController.instance.RefreshHandAnimation();
 			return true;
+		}
 
 		for (int i=0; i < PlayerController.instance.items.Count;i++)
 		{
@@ -46,6 +52,7 @@ public class DialogueRemoveResource : DialogueAction
 				}
 			}
 		}
+		PlayerController.instance.RefreshHandAnimation();
 
 		return true;
 	}

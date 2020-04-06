@@ -42,6 +42,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "W takim razie s\u0142ucham."
+--- !u!114 &-7436709564808266640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-6984594975329509136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +150,7 @@ MonoBehaviour:
   - {fileID: 291222402045404565}
   - {fileID: -9146675725582927803}
   - {fileID: -612749778473879569}
+  - {fileID: 4211098233014826856}
   - {fileID: -3150506250733294720}
 --- !u!114 &291222402045404565
 MonoBehaviour:
@@ -165,6 +180,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &4211098233014826856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 12
+  state: 1
 --- !u!114 &6572913124100693645
 MonoBehaviour:
   m_ObjectHideFlags: 0

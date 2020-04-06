@@ -51,6 +51,8 @@ public class PlayerController : LivingBeing
 
 	//public Animator animator;
 	//public NavMeshAgent agent;
+	public NPC currentTalkingNPC;
+
 	public AudioSource playerMouth;
 	public float speed = 5;
 	public float cameraAngle = 30;
@@ -133,6 +135,9 @@ public class PlayerController : LivingBeing
 		Camera.main.transform.position = transform.position + new Vector3(x*cameraOffset.x, cameraOffset.y, z*cameraOffset.z)*(cameraZoom);
 		Camera.main.transform.LookAt(transform.position);
 
+		if (Input.GetKeyDown(KeyCode.Space))
+			if (currentTalkingNPC != null)
+				currentTalkingNPC.ProcessLine();
 
 		if (health > 0 && canMove)
 		{
@@ -340,6 +345,29 @@ public class PlayerController : LivingBeing
 		{
 			DrawTool(h.Value);
 		}
+	}
+
+	public void RefreshHandAnimation()
+	{
+		if (hands[Hand.Left] != null)
+		{
+			animator.SetBool("LeftHand", true);
+			if (hands[Hand.Right] != null)
+			{
+				if (hands[Hand.Right]?.GetComponent<Resource>().handlingMethod == Item.HandlingMethod.OnShoulder)
+					animator.SetBool("Shoulder", true);
+				else
+					animator.SetBool("RightHand", true);
+			}
+			return;
+		}
+		else if (hands[Hand.Right] != null)
+		{
+			animator.SetBool("LeftHand", true);
+			return;
+		}
+
+		animator.Play("HandsIdle");
 	}
 
 	public void DrawTool(Hand h)

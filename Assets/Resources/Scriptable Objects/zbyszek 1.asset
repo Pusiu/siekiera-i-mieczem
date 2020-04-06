@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8420993977532163829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 0
+  state: 2
 --- !u!114 &-7845175712417524650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 1
   text: "Ja z \u017Con\u0105 zostali\u015Bmy z nadziej\u0105, \u017Ce kiedy\u015B
-    zjawi si\u0119 kto\u015B, kto pomo\u017Ce nam odbydowa\u0107 nasz\u0105 osad\u0119.
+    zjawi si\u0119 kto\u015B, kto pomo\u017Ce nam odbudowa\u0107 nasz\u0105 osad\u0119.
     \n"
 --- !u!114 &-4453793618550032612
 MonoBehaviour:
@@ -88,8 +102,8 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: "Niestety, przez te kilka miesci\u0119cy nikt si\u0119 nie pojawi\u0142,
-    a sam niestety nie dam rady jej odbydowa\u0107. "
+  text: "Niestety, przez te kilka miesi\u0119cy nikt si\u0119 nie pojawi\u0142, a
+    sam niestety nie dam rady jej odbydowa\u0107. "
 --- !u!114 &-4372617846117413071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +173,8 @@ MonoBehaviour:
   m_Name: zbyszek 1
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 4864249770867588010}
+  - {fileID: -8420993977532163829}
+  - {fileID: 5499571389907418648}
   - {fileID: 3243595966788429660}
   - {fileID: -4156134867832213018}
   - {fileID: -4768858792541078457}
@@ -274,7 +289,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 1
   text: "Lata ju\u017C nie te, nie mam tyle si\u0142y. Jeste\u015B pierwsz\u0105
-    osob\u0105, kt\xF3ra przyby\u0142a do naszej osady od splondrowania przez zbir\xF3w."
+    osob\u0105, kt\xF3ra przyby\u0142a do naszej osady od spl\u0105drowania przez
+    zbir\xF3w."
 --- !u!114 &3243595966788429660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,8 +304,8 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: "Smutna historia. Jaki\u015B czas temu napadli na nasz\u0105 osad\u0119 zbiry
-    i ca\u0142\u0105 spl\u0105drowali."
+  text: "Na imi\u0119 mi Zbyszek. To smutna historia. Jaki\u015B czas temu napadli
+    na nasz\u0105 osad\u0119 zbiry i ca\u0142\u0105 spl\u0105drowali."
 --- !u!114 &3758267330187262058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,7 +334,7 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 0
-  text: "Witaj, co sta\u0142o si\u0119 z wasz\u0105 osad\u0105?"
+  text: "Witaj, jestem Marain.\nCo sta\u0142o si\u0119 z wasz\u0105 osad\u0105?"
 --- !u!114 &5210841274908370363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +363,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &5499571389907418648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: "Witaj, jestem Marian.\nCo sta\u0142o si\u0119 z wasz\u0105 osad\u0105?"
 --- !u!114 &6765384335989519369
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 0
-  text: "A teraz wybacz kchana, ale musz\u0119 p\xF3j\u015Bc do Zbyszka i zapyta\u0107
+  text: "A teraz wybacz kochana, ale musz\u0119 p\xF3j\u015B\u0107 do Zbyszka i zapyta\u0107
     czy jeszcze czego\u015B nie potrzeba."
 --- !u!114 &11400000
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 0
-  text: "Oto nasz nowy dom! Podoba Ci si\u0119?"
+  text: "Wybudowa\u0142em dla nas dom! Podoba ci si\u0119?"
 --- !u!114 &8008208658341736056
 MonoBehaviour:
   m_ObjectHideFlags: 0

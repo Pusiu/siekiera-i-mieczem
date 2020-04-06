@@ -47,10 +47,14 @@ public class NPC : LivingBeing
 	{
 		do
 		{
+			GetComponent<AudioSource>().Stop();
+			PlayerController.instance.playerMouth.Stop();
+			PlayerController.instance.currentTalkingNPC = this;
 			currentDialogueLineIndex++;
 			GameUI.instance.speechBubble.gameObject.SetActive(false);
 			if (currentDialogue == null || currentDialogueLineIndex >= currentDialogue.lines.Count)
 			{
+				PlayerController.instance.currentTalkingNPC = null;
 				return;
 			}
 		} while (currentDialogue.lines[currentDialogueLineIndex].Execute(this));

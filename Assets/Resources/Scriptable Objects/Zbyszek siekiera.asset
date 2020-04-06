@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: Oto Twoja siekiera.
+  text: "Oto Twoja siekiera. Mo\u017Cesz te\u017C u\u017Cy\u0107 mojego wozu do transportu
+    materia\u0142\xF3w je\u015Bli potrzebujesz"
 --- !u!114 &-8147027434155008907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,6 +30,20 @@ MonoBehaviour:
   questId: 1
   state: 1
 --- !u!114 &-6917818028542048403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
+--- !u!114 &-5799275868465822801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,6 +85,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-4946577052065110432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-2163432017961743202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +113,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-2099373375734332838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: "Mam materia\u0142y"
 --- !u!114 &-1831330164685334026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +141,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-1083989862085872623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c2ee143843540ab88898f373161c, type: 3}
+  m_Name: DialogueFadeScreen
+  m_EditorClassIdentifier: 
+  fadeIn: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +172,11 @@ MonoBehaviour:
   - {fileID: 1533325976612042000}
   - {fileID: 2297465731478902403}
   - {fileID: 3425835445268274258}
+  - {fileID: -2099373375734332838}
+  - {fileID: 6469430930003304171}
+  - {fileID: 7373688996281848712}
+  - {fileID: 3140774837011268272}
+  - {fileID: -1083989862085872623}
   - {fileID: -8517120596571093609}
   - {fileID: 521545282461459898}
   - {fileID: 111573830349015401}
@@ -134,8 +195,7 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 0
-  text: "Dzi\u0119kuj\u0119. Teraz mog\u0119 zaj\u0105\u0107 si\u0119 budow\u0105
-    chaty."
+  text: "Dzi\u0119kuj\u0119, na pewno si\u0119 przyda"
 --- !u!114 &521545282461459898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +238,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   t: 1
   count: 3
+--- !u!114 &1944769212196038905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &2297465731478902403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +266,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   t: 0
   count: 2
+--- !u!114 &3140774837011268272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0767878512a4743b9dd7d5b4856ed0, type: 3}
+  m_Name: DialogueWait
+  m_EditorClassIdentifier: 
+  time: 1
 --- !u!114 &3312908613171161152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +324,33 @@ MonoBehaviour:
   t: 1
   count: 3
   exitIfFalse: 1
+--- !u!114 &6469430930003304171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "\u015Awietnie, daj mi chwil\u0119"
+--- !u!114 &7373688996281848712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c2ee143843540ab88898f373161c, type: 3}
+  m_Name: DialogueFadeScreen
+  m_EditorClassIdentifier: 
+  fadeIn: 1
 --- !u!114 &7716836226559183171
 MonoBehaviour:
   m_ObjectHideFlags: 0

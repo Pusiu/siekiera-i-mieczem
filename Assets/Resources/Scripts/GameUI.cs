@@ -364,6 +364,7 @@ public class GameUI : MonoBehaviour
 				questLogEntries[q.name].SetActive(false);
 			}
 		}
+		LayoutRebuilder.ForceRebuildLayoutImmediate(questLogContent.GetComponent<RectTransform>());
     }
 
 	public void ShowGuideScreen()
@@ -410,6 +411,10 @@ public class GameUI : MonoBehaviour
 	public void FadeOutRebuildingScreen()
 	{
 		timePassOverlay.GetComponent<Animator>().SetBool("Fade", false);
+		GameManager.instance.ExecuteAction(() =>
+		{
+			timePassOverlay.SetActive(false);
+		}, timePassOverlay.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
 	}
 
 	public void Typewrite(string text)

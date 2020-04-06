@@ -16,6 +16,9 @@ public class DialogueFadeScreen : DialogueAction
 
 		GameManager.instance.ExecuteAction(() =>
 		{
+			if (!fadeIn)
+				GameUI.instance.timePassOverlay.SetActive(false);
+
 			npc.ProcessLine();
 		},3);
 

@@ -253,6 +253,20 @@ MonoBehaviour:
   m_Name: DialogueWait
   m_EditorClassIdentifier: 
   time: 3
+--- !u!114 &-2176088424697050107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Doskonale, dorzu\u0107my je do ogniska"
 --- !u!114 &-1741934777821292704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +339,8 @@ MonoBehaviour:
   - {fileID: -5987635938307592341}
   - {fileID: -6692704671294911016}
   - {fileID: 5249082067559560786}
+  - {fileID: 3820637237349458572}
+  - {fileID: -2176088424697050107}
   - {fileID: 3057814862207839115}
   - {fileID: -2495154585494699596}
   - {fileID: -1741934777821292704}
@@ -409,6 +425,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &3820637237349458572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: "Oto ga\u0142\u0119zie"
 --- !u!114 &4287085767652470546
 MonoBehaviour:
   m_ObjectHideFlags: 0

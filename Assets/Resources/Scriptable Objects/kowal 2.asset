@@ -125,6 +125,21 @@ MonoBehaviour:
   m_Name: DialogueSetTime
   m_EditorClassIdentifier: 
   time: 0
+--- !u!114 &-845217079290023751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "G\xF3ry znajduj\u0105 si\u0119 na po\u0142udniowym zachodzie. Pod\u0105\u017Caj
+    \u015Bcie\u017Ckami to na pewno tam trafisz"
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,10 +153,13 @@ MonoBehaviour:
   m_Name: kowal 2
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 349029062230942638}
+  - {fileID: 3251994786481248245}
+  - {fileID: 5935240368294963741}
   - {fileID: 7162609888745198925}
   - {fileID: 9180866090543626337}
+  - {fileID: 5331807668723115343}
   - {fileID: 4990598416864352112}
+  - {fileID: -845217079290023751}
   - {fileID: 756625848771097076}
   - {fileID: 6040136340731854100}
   - {fileID: -6108387626045706148}
@@ -218,6 +236,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &3251994786481248245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5973951cb18014b8d99a88a5fd075c, type: 3}
+  m_Name: DialogueCheckQuestStatus
+  m_EditorClassIdentifier: 
+  questID: 2
+  state: 2
 --- !u!114 &4990598416864352112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +264,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Ju\u017C si\u0119 robi, rusz\u0119 w drog\u0119 od razu."
+--- !u!114 &5331807668723115343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: Odzyskaj je dla mnie, to dostaniesz miecz
 --- !u!114 &5871705226874876707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +291,20 @@ MonoBehaviour:
   m_Name: DialogueWait
   m_EditorClassIdentifier: 
   time: 0
+--- !u!114 &5935240368294963741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Bardzo dzi\u0119kuj\u0119! Ku\u017Ania wygl\u0105da wspaniale."
 --- !u!114 &6040136340731854100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,8 +332,8 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: "Jednak, \u017Ceby zrobi\u0107 miecz, potrzebuje kowad\u0142a, kt\xF3re zosta\u0142o
-    skradzione."
+  text: "Jednak, \u017Ceby zrobi\u0107 miecz, potrzebuje kowad\u0142a, kt\xF3re porzuci\u0142em
+    w g\xF3rach, na skrzy\u017Cowaniu."
 --- !u!114 &7250576186183488470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,5 +388,5 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: "Z tego co wiem znajduj\u0119 si\u0119 w g\xF3rach. Prznie\u015B je, to dostaniesz
-    miecz"
+  text: "Bandyci napadli mnie, gdy wraca\u0142em z miasta przez g\xF3ry.Musia\u0142em
+    ucieka\u0107 i zostawi\u0107 kowad\u0142o. "

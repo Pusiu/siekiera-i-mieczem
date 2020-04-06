@@ -14,6 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 1
   text: "B\u0119dziesz mia\u0142 gdzie mieszka\u0107 z Halin\u0105. Co Ty na to?"
+--- !u!114 &-8103121033821714302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5973951cb18014b8d99a88a5fd075c, type: 3}
+  m_Name: DialogueCheckQuestStatus
+  m_EditorClassIdentifier: 
+  questID: 0
+  state: 0
 --- !u!114 &-7489666923158861503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,6 +56,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Co si\u0119 dzieje?"
+--- !u!114 &-3064939994424411946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 1
+  text: "Marian, s\u0142uchaj!"
 --- !u!114 &-2856642830406864204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +112,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "\u015Awietny pomys\u0142. Zabieram si\u0119 do pracy!"
+--- !u!114 &-1424326561631571585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 11
+  state: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +139,8 @@ MonoBehaviour:
   m_Name: Zbyszek 5
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 4796117007354513323}
+  - {fileID: -1424326561631571585}
+  - {fileID: -3064939994424411946}
   - {fileID: -5852550569134511842}
   - {fileID: -7489666923158861503}
   - {fileID: -8386680911944577502}

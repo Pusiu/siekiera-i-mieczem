@@ -76,6 +76,7 @@ MonoBehaviour:
   - {fileID: 4924454247511486112}
   - {fileID: -3715650545160913639}
   - {fileID: -1882603183126858049}
+  - {fileID: 1414922282887390493}
   - {fileID: 2802746775548447273}
 --- !u!114 &106082389151920293
 MonoBehaviour:
@@ -91,6 +92,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &1414922282887390493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 2
+  state: 1
 --- !u!114 &2802746775548447273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +122,20 @@ MonoBehaviour:
   npcID: 0
   endCurrent: 1
   nextDialogue: {fileID: 11400000, guid: 8c5113a85450a554cb523bec1a829d71, type: 2}
+--- !u!114 &3105972873467358711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &3722062876617753818
 MonoBehaviour:
   m_ObjectHideFlags: 0

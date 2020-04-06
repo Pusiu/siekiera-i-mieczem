@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: "Co to za kobieta? Nigdy jej nie widzia\u0142em. Porozmawiaj z ni\u0105 i
-    dowiedz si\u0119 wi\u0119cej."
+  text: "Dzisiaj rano do wioski przyby\u0142a nowa kobieta, my\u015Bl\u0119 \u017Ce
+    powiniene\u015B z ni\u0105 porozmawia\u0107."
 --- !u!114 &-8964992370368726003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28,6 +28,47 @@ MonoBehaviour:
   m_Name: DialogueSetTime
   m_EditorClassIdentifier: 
   time: 0
+--- !u!114 &-8963894149003109083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
+--- !u!114 &-8548394435849028630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dadf81dd082fd4649806ddea95780513, type: 3}
+  m_Name: DialogueSetTime
+  m_EditorClassIdentifier: 
+  time: 700
+--- !u!114 &-8468879090689007991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-8467824730977766637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +113,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-6003384321655709750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c2ee143843540ab88898f373161c, type: 3}
+  m_Name: DialogueFadeScreen
+  m_EditorClassIdentifier: 
+  fadeIn: 1
 --- !u!114 &-4353685979753106193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +180,7 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 0
-  text: "Wspani\u0142a stajnia. Dzi\u0119kujemy."
+  text: "Wspania\u0142a stajnia. Dzi\u0119kujemy."
 --- !u!114 &-1665571594532067311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +238,11 @@ MonoBehaviour:
   - {fileID: -2436199605109047347}
   - {fileID: -1769184254982248082}
   - {fileID: 337202288595694040}
+  - {fileID: -6003384321655709750}
+  - {fileID: 523247631245514715}
   - {fileID: 8571567065713844821}
+  - {fileID: -8548394435849028630}
+  - {fileID: 2456247772874864028}
   - {fileID: 1531974613785430224}
   - {fileID: -4353685979753106193}
   - {fileID: -9107731105629351197}
@@ -203,6 +261,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Mam nadziej\u0119, \u017Ce b\u0119dzie d\u0142ugo s\u0142u\u017Cy\u0142a."
+--- !u!114 &523247631245514715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0767878512a4743b9dd7d5b4856ed0, type: 3}
+  m_Name: DialogueWait
+  m_EditorClassIdentifier: 
+  time: 2
 --- !u!114 &584489232129152205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +300,20 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: Hmmm... Dziwnee...
+  text: "Hej Marian! Mam do ciebie spraw\u0119"
+--- !u!114 &2456247772874864028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c2ee143843540ab88898f373161c, type: 3}
+  m_Name: DialogueFadeScreen
+  m_EditorClassIdentifier: 
+  fadeIn: 0
 --- !u!114 &2881824879221808666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +397,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questId: 0
   state: 0
+--- !u!114 &5556109946542816622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c2ee143843540ab88898f373161c, type: 3}
+  m_Name: DialogueFadeScreen
+  m_EditorClassIdentifier: 
+  fadeIn: 0
 --- !u!114 &5679201678300841382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,6 +438,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &7388232666814359557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
+--- !u!114 &7648590248206496211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &8571567065713844821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,3 +480,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcID: 0
   active: 1
+--- !u!114 &9189521956679942364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 

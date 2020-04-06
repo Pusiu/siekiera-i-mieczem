@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 	public AudioClip wooshSound;
 	public AudioClip wooshSwordSound;
 	public AudioClip buildingSound;
+	public bool autoEndgame = true;
 
 	public List<BaseQuest> questList = new List<BaseQuest>();
 	public List<NPC> npcs;
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour
 
 	public void CheckQuestStatuses()
 	{
-		if (gameOver)
+		if (gameOver || autoEndgame)
 			return;
 
 		if (questList.FindAll(x => x.questState != BaseQuest.QuestState.Completed && x.isMainQuest).Count == 0)

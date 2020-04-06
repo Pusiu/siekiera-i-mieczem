@@ -27,7 +27,7 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 1
-  text: Witajcie
+  text: "Witaj panie, jestem Halina. Jak Ci na imi\u0119?"
 --- !u!114 &-2112166872413572912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Name: DialogueLine
   m_EditorClassIdentifier: 
   speaker: 0
-  text: "Witaj, co Ci\u0119 sprowadza do osady?"
+  text: "Jestem Marian. Co ci\u0119 sprowadza do osady Halino?"
 --- !u!114 &-2026290100794611814
 MonoBehaviour:
   m_ObjectHideFlags: 0

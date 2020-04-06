@@ -72,6 +72,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-2854373845824470347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-2546791936911775003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +100,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 1
   text: "Bez Ciebie nigdy by\u015Bmy nie odbudowali naszej osady!"
+--- !u!114 &-2441823628776678663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc36da3354143454d873c7cd418064b1, type: 3}
+  m_Name: DialogueSetQuestStatus
+  m_EditorClassIdentifier: 
+  questId: 12
+  state: 2
 --- !u!114 &-404862396284936654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +149,8 @@ MonoBehaviour:
   - {fileID: -7005916921324949727}
   - {fileID: 2905315592129826404}
   - {fileID: -404862396284936654}
+  - {fileID: 1930402803028979265}
+  - {fileID: -2441823628776678663}
   - {fileID: -6947198247970027839}
 --- !u!114 &1015104067451972370
 MonoBehaviour:
@@ -136,6 +166,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: "Ratusz sko\u0144czony. Jak wygl\u0105da?"
+--- !u!114 &1930402803028979265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &2905315592129826404
 MonoBehaviour:
   m_ObjectHideFlags: 0
