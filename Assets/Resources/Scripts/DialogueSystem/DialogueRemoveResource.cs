@@ -19,6 +19,7 @@ public class DialogueRemoveResource : DialogueAction
 		}
 		if (c >= count)
 		{
+			PlayerController.instance.animator.SetTrigger("Pickup");
 			PlayerController.instance.RefreshHandAnimation();
 			return true;
 		}
@@ -31,6 +32,7 @@ public class DialogueRemoveResource : DialogueAction
 		}
 		if (c >= count)
 		{
+			PlayerController.instance.animator.SetTrigger("Pickup");
 			PlayerController.instance.RefreshHandAnimation();
 			return true;
 		}

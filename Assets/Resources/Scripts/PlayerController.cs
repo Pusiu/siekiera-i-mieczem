@@ -472,10 +472,10 @@ public class PlayerController : LivingBeing
 		if (holster[Hand.Right]?.toolType == type)
 			return holster[Hand.Right];
 
-		if (hands[Hand.Left]?.GetComponent<Tool>() != null && ((Tool)hands[Hand.Left])?.toolType == type)
+		if (hands[Hand.Left] != null && hands[Hand.Left]?.GetComponent<Tool>() != null && ((Tool)hands[Hand.Left])?.toolType == type)
 			return (Tool)hands[Hand.Left];
 
-		if (hands[Hand.Right]?.GetComponent<Tool>() != null && ((Tool)hands[Hand.Right])?.toolType == type)
+		if (hands[Hand.Right] != null && hands[Hand.Right]?.GetComponent<Tool>() != null && ((Tool)hands[Hand.Right])?.toolType == type)
 			return (Tool)hands[Hand.Right];
 
 		return null;

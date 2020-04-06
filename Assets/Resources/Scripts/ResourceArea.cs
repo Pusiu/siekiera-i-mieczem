@@ -64,7 +64,7 @@ public class ResourceArea : MonoBehaviour
 
 	public void RemoveResources()
 	{
-		Collider[] cols = Physics.OverlapBox(transform.position, col.size / 2, col.transform.rotation);
+		Collider[] cols = Physics.OverlapBox(transform.position + col.center, Vector3.Scale(transform.localScale, col.size / 2), col.transform.rotation);
 
 		foreach (Resource.ResourceType t in resourcesCount.Keys)
 		{

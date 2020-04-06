@@ -216,7 +216,10 @@ public class GameUI : MonoBehaviour
 		if (s == null)
 			return;
 
-		int destIndex = Convert.ToInt32(r[0].gameObject.name);
+		int destIndex;
+		if (!int.TryParse(r[0].gameObject.name, out destIndex))
+			return;
+		//= Convert.ToInt32(r[0].gameObject.name);
 		Debug.Log($"From {lastDraggedIndex} to {destIndex}");
 
 		Item dest = GetItemByIndex(destIndex);

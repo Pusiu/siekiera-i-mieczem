@@ -47,7 +47,9 @@ public class DialogueLine : DialogueAction
 		src.Stop();
 		GameManager.instance.ExecuteAction(() =>
 		{
-			if (executingNPC.currentDialogueLineIndex < executingNPC.currentDialogue.lines.Count &&
+			if (executingNPC != null && 
+				executingNPC.currentDialogue != null && 
+				executingNPC.currentDialogueLineIndex < executingNPC.currentDialogue.lines.Count &&
 				executingNPC.currentDialogueLineIndex >= 0 &&
 				executingNPC.currentDialogue.lines[executingNPC.currentDialogueLineIndex] == this)
 				executingNPC.ProcessLine();
