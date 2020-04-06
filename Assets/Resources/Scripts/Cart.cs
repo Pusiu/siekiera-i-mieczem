@@ -145,6 +145,11 @@ public class Cart : Item, IInteractable
 						 r.transform.localRotation = Quaternion.identity;
 						 r.isOnCart = true;
 					 }
+					 else
+					 {
+						 GameUI.instance.ShowHint("Na wozie nie ma na to miejsca");
+						 return;
+					 }
 				 }
 			 };
 		}

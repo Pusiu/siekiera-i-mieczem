@@ -73,7 +73,8 @@ public class TimeAndWeather : MonoBehaviour
 		}
 
 		sun.transform.rotation = Quaternion.Euler(new Vector3(xrot, 30, 0));
-		GameUI.instance.timeDial.rectTransform.rotation = Quaternion.Euler(0, 0, 90 - xrot);
+		GameUI.instance.timeDial.rectTransform.rotation = Quaternion.Euler(0, 0, xrot-90);
+		//GameUI.instance.timeDial.rectTransform.rotation = Quaternion.Euler(0, 0, 90 - xrot);
 		//sun.transform.rotation = Quaternion.Euler(xrot, sun.transform.rotation.eulerAngles.y, sun.transform.rotation.eulerAngles.z);
 
 

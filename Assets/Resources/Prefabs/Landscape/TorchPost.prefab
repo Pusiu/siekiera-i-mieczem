@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6497693401413039888}
   - component: {fileID: 2843872565889371430}
   - component: {fileID: 8380071274425840095}
+  - component: {fileID: 1654959131257017117}
   m_Layer: 0
   m_Name: TorchPost
   m_TagString: Untagged
@@ -80,6 +81,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1654959131257017117
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7815760071191250179}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.45675522, y: 0.45708978, z: 4.052976}
+  m_Center: {x: -0.0059400722, y: -0.004988454, z: 1.9991543}
 --- !u!1001 &3788970988547653055
 PrefabInstance:
   m_ObjectHideFlags: 0
