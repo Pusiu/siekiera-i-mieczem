@@ -78,6 +78,7 @@ public class ResourceArea : MonoBehaviour
 
 				Destroy(lh.gameObject);
 				PlayerController.instance.hands[PlayerController.Hand.Left] = null;
+				PlayerController.instance.animator.SetTrigger("Pickup");
 			}
 			for (int i=0; i < PlayerController.instance.items.Count;i++)
 			{
