@@ -309,7 +309,7 @@ MonoBehaviour:
   currentNPC: 1
   npcID: 0
   endCurrent: 1
-  nextDialogue: {fileID: 11400000, guid: a1817c273c0e7e441a7ef7e41d1f8d55, type: 2}
+  nextDialogue: {fileID: 0}
 --- !u!114 &3425835445268274258
 MonoBehaviour:
   m_ObjectHideFlags: 0
