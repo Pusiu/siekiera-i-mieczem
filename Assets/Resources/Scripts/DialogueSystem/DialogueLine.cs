@@ -60,16 +60,5 @@ public class DialogueLine : DialogueAction
 	{
 		base.DrawInspectorLine();
 
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Speaker:");
-		speaker = (DialogueLine.Speaker)EditorGUILayout.EnumPopup(speaker);
-		EditorGUILayout.EndHorizontal();
-
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Text:");
-		EditorStyles.textArea.wordWrap = true;
-		text = GUILayout.TextArea(text, new GUILayoutOption[] { GUILayout.MinWidth(200), GUILayout.MinHeight(200)});
-		EditorGUILayout.EndHorizontal();
-
 	}
 }

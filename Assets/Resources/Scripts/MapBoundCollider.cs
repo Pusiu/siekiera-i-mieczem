@@ -10,6 +10,14 @@ public class MapBoundCollider : MonoBehaviour
 		PlayerController.instance.MoveTo(PlayerController.instance.gameObject);
 		GameUI.instance.currentSpeechFocus = PlayerController.instance.gameObject;
 		GameUI.instance.Typewrite("Nie powinienem się oddalać od wioski");
+		GameUI.instance.OnTypewriteEnded += OnTypewriteEnded;
+	}
+
+	private static void OnTypewriteEnded()
+	{
+		GameUI.instance.OnTypewriteEnded -= OnTypewriteEnded;
+		GameUI.instance.speechBubble.gameObject.SetActive(false);
+		
 	}
 
 	private void OnMouseDown()
