@@ -82,6 +82,9 @@ public class ResourceArea : MonoBehaviour
 			for (int i=0; i < PlayerController.instance.items.Count;i++)
 			{
 				Item it = PlayerController.instance.items[i];
+				if (it == null)
+					continue;
+
 				Resource r = it?.GetComponent<Resource>();
 				if ( r!= null && r.resourceType == t)
 				{
@@ -99,7 +102,7 @@ public class ResourceArea : MonoBehaviour
 			}
 
 			//Remove from ground
-			List<Collider> l = cols.Where(x => x.GetComponentInChildren<Resource>()?.resourceType == t).ToList();
+			List<Collider> l = cols.Where(x => x.GetComponent<Resource>()?.resourceType == t).ToList();
 			l.ForEach(x => Destroy(x.gameObject));
 		}
 	}
