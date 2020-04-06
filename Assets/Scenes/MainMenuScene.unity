@@ -33934,12 +33934,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "poly.google.com:\r\n\tMedieval cart by Kenney\r\n\tGrass by Google\r\n\t\nhttps://opengameart.org/\t\r\n\thttps://opengameart.org/content/37-hitspunchesby
-    Independent.nu\r\n\thttps://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud
+  m_Text: "poly.google.com:\r\n\tMedieval cart by Kenney\r\n\tGrass by Google\r\n\t\r\nopengameart.org\r\n\thttps://opengameart.org/content/37-hitspunches
+    by Independent.nu\r\n\thttps://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud
     by TinyWorlds\r\n\thttps://opengameart.org/content/5-hit-sounds-dying by TinyWorlds\r\n\thttps://opengameart.org/content/items-door-fire-weapon-hits
     by Jute\r\n\t\r\nfreesound.org\r\n\thttps://freesound.org/people/Imjeax/sounds/427400/
     - Forest Ambient LOOP by Imjeax\r\n\thttps://freesound.org/people/Nimlos/sounds/422048/
-    - forest_cicada_loop.flac by Nimlos"
+    - forest_cicada_loop.flac by Nimlos\r\n\tCartoon Mumble Speak by dersuperanton
+    freesound.org\r\n\t\"Hammering Nails, Close, A.wav\" by InspectorJ (www.jshaw.co.uk)
+    of Freesound.org\r\n\thttps://freesound.org/people/ryanconway/sounds/240801/
+    - Pickaxe mining stone by ryanconway\r\n\r\ngame-icons.net\r\n\tAxe sword iconby
+    Delapouite under CC BY 3.0\r\n\r\nyoutube.com\r\n\thttps://www.youtube.com/watch?v=eZ_r1H9vHkI
+    \"Medieval Song Village Consort\" by Always Music"
 --- !u!222 &1646167193
 CanvasRenderer:
   m_ObjectHideFlags: 0

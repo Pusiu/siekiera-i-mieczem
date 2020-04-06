@@ -99,6 +99,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: 0
   text: 
+--- !u!114 &-4118006675859286676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64421d159dd5d4b4ca2e5c21e1eee1b9, type: 3}
+  m_Name: DialogueLine
+  m_EditorClassIdentifier: 
+  speaker: 0
+  text: 
 --- !u!114 &-2163432017961743202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +195,7 @@ MonoBehaviour:
   - {fileID: 521545282461459898}
   - {fileID: 111573830349015401}
   - {fileID: -8147027434155008907}
+  - {fileID: 4306967097050819758}
   - {fileID: 3312908613171161152}
 --- !u!114 &111573830349015401
 MonoBehaviour:
@@ -309,6 +324,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questId: 10
   state: 2
+--- !u!114 &4306967097050819758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdec204b15b7b504291ce6b069969193, type: 3}
+  m_Name: DialogueShowGuideEntry
+  m_EditorClassIdentifier: 
+  entryName: "Materia\u0142y i budowanie"
 --- !u!114 &6238868704756154402
 MonoBehaviour:
   m_ObjectHideFlags: 0
