@@ -375,7 +375,7 @@ public class PlayerController : LivingBeing
 		Tool t = holster[h];
 		if (t == null)
 		{
-			if (hands[h]?.GetComponent<Tool>() != null)
+			if (hands[h] != null && hands[h]?.GetComponent<Tool>() != null)
 				t = (Tool)hands[h];
 			else
 				return;

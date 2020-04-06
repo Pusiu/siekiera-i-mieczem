@@ -19,7 +19,7 @@ public class ResourceArea : MonoBehaviour
 
 	private void Awake()
 	{
-		resourcesCount.Add(Resource.ResourceType.Stone, 0);
+		resourcesCount.Add(Resource.ResourceType.Rock, 0);
 		resourcesCount.Add(Resource.ResourceType.Wood, 0);
 		col = GetComponent<BoxCollider>();
 	}
@@ -49,7 +49,8 @@ public class ResourceArea : MonoBehaviour
 			{*/
 				Resource r = c.GetComponentInChildren<Resource>();
 				if (r!=null)
-					resourcesCount[r.resourceType]++;
+					if (resourcesCount.ContainsKey(r.resourceType))
+						resourcesCount[r.resourceType]++;
 			//}
 		}
 		OnResourceAreaUpdateEvent();
@@ -57,7 +58,7 @@ public class ResourceArea : MonoBehaviour
 
 	public void SetResourceText(int maxWood, int maxStone)
 	{
-		stoneText.text = $"{resourcesCount[Resource.ResourceType.Stone].ToString()}/{maxStone.ToString()}";
+		stoneText.text = $"{resourcesCount[Resource.ResourceType.Rock].ToString()}/{maxStone.ToString()}";
 		woodText.text = $"{resourcesCount[Resource.ResourceType.Wood].ToString()}/{maxWood.ToString()}";
 	}
 

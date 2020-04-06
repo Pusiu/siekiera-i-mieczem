@@ -97,7 +97,7 @@ MonoBehaviour:
   itemName: "Ska\u0142a"
   image: {fileID: 21300000, guid: 19f4b7af51d7f4e4ebb37fbf5b3bdc25, type: 3}
   handlingMethod: 1
-  resourceType: 1
+  resourceType: 5
   isOnCart: 0
   canBePickedUp: 1
   requireTool: 1

@@ -5,7 +5,7 @@ using UnityEngine;
 public class RebuildQuest : BaseQuest
 {
 	public int woodAmount;
-	public int stoneAmount;
+	public int rockAmount;
 	public ResourceArea resourceArea;
 	public GameObject destroyedBuilding;
 	public GameObject rebuildedBuilding;
@@ -22,7 +22,7 @@ public class RebuildQuest : BaseQuest
 		if (state == QuestState.Active)
 		{
 			resourceArea.gameObject.SetActive(true);
-			resourceArea.SetResourceText(woodAmount, stoneAmount);
+			resourceArea.SetResourceText(woodAmount, rockAmount);
 		}
 		else
 		{
@@ -32,9 +32,9 @@ public class RebuildQuest : BaseQuest
 
 	private void ResourceArea_OnResourceAreaUpdateEvent()
 	{
-		resourceArea.SetResourceText(woodAmount, stoneAmount);
+		resourceArea.SetResourceText(woodAmount, rockAmount);
 		//might potentialy delete more objects than needed
-		if (resourceArea.resourcesCount[Resource.ResourceType.Stone] >= stoneAmount)
+		if (resourceArea.resourcesCount[Resource.ResourceType.Rock] >= rockAmount)
 		{
 			if (resourceArea.resourcesCount[Resource.ResourceType.Wood] >= woodAmount)
 			{
@@ -66,7 +66,7 @@ public class RebuildQuest : BaseQuest
 	public override string GetDescription()
 	{
 		return $"Przynieś następującą ilość zasobów:\n" +
-				$"Kamień:{resourceArea.resourcesCount[Resource.ResourceType.Stone]}/{stoneAmount}\n" +
+				$"Kamień:{resourceArea.resourcesCount[Resource.ResourceType.Rock]}/{rockAmount}\n" +
 				$"Drewno:{resourceArea.resourcesCount[Resource.ResourceType.Wood]}/{woodAmount}";
 	}
 }
