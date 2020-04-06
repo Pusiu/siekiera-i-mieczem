@@ -32,14 +32,6 @@ public class DialogueSetQuestStatus : DialogueAction
 	public override void DrawInspectorLine()
 	{
 		base.DrawInspectorLine();
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Quest ID:");
-		questId = EditorGUILayout.IntField(questId, new GUILayoutOption[] { GUILayout.MaxWidth(100) });
-		EditorGUILayout.EndHorizontal();
 
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Quest status:");
-		state = (BaseQuest.QuestState)EditorGUILayout.EnumPopup(state);
-		EditorGUILayout.EndHorizontal();
 	}
 }

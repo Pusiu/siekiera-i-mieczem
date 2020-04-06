@@ -62,16 +62,7 @@ public class DialogueRemoveResource : DialogueAction
 	public override void DrawInspectorLine()
 	{
 		base.DrawInspectorLine();
-		EditorGUILayout.LabelField("Removes x resources from player's inventory");
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Resource type:");
-		t = (Resource.ResourceType)EditorGUILayout.EnumPopup(t);
-		EditorGUILayout.EndHorizontal();
 
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Count:");
-		count = EditorGUILayout.IntField(count);
-		EditorGUILayout.EndHorizontal();
 
 	}
 }

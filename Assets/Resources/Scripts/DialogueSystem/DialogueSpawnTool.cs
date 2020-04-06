@@ -18,9 +18,6 @@ public class DialogueSpawnTool : DialogueAction
 	{
 		base.DrawInspectorLine();
 
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Tool prefab:");
-		toolPrefab = (GameObject)EditorGUILayout.ObjectField(toolPrefab, typeof(GameObject), false);
-		EditorGUILayout.EndHorizontal();
+
 	}
 }

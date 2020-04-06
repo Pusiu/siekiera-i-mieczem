@@ -28,14 +28,6 @@ public class DialogueHasTool : DialogueAction
 	public override void DrawInspectorLine()
 	{
 		base.DrawInspectorLine();
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Tool type:");
-		t = (Tool.ToolType)EditorGUILayout.EnumPopup(t);
-		EditorGUILayout.EndHorizontal();
 
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Exit if false:");
-		exitIfFalse = EditorGUILayout.Toggle(exitIfFalse);
-		EditorGUILayout.EndHorizontal();
 	}
 }

@@ -35,27 +35,6 @@ public class DialogueSwitch : DialogueAction
 	{
 		base.DrawInspectorLine();
 
-		GUILayout.BeginHorizontal();
-		GUILayout.Label("Current NPC?:");
-		currentNPC = EditorGUILayout.Toggle(currentNPC);
-		GUILayout.EndHorizontal();
 
-		if (!currentNPC)
-		{
-			GUILayout.BeginHorizontal();
-			GUILayout.Label("NPC ID:");
-			npcID = EditorGUILayout.IntField(npcID);
-			GUILayout.EndHorizontal();
-		}
-
-		GUILayout.BeginHorizontal();
-		GUILayout.Label("Next dialogue:");
-		nextDialogue = (DialogueScriptableObject)EditorGUILayout.ObjectField(nextDialogue, typeof(DialogueScriptableObject), false, new GUILayoutOption[] { GUILayout.MinWidth(200)});
-		GUILayout.EndHorizontal();
-
-		GUILayout.BeginHorizontal();
-		GUILayout.Label("End current dialogue:");
-		endCurrent = EditorGUILayout.Toggle(endCurrent);
-		GUILayout.EndHorizontal();
 	}
 }

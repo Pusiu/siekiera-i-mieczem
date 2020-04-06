@@ -18,9 +18,6 @@ public class DialogueSetTime : DialogueAction
 	public override void DrawInspectorLine()
 	{
 		base.DrawInspectorLine();
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Time:");
-		time = EditorGUILayout.IntField(time);
-		EditorGUILayout.EndHorizontal();
+
 	}
 }

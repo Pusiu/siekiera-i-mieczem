@@ -16,6 +16,8 @@ public class Cart : Item, IInteractable
 	public List<Transform> treesPos = new List<Transform>();
 	public List<Transform> stonesPos = new List<Transform>();
 
+
+	public bool firstUse = true;
 	void Awake()
 	{
 		instance = this;
@@ -29,7 +31,7 @@ public class Cart : Item, IInteractable
 		switch (t)
 		{
 			case Resource.ResourceType.Anvil:
-			case Resource.ResourceType.Stone:
+			case Resource.ResourceType.Rock:
 				l = stonesPos;
 				others = treesPos;
 				break;
@@ -65,6 +67,25 @@ public class Cart : Item, IInteractable
 
 	public void OnInteraction()
 	{
+		if (firstUse)
+		{
+			GameObject entry = null;
+			for (int i = 0; i < GameUI.instance.guideScreenEntriesContents.transform.childCount; i++)
+			{
+				if (GameUI.instance.guideScreenEntriesContents.transform.GetChild(i).name == "Wóz")
+				{
+					entry = GameUI.instance.guideScreenEntriesContents.transform.GetChild(i).gameObject;
+					break;
+				}
+			}
+			if (entry != null)
+			{
+				GameUI.instance.ShowGuideScreen();
+				GameUI.instance.SelectGuideScreenEntry(entry);
+			}
+			firstUse = false;
+		}
+
 		if (!isBeingUsed)
 		{
 			Transform target = drivingPos;

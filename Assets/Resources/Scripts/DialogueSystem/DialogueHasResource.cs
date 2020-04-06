@@ -29,19 +29,6 @@ public class DialogueHasResource : DialogueAction
 	public override void DrawInspectorLine()
 	{
 		base.DrawInspectorLine();
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Resource type:");
-		t = (Resource.ResourceType)EditorGUILayout.EnumPopup(t);
-		EditorGUILayout.EndHorizontal();
 
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Count:");
-		count = EditorGUILayout.IntField(count);
-		EditorGUILayout.EndHorizontal();
-
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Exit if false:");
-		exitIfFalse = EditorGUILayout.Toggle(exitIfFalse);
-		EditorGUILayout.EndHorizontal();
 	}
 }

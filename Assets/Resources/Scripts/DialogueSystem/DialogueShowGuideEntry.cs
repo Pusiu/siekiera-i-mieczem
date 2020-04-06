@@ -34,11 +34,6 @@ public class DialogueShowGuideEntry : DialogueAction
 	public override void DrawInspectorLine()
 	{
 		base.DrawInspectorLine();
-		EditorGUILayout.LabelField("Shows guide screen with given entry");
 
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Entry name");
-		entryName = EditorGUILayout.TextField(entryName);
-		EditorGUILayout.EndHorizontal();
 	}
 }

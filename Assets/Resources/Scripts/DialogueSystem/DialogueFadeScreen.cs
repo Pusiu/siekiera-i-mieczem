@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class DialogueFadeScreen : DialogueAction
@@ -28,9 +27,6 @@ public class DialogueFadeScreen : DialogueAction
 	public override void DrawInspectorLine()
 	{
 		base.DrawInspectorLine();
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Fade in?:");
-		fadeIn = EditorGUILayout.Toggle(fadeIn);
-		EditorGUILayout.EndHorizontal();
+
 	}
 }

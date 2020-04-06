@@ -19,9 +19,6 @@ public class DialogueWait : DialogueAction
 	public override void DrawInspectorLine()
 	{
 		base.DrawInspectorLine();
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Wait time:");
-		time = EditorGUILayout.FloatField(time);
-		EditorGUILayout.EndHorizontal();
+
 	}
 }

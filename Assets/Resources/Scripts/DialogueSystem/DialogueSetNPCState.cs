@@ -21,15 +21,6 @@ public class DialogueSetNPCState : DialogueAction
 	{
 		base.DrawInspectorLine();
 
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Targeted NPC ID:");
-		npcID = EditorGUILayout.IntField(npcID);
-		EditorGUILayout.EndHorizontal();
-
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Set active?");
-		active = EditorGUILayout.Toggle(active);
-		EditorGUILayout.EndHorizontal();
 	}
 }
 

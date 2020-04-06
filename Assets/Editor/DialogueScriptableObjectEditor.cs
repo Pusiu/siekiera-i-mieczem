@@ -81,7 +81,8 @@ public class DialogueScriptableObjectEditor : Editor
 				DrawPlusMinus(i);
 				EditorGUILayout.EndHorizontal();
 
-				d.DrawInspectorLine();
+				//d.DrawInspectorLine();
+				DrawInspectorLine(d);
 			}
 			Rect rect = EditorGUILayout.GetControlRect(false, 1);
 
@@ -93,5 +94,181 @@ public class DialogueScriptableObjectEditor : Editor
 
 		EditorUtility.SetDirty(o);
 		//AssetDatabase.SaveAssets();
+	}
+
+	public void DrawInspectorLine(DialogueAction action)
+	{
+		if (action is DialogueCheckQuestStatus)
+		{
+			DialogueCheckQuestStatus c = (DialogueCheckQuestStatus)action;
+			EditorStyles.label.wordWrap = true;
+			EditorGUILayout.LabelField("This action let's dialogue proceed only if given quest status evaluates to true", new GUILayoutOption[] { GUILayout.MinHeight(50) });
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Quest ID:");
+			c.questID = EditorGUILayout.IntField(c.questID);
+			EditorGUILayout.EndHorizontal();
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Quest state:");
+			c.state= (BaseQuest.QuestState)EditorGUILayout.EnumPopup(c.state);
+			EditorGUILayout.EndHorizontal();
+		}
+		else if (action is DialogueFadeScreen)
+		{
+			DialogueFadeScreen f = (DialogueFadeScreen)action;
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Fade in?:");
+			f.fadeIn = EditorGUILayout.Toggle(f.fadeIn);
+			EditorGUILayout.EndHorizontal();
+		}
+		else if (action is DialogueHasResource)
+		{
+			DialogueHasResource d = (DialogueHasResource)action;
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Resource type:");
+			d.t = (Resource.ResourceType)EditorGUILayout.EnumPopup(d.t);
+			EditorGUILayout.EndHorizontal();
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Count:");
+			d.count = EditorGUILayout.IntField(d.count);
+			EditorGUILayout.EndHorizontal();
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Exit if false:");
+			d.exitIfFalse = EditorGUILayout.Toggle(d.exitIfFalse);
+			EditorGUILayout.EndHorizontal();
+		}
+		else if (action is DialogueHasTool)
+		{
+			DialogueHasTool d = (DialogueHasTool)action;
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Tool type:");
+			d.t = (Tool.ToolType)EditorGUILayout.EnumPopup(d.t);
+			EditorGUILayout.EndHorizontal();
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Exit if false:");
+			d.exitIfFalse = EditorGUILayout.Toggle(d.exitIfFalse);
+			EditorGUILayout.EndHorizontal();
+		}
+		else if (action is DialogueLine)
+		{
+			DialogueLine d = (DialogueLine)action;
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Speaker:");
+			d.speaker = (DialogueLine.Speaker)EditorGUILayout.EnumPopup(d.speaker);
+			EditorGUILayout.EndHorizontal();
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Text:");
+			EditorStyles.textArea.wordWrap = true;
+			d.text = GUILayout.TextArea(d.text, new GUILayoutOption[] { GUILayout.MinWidth(200), GUILayout.MinHeight(200) });
+			EditorGUILayout.EndHorizontal();
+		}
+		else if (action is DialogueRemoveResource)
+		{
+			DialogueRemoveResource d = (DialogueRemoveResource)action;
+			EditorGUILayout.LabelField("Removes x resources from player's inventory");
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Resource type:");
+			d.t = (Resource.ResourceType)EditorGUILayout.EnumPopup(d.t);
+			EditorGUILayout.EndHorizontal();
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Count:");
+			d.count = EditorGUILayout.IntField(d.count);
+			EditorGUILayout.EndHorizontal();
+		}
+		else if (action is DialogueSetNPCState)
+		{
+			DialogueSetNPCState d = (DialogueSetNPCState)action;
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Targeted NPC ID:");
+			d.npcID = EditorGUILayout.IntField(d.npcID);
+			EditorGUILayout.EndHorizontal();
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Set active?");
+			d.active = EditorGUILayout.Toggle(d.active);
+			EditorGUILayout.EndHorizontal();
+		}
+		else if (action is DialogueSetQuestStatus)
+		{
+			DialogueSetQuestStatus d = (DialogueSetQuestStatus)action;
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Quest ID:");
+			d.questId = EditorGUILayout.IntField(d.questId, new GUILayoutOption[] { GUILayout.MaxWidth(100) });
+			EditorGUILayout.EndHorizontal();
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Quest status:");
+			d.state = (BaseQuest.QuestState)EditorGUILayout.EnumPopup(d.state);
+			EditorGUILayout.EndHorizontal();
+		}
+		else if (action is DialogueSetTime)
+		{
+			DialogueSetTime d = (DialogueSetTime)action;
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Time:");
+			d.time = EditorGUILayout.IntField(d.time);
+			EditorGUILayout.EndHorizontal();
+		}
+		else if (action is DialogueShowGuideEntry)
+		{
+			DialogueShowGuideEntry d = (DialogueShowGuideEntry)action;
+			EditorGUILayout.LabelField("Shows guide screen with given entry");
+
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Entry name");
+			d.entryName = EditorGUILayout.TextField(d.entryName);
+			EditorGUILayout.EndHorizontal();
+		}
+		else if (action is DialogueSpawnTool)
+		{
+			DialogueSpawnTool d = (DialogueSpawnTool)action;
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Tool prefab:");
+			d.toolPrefab = (GameObject)EditorGUILayout.ObjectField(d.toolPrefab, typeof(GameObject), false);
+			EditorGUILayout.EndHorizontal();
+		}
+		else if (action is DialogueSwitch)
+		{
+			DialogueSwitch d = (DialogueSwitch)action;
+
+			GUILayout.BeginHorizontal();
+			GUILayout.Label("Current NPC?:");
+			d.currentNPC = EditorGUILayout.Toggle(d.currentNPC);
+			GUILayout.EndHorizontal();
+
+			if (!d.currentNPC)
+			{
+				GUILayout.BeginHorizontal();
+				GUILayout.Label("NPC ID:");
+				d.npcID = EditorGUILayout.IntField(d.npcID);
+				GUILayout.EndHorizontal();
+			}
+
+			GUILayout.BeginHorizontal();
+			GUILayout.Label("Next dialogue:");
+			d.nextDialogue = (DialogueScriptableObject)EditorGUILayout.ObjectField(d.nextDialogue, typeof(DialogueScriptableObject), false, new GUILayoutOption[] { GUILayout.MinWidth(200) });
+			GUILayout.EndHorizontal();
+
+			GUILayout.BeginHorizontal();
+			GUILayout.Label("End current dialogue:");
+			d.endCurrent = EditorGUILayout.Toggle(d.endCurrent);
+			GUILayout.EndHorizontal();
+		}
+		else if (action is DialogueWait)
+		{
+			DialogueWait d = (DialogueWait)action;
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField("Wait time:");
+			d.time = EditorGUILayout.FloatField(d.time);
+			EditorGUILayout.EndHorizontal();
+		}
 	}
 }
